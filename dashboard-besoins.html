@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard des besoins · GDG Marseille</title>
+    <meta name="description" content="Vous recrutez ou cherchez une opportunité ? Dites-nous vos besoins pour alimenter le Policy Lab du GDG." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-gdg-marseille.svg" alt="GDG Marseille" width="160" />
+            </a>
+            <nav class="nav" aria-label="Navigation principale">
+                <ul class="nav__list">
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="nous-rejoindre.html">Nous rejoindre</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="devenir-partenaire.html">Devenir partenaire</a></li>
+                    <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+                    <li><a href="dashboard-besoins.html" class="active">Dashboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav__toggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>📊 Dashboard des besoins</h1>
+                <p>Vous recrutez ? Vous cherchez une opportunité ? Dites-nous ce dont vous avez besoin.</p>
+            </div>
+        </section>
+
+        <!-- ===== INTRODUCTION ===== -->
+        <section class="dashboard-intro">
+            <div class="container">
+                <div class="dashboard-intro__text">
+                    <p>
+                        Ces données alimentent le <strong>Policy Lab</strong> du GDG Marseille : 
+                        nous analysons les tendances du marché, les compétences recherchées et les 
+                        opportunités pour mieux structurer l'écosystème tech marseillais.
+                    </p>
+                    <p>
+                        <strong>⚠️ Version simple en V1</strong> — un formulaire Google Form intégré. 
+                        Le dashboard complet avec visualisation des données est prévu pour la V2.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GOOGLE FORM EMBED ===== -->
+        <section class="dashboard-form">
+            <div class="container">
+                <h2 class="section-title">📝 Remplissez le formulaire</h2>
+                <div class="form-iframe-container">
+                    <!-- Remplace le src par l'URL de ton Google Form -->
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/FAKE_ID/viewform?embedded=true" 
+                        width="100%" 
+                        height="800" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                        Chargement du formulaire...
+                    </iframe>
+                </div>
+                <p class="dashboard-note">
+                    🔒 Les données collectées sont anonymisées et utilisées uniquement à des fins d'étude territoriale. 
+                    (Coordination avec Mathias pour la sécurité des données.)
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <img src="assets/img/logo-gdg-marseille-white.svg" alt="GDG Marseille" width="140" />
+                <p>© 2026 GDG Marseille — Association loi 1901</p>
+            </div>
+            <div class="footer__col">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Suivez-nous</h4>
+                <ul class="footer__socials">
+                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Discord">Discord</a></li>
+                    <li><a href="#" aria-label="Meetup">Meetup</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

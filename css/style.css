@@ -1015,3 +1015,110 @@ blockquote cite {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ===== DASHBOARD ===== */
+.dashboard-intro {
+    padding: 2rem 0 0 0;
+}
+.dashboard-intro__text {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+.dashboard-intro__text p {
+    margin-bottom: 0.8rem;
+}
+.dashboard-form {
+    padding: 2rem 0 3rem 0;
+}
+.form-iframe-container {
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #eef3fc;
+}
+.form-iframe-container iframe {
+    display: block;
+    min-height: 700px;
+}
+.dashboard-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    max-width: 650px;
+    margin: 1.5rem auto 0;
+}
+
+/* ===== CONTACT ===== */
+.contact-form-section {
+    padding: 3rem 0;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contact-form h2,
+.contact-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+.contact-form .form {
+    max-width: 100%;
+}
+.contact-info__item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+.contact-icon {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+.contact-info__item strong {
+    display: block;
+    font-size: 1rem;
+}
+.contact-info__item a {
+    color: #4285F4;
+    text-decoration: none;
+}
+.contact-info__item a:hover {
+    text-decoration: underline;
+}
+.contact-socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
+}
+.contact-socials a {
+    color: #4285F4;
+    font-weight: 500;
+}
+.contact-info__note {
+    font-size: 0.9rem;
+    color: #999;
+    background: #fafafa;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .form-iframe-container iframe {
+        min-height: 600px;
+    }
+}
