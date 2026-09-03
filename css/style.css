@@ -273,3 +273,591 @@ blockquote cite {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== PÁGINAS INTERNAS ===== */
+.page-hero {
+    background: #f0f7ff;
+    padding: 3rem 0;
+    text-align: center;
+}
+.page-hero h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+}
+
+/* ===== SECCIONES JOIN ===== */
+.join-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
+}
+.join-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.cfp {
+    background: #f9faff;
+}
+
+/* ===== FORMULARIOS ===== */
+.form {
+    max-width: 650px;
+    margin: 1.5rem 0;
+}
+.form-group {
+    margin-bottom: 1.2rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4285F4;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66,133,244,0.2);
+}
+.checkbox-group,
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.checkbox-group label,
+.radio-group label {
+    font-weight: 400;
+}
+.checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+.checkbox label {
+    display: inline;
+}
+.char-counter {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+/* ===== BUSINESS CTA ===== */
+.business-cta {
+    text-align: center;
+    background: #eaf3ff;
+}
+
+/* ===== ACTIVE EN NAV ===== */
+.nav__list a.active {
+    color: #4285F4;
+    font-weight: 700;
+}
+
+/* ===== FILTRES ===== */
+.filters-section {
+    padding: 1.5rem 0 0.5rem 0;
+}
+.filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 2rem;
+    background: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.filter-btn:hover {
+    border-color: #4285F4;
+    color: #4285F4;
+}
+.filter-btn.active {
+    background: #4285F4;
+    color: #fff;
+    border-color: #4285F4;
+}
+
+/* ===== ÉVÉNEMENTS ===== */
+.events-section {
+    padding: 2rem 0;
+}
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Cartes d'événements améliorées */
+.event-card {
+    position: relative;
+    padding-top: 1.8rem; /* espacio para el badge */
+}
+.event-card__badge {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    background: #4285F4;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+.event-card__badge.past {
+    background: #888;
+}
+.event-card.past {
+    opacity: 0.8;
+    background: #f7f7f7;
+}
+.event-meta {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.2rem 0;
+}
+.event-desc {
+    margin: 0.8rem 0;
+}
+.event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.6rem 0 1rem 0;
+}
+.event-tags span {
+    background: #eef3fc;
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    color: #1a1a1a;
+}
+.event-card__gallery {
+    margin-top: 0.8rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* ===== CO-ORGANISATION ===== */
+.coorganize-section {
+    background: #f5f9ff;
+    padding: 3rem 0;
+}
+.coorganize-section .form {
+    max-width: 650px;
+    margin: 1.5rem auto;
+}
+/* ===== PARTNER HERO ===== */
+.partner-hero__stat {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4285F4;
+    margin-bottom: 0.5rem;
+}
+.partner-hero__stat strong {
+    font-size: 2.8rem;
+}
+
+/* ===== PRICING CARDS ===== */
+.pricing-section {
+    padding: 3rem 0;
+    background: #fafafa;
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
+.pricing-card {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(66,133,244,0.12);
+}
+.pricing-card.featured {
+    border-color: #4285F4;
+    position: relative;
+    background: #f8fbff;
+}
+.pricing-badge {
+    position: absolute;
+    top: -0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4285F4;
+    color: #fff;
+    padding: 0.2rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0.5rem 0;
+}
+.pricing-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+}
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 1.5rem 0;
+    flex-grow: 1;
+}
+.pricing-features li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f3f3f3;
+    font-size: 0.95rem;
+}
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+.pricing-tax-note {
+    text-align: center;
+    background: #eef6ff;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+}
+
+/* ===== INSTITUTIONS ===== */
+.institutions-section {
+    padding: 3rem 0;
+}
+.institutions__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.institutions__text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.institutions__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+.institutions__benefits li {
+    padding: 0.3rem 0;
+    font-size: 1.05rem;
+}
+.institutions__image img {
+    width: 100%;
+    border-radius: 1.5rem;
+    background: #eee;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* ===== FORM SECTIONS ===== */
+.form-section {
+    padding: 3rem 0;
+}
+.form-section.institution-form {
+    background: #f5f9ff;
+}
+.form-section .form {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .institutions__inner {
+        grid-template-columns: 1fr;
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .partner-hero__stat strong {
+        font-size: 2rem;
+    }
+}
+
+/* ===== SUPPORT HERO ===== */
+.support-hero__tagline {
+    font-size: 1.4rem;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+}
+
+/* ===== BARRE DE PROGRESSION ===== */
+.progress-section {
+    padding: 2rem 0 3rem 0;
+}
+.progress-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #eef3fc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.progress-stat .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+}
+.progress-stat .stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+.progress-bar-container {
+    background: #eef3fc;
+    border-radius: 2rem;
+    height: 24px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4285F4, #6aa2f7);
+    border-radius: 2rem;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+.progress-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+.progress-cta {
+    text-align: center;
+}
+.btn--large {
+    padding: 0.9rem 3rem;
+    font-size: 1.2rem;
+}
+
+/* ===== VENTILATION ===== */
+.breakdown-section {
+    padding: 3rem 0;
+    background: #f8fbff;
+}
+.breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.breakdown-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid #eef3fc;
+    position: relative;
+}
+.breakdown-emoji {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.breakdown-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.breakdown-item p {
+    font-size: 0.95rem;
+    color: #555;
+}
+.breakdown-amount {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background: #4285F4;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.2rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+}
+
+/* ===== PALIERS ===== */
+.tiers-section {
+    padding: 3rem 0;
+}
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.tier-card {
+    background: #fff;
+    padding: 1.8rem 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    transition: 0.3s;
+}
+.tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(66,133,244,0.08);
+}
+.tier-card.featured {
+    border-color: #4285F4;
+    background: #f8fbff;
+}
+.tier-amount {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4285F4;
+    margin-bottom: 0.5rem;
+}
+.tier-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.tier-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ===== DÉDUCTION FISCALE ===== */
+.tax-section {
+    padding: 3rem 0;
+    background: #f5f9ff;
+}
+.tax-card {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border-left: 6px solid #4285F4;
+}
+.tax-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.tax-example {
+    background: #eef6ff;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+}
+.tax-example p {
+    margin: 0.2rem 0;
+}
+.tax-note {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+/* ===== DONATE ===== */
+.donate-section {
+    padding: 3rem 0;
+}
+.donate-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.donate-buttons {
+    text-align: center;
+}
+.donate-helper {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+.donate-alternative {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.donate-alternative a {
+    color: #4285F4;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    .progress-stats {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+    .progress-stat .stat-value {
+        font-size: 1.4rem;
+    }
+    .breakdown-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .tiers-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    .tax-card {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devenir partenaire · GDG Marseille</title>
+    <meta name="description" content="Soutenez la communauté tech de Marseille. Offres de partenariat Bronze, Silver, Gold pour entreprises et institutions." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-gdg-marseille.svg" alt="GDG Marseille" width="160" />
+            </a>
+            <nav class="nav" aria-label="Navigation principale">
+                <ul class="nav__list">
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="nous-rejoindre.html">Nous rejoindre</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="devenir-partenaire.html" class="active">Devenir partenaire</a></li>
+                    <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+                    <li><a href="dashboard-besoins.html">Dashboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav__toggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO B2B ===== -->
+        <section class="page-hero partner-hero">
+            <div class="container">
+                <h1>Devenir partenaire</h1>
+                <p class="partner-hero__stat">
+                    <strong>71%</strong> des entreprises tech françaises ne trouvent pas les profils dont elles ont besoin.
+                </p>
+                <p>Le GDG Marseille change ça. Soutenez la communauté et recrutez les talents de demain.</p>
+            </div>
+        </section>
+
+        <!-- ===== 3 NIVEAUX DE PARTENARIAT ===== -->
+        <section class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">Choisissez votre niveau d'engagement</h2>
+                <div class="pricing-grid">
+
+                    <!-- BRONZE -->
+                    <div class="pricing-card">
+                        <h3>Bronze</h3>
+                        <p class="pricing-price">500 € <span>/ an</span></p>
+                        <ul class="pricing-features">
+                            <li>✅ Logo sur le site (page partenaires)</li>
+                            <li>✅ 1 mention sur les réseaux sociaux</li>
+                            <li>✅ Accès aux événements (2 invitations)</li>
+                        </ul>
+                        <a href="#partner-form" class="btn btn--outline">Je suis intéressé</a>
+                    </div>
+
+                    <!-- SILVER -->
+                    <div class="pricing-card featured">
+                        <span class="pricing-badge">Recommandé</span>
+                        <h3>Silver</h3>
+                        <p class="pricing-price">1 200 € <span>/ an</span></p>
+                        <ul class="pricing-features">
+                            <li>✅ Tous les avantages Bronze</li>
+                            <li>✅ Logo + stand à un événement</li>
+                            <li>✅ 2 mentions sur les réseaux sociaux</li>
+                            <li>✅ 5 invitations événements</li>
+                            <li>✅ Newsletter dédiée (1 envoi)</li>
+                        </ul>
+                        <a href="#partner-form" class="btn btn--primary">Je suis intéressé</a>
+                    </div>
+
+                    <!-- GOLD -->
+                    <div class="pricing-card">
+                        <h3>Gold</h3>
+                        <p class="pricing-price">2 500 € <span>/ an</span></p>
+                        <ul class="pricing-features">
+                            <li>✅ Tous les avantages Silver</li>
+                            <li>✅ Prise de parole lors d'un événement</li>
+                            <li>✅ Contenu dédié sur le site</li>
+                            <li>✅ Accès privilégié au réseau membres</li>
+                            <li>✅ 10 invitations événements</li>
+                            <li>✅ Logo sur les communications de l'association</li>
+                        </ul>
+                        <a href="#partner-form" class="btn btn--outline">Je suis intéressé</a>
+                    </div>
+
+                </div>
+
+                <!-- Mention fiscale entreprises -->
+                <p class="pricing-tax-note">
+                    💰 <strong>Déduction fiscale possible</strong> (statut d'intérêt général en cours) — renseignez-vous auprès de votre service comptable.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== SECTION INSTITUTIONS / ÉLUS ===== -->
+        <section class="institutions-section">
+            <div class="container">
+                <div class="institutions__inner">
+                    <div class="institutions__text">
+                        <h2>🏛️ Vous êtes une institution ou un élu ?</h2>
+                        <p>
+                            Notre approche est différente. Pas de tarif, un <strong>partenariat stratégique</strong> 
+                            pour co-construire la donnée territoriale, soutenir l'innovation locale et 
+                            faire rayonner Marseille comme pôle tech d'excellence.
+                        </p>
+                        <ul class="institutions__benefits">
+                            <li>🤝 Soutien institutionnel et relais communication</li>
+                            <li>📊 Co-construction de données territoriales</li>
+                            <li>🏙️ Participation aux événements majeurs</li>
+                        </ul>
+                        <a href="#institution-form" class="btn btn--primary">Prendre contact</a>
+                    </div>
+                    <div class="institutions__image">
+                        <img src="assets/img/placeholder-institution.jpg" alt="Marseille institution" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FORMULAIRE ENTREPRISES ===== -->
+        <section class="form-section" id="partner-form">
+            <div class="container">
+                <h2 class="section-title">📩 Demande de partenariat (entreprises)</h2>
+                <form class="form" id="formPartner">
+                    <div class="form-group">
+                        <label for="partner_nom">Nom de l'entreprise *</label>
+                        <input type="text" id="partner_nom" name="entreprise" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="partner_contact">Votre nom et prénom *</label>
+                        <input type="text" id="partner_contact" name="contact" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="partner_email">Email professionnel *</label>
+                        <input type="email" id="partner_email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="partner_phone">Téléphone</label>
+                        <input type="tel" id="partner_phone" name="phone" />
+                    </div>
+                    <div class="form-group">
+                        <label for="partner_niveau">Niveau d'intérêt *</label>
+                        <select id="partner_niveau" name="niveau" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="surmesure">Sur-mesure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="partner_message">Message (optionnel)</label>
+                        <textarea id="partner_message" name="message" rows="3" placeholder="Vos attentes, vos objectifs, votre secteur..."></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="partner_rgpd" name="rgpd" required />
+                        <label for="partner_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Envoyer ma demande</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== FORMULAIRE INSTITUTIONS ===== -->
+        <section class="form-section institution-form" id="institution-form">
+            <div class="container">
+                <h2 class="section-title">🏛️ Prise de contact — Institutions / Élus</h2>
+                <form class="form" id="formInstitution">
+                    <div class="form-group">
+                        <label for="inst_nom">Institution / Collectivité *</label>
+                        <input type="text" id="inst_nom" name="institution" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="inst_contact">Votre nom et fonction *</label>
+                        <input type="text" id="inst_contact" name="contact" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="inst_email">Email *</label>
+                        <input type="email" id="inst_email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="inst_message">Votre message *</label>
+                        <textarea id="inst_message" name="message" rows="4" placeholder="Votre projet, vos attentes, comment nous pourrions collaborer..." required></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="inst_rgpd" name="rgpd" required />
+                        <label for="inst_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Envoyer ma demande</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <img src="assets/img/logo-gdg-marseille-white.svg" alt="GDG Marseille" width="140" />
+                <p>© 2026 GDG Marseille — Association loi 1901</p>
+            </div>
+            <div class="footer__col">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Suivez-nous</h4>
+                <ul class="footer__socials">
+                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Discord">Discord</a></li>
+                    <li><a href="#" aria-label="Meetup">Meetup</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // --- FORMULAIRE PARTENAIRES ---
+            const partnerForm = document.getElementById('formPartner');
+            if (partnerForm) {
+                partnerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('✅ Demande de partenariat envoyée (simulation). L\'équipe vous contactera sous 72h.');
+                    this.reset();
+                });
+            }
+
+            // --- FORMULAIRE INSTITUTIONS ---
+            const instForm = document.getElementById('formInstitution');
+            if (instForm) {
+                instForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('✅ Prise de contact institutionnelle envoyée (simulation). Un membre de l\'équipe vous répondra.');
+                    this.reset();
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>

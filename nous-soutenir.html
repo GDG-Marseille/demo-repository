@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nous soutenir · GDG Marseille</title>
+    <meta name="description" content="Soutenez la communauté tech de Marseille. Faites un don et bénéficiez d'une déduction fiscale." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-gdg-marseille.svg" alt="GDG Marseille" width="160" />
+            </a>
+            <nav class="nav" aria-label="Navigation principale">
+                <ul class="nav__list">
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="nous-rejoindre.html">Nous rejoindre</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="devenir-partenaire.html">Devenir partenaire</a></li>
+                    <li><a href="nous-soutenir.html" class="active">Nous soutenir</a></li>
+                    <li><a href="dashboard-besoins.html">Dashboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav__toggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="page-hero support-hero">
+            <div class="container">
+                <h1>💙 Nous soutenir</h1>
+                <p class="support-hero__tagline">
+                    Vous croyez en une tech marseillaise forte ? Aidez-nous à la construire.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== BARRE DE PROGRESSION ===== -->
+        <section class="progress-section">
+            <div class="container">
+                <div class="progress-card">
+                    <div class="progress-stats">
+                        <div class="progress-stat">
+                            <span class="stat-label">Objectif annuel</span>
+                            <span class="stat-value">10 000 €</span>
+                        </div>
+                        <div class="progress-stat">
+                            <span class="stat-label">Déjà collecté</span>
+                            <span class="stat-value" id="collectedAmount">4 250 €</span>
+                        </div>
+                        <div class="progress-stat">
+                            <span class="stat-label">Progression</span>
+                            <span class="stat-value" id="progressPercent">42.5 %</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="progressFill" style="width: 42.5%;"></div>
+                    </div>
+                    <p class="progress-note">
+                        🔄 Mise à jour manuelle par l'équipe — les dons sont reversés intégralement à l'association.
+                    </p>
+                    <div class="progress-cta">
+                        <a href="#donate" class="btn btn--primary btn--large">Je donne maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VENTILATION PAR POSTE ===== -->
+        <section class="breakdown-section">
+            <div class="container">
+                <h2 class="section-title">À quoi sert chaque euro ?</h2>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <span class="breakdown-emoji">🍕</span>
+                        <h3>Pizzas & boissons</h3>
+                        <p>Pour nos <strong>Pizza & Code</strong> mensuels. Une pizza = un sourire et du code.</p>
+                        <span class="breakdown-amount">35 %</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-emoji">🖨️</span>
+                        <h3>Impressions & goodies</h3>
+                        <p>Flyers, posters, badges, stickers... pour faire rayonner l'événement.</p>
+                        <span class="breakdown-amount">20 %</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-emoji">🎤</span>
+                        <h3>Matériel atelier</h3>
+                        <p>Micros, vidéoprojecteurs, équipement pour les talks et démos.</p>
+                        <span class="breakdown-amount">25 %</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-emoji">📡</span>
+                        <h3>Communication</h3>
+                        <p>Réseaux, site web, newsletters pour toucher toute la communauté.</p>
+                        <span class="breakdown-amount">20 %</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PALIERS DE DON ===== -->
+        <section class="tiers-section">
+            <div class="container">
+                <h2 class="section-title">🎁 Paliers de don — vos contreparties</h2>
+                <div class="tiers-grid">
+
+                    <div class="tier-card">
+                        <span class="tier-amount">10 €</span>
+                        <h3>☕ Café Pizza & Code</h3>
+                        <p>Un café offert lors du prochain événement. De quoi commencer la soirée en douceur.</p>
+                    </div>
+
+                    <div class="tier-card featured">
+                        <span class="tier-amount">50 €</span>
+                        <h3>🖼️ Impressions événement</h3>
+                        <p>Votre nom apparaît sur les supports imprimés d'un événement (flyer, programme).</p>
+                    </div>
+
+                    <div class="tier-card">
+                        <span class="tier-amount">200 €</span>
+                        <h3>🔧 Matériel atelier</h3>
+                        <p>Votre don finance du matériel pour nos ateliers pratiques (capteurs, kits Arduino, etc.).</p>
+                    </div>
+
+                    <div class="tier-card">
+                        <span class="tier-amount">500 €</span>
+                        <h3>🏆 Sponsor d'un événement</h3>
+                        <p>Votre logo en bannière sur un événement majeur (DevFest ou GDG Connect).</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DÉDUCTION FISCALE ===== -->
+        <section class="tax-section">
+            <div class="container">
+                <div class="tax-card">
+                    <h2>📉 66 % de réduction d'impôt</h2>
+                    <p>
+                        En tant qu'association loi 1901 reconnue d'intérêt général, 
+                        vos dons sont éligibles à la <strong>déduction fiscale</strong> de <strong>66 %</strong> 
+                        du montant versé (dans la limite de 20 % de votre revenu imposable).
+                    </p>
+                    <div class="tax-example">
+                        <p><strong>Exemple concret :</strong></p>
+                        <p>Un don de <strong>100 €</strong> ne vous coûte réellement que <strong>34 €</strong> 
+                        après déduction fiscale. 💡</p>
+                    </div>
+                    <p class="tax-note">
+                        ⚠️ Statut d'intérêt général en cours d'activation — vérifiez auprès de votre comptable.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BOUTON DE DON HELLOASSO ===== -->
+        <section class="donate-section" id="donate">
+            <div class="container">
+                <h2 class="section-title">💳 Faire un don</h2>
+                <p class="donate-subtitle">Chaque euro compte. Merci pour votre soutien !</p>
+                <div class="donate-buttons">
+                    <a href="#" class="btn btn--primary btn--large" id="helloAssoBtn">
+                        🎯 Donner via HelloAsso
+                    </a>
+                    <p class="donate-helper">
+                        (Bouton à activer après ouverture du compte HelloAsso)
+                    </p>
+                </div>
+                <!-- Alternative directe si HelloAsso n'est pas encore prêt -->
+                <div class="donate-alternative">
+                    <p>Vous préférez un virement ? Contactez-nous à <a href="mailto:contact@gdgmarseille.fr">contact@gdgmarseille.fr</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <img src="assets/img/logo-gdg-marseille-white.svg" alt="GDG Marseille" width="140" />
+                <p>© 2026 GDG Marseille — Association loi 1901</p>
+            </div>
+            <div class="footer__col">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Suivez-nous</h4>
+                <ul class="footer__socials">
+                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Discord">Discord</a></li>
+                    <li><a href="#" aria-label="Meetup">Meetup</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // ===== ANIMATION BARRE DE PROGRESSION =====
+            const progressFill = document.getElementById('progressFill');
+            const percentDisplay = document.getElementById('progressPercent');
+
+            // Simulación: cuando la página carga, la barra se anima desde 0 hasta el valor actual
+            const targetPercent = 42.5; // Cambia este valor manualmente cuando actualices los fondos
+            let currentPercent = 0;
+
+            function animateProgress() {
+                if (currentPercent < targetPercent) {
+                    currentPercent += 0.5;
+                    if (currentPercent > targetPercent) currentPercent = targetPercent;
+                    progressFill.style.width = currentPercent + '%';
+                    percentDisplay.textContent = currentPercent.toFixed(1) + ' %';
+                    requestAnimationFrame(animateProgress);
+                }
+            }
+
+            // Usamos IntersectionObserver para que la animación arranque al hacer scroll
+            const progressCard = document.querySelector('.progress-card');
+            if (progressCard) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateProgress();
+                            observer.disconnect(); // Solo una vez
+                        }
+                    });
+                }, { threshold: 0.3 });
+                observer.observe(progressCard);
+            }
+
+            // ===== BOUTON HELLOASSO (placeholder) =====
+            const helloBtn = document.getElementById('helloAssoBtn');
+            if (helloBtn) {
+                helloBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('🔗 Redirection vers HelloAsso (à activer).\n\nEn attendant, merci pour votre soutien !');
+                });
+            }
+
+        });
+    </script>
+
+</body>
+</html>

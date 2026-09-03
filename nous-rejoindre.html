@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nous rejoindre · GDG Marseille</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ===== HEADER (igual que en index.html) ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-gdg-marseille.svg" alt="GDG Marseille" width="160" />
+            </a>
+            <nav class="nav" aria-label="Navigation principale">
+                <ul class="nav__list">
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="nous-rejoindre.html" class="active">Nous rejoindre</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="devenir-partenaire.html">Devenir partenaire</a></li>
+                    <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+                    <li><a href="dashboard-besoins.html">Dashboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav__toggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO DE LA PÁGINA ===== -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Nous rejoindre</h1>
+                <p>Il y a plusieurs façons de faire partie de l'aventure GDG Marseille.</p>
+            </div>
+        </section>
+
+        <!-- ===== 1. PARCOURS MEMBRE ===== -->
+        <section class="join-section" id="membre">
+            <div class="container">
+                <h2>👤 Devenir membre</h2>
+                <p>Rejoignez la communauté et participez à tous nos événements. Gratuit et ouvert à tous.</p>
+                <form class="form" id="formMembre">
+                    <div class="form-group">
+                        <label for="membre_prenom">Prénom</label>
+                        <input type="text" id="membre_prenom" name="prenom" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="membre_email">Email</label>
+                        <input type="email" id="membre_email" name="email" required />
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="membre_rgpd" name="rgpd" required />
+                        <label for="membre_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Devenir membre</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== 2. PARCOURS BÉNÉVOLE ===== -->
+        <section class="join-section" id="benevole">
+            <div class="container">
+                <h2>🤝 Devenir bénévole</h2>
+                <p>Vous avez du temps et des compétences à offrir ? Rejoignez l'équipe organisatrice.</p>
+                <form class="form" id="formBenevole">
+                    <div class="form-group">
+                        <label for="bene_nom">Nom complet</label>
+                        <input type="text" id="bene_nom" name="nom" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="bene_email">Email</label>
+                        <input type="email" id="bene_email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="bene_profil">Votre profil / compétences</label>
+                        <textarea id="bene_profil" name="profil" rows="3" placeholder="Ex: développeur, community manager, designer..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="bene_dispo">Disponibilités</label>
+                        <input type="text" id="bene_dispo" name="dispo" placeholder="Soir, week-end, flexible..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="bene_motivation">Pourquoi voulez-vous nous aider ?</label>
+                        <textarea id="bene_motivation" name="motivation" rows="3"></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="bene_rgpd" name="rgpd" required />
+                        <label for="bene_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Postuler comme bénévole</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== 3. PARCOURS SPEAKER ===== -->
+        <section class="join-section" id="speaker">
+            <div class="container">
+                <h2>🎤 Proposer un talk / atelier</h2>
+                <p>Vous avez une expertise à partager ? Soumettez votre proposition.</p>
+                <form class="form" id="formSpeaker">
+                    <div class="form-group">
+                        <label for="speaker_nom">Prénom et Nom</label>
+                        <input type="text" id="speaker_nom" name="nom" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="speaker_email">Email</label>
+                        <input type="email" id="speaker_email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="speaker_titre">Titre du talk / atelier</label>
+                        <input type="text" id="speaker_titre" name="titre" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="speaker_bio">Bio courte (max 300 caractères)</label>
+                        <textarea id="speaker_bio" name="bio" maxlength="300" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Proposer mon talk</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== 4. CALL FOR PAPERS (COMPLETO) ===== -->
+        <section class="join-section cfp" id="cfp">
+            <div class="container">
+                <h2>📢 Call for Papers</h2>
+                <p>Soumettez votre conférence complète pour nos prochains événements.</p>
+                <form class="form" id="formCFP">
+                    <!-- Nom et Email -->
+                    <div class="form-group">
+                        <label for="cfp_nom">Prénom et Nom *</label>
+                        <input type="text" id="cfp_nom" name="nom" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cfp_email">Email *</label>
+                        <input type="email" id="cfp_email" name="email" required />
+                    </div>
+
+                    <!-- Titre du talk -->
+                    <div class="form-group">
+                        <label for="cfp_titre">Titre du talk / atelier *</label>
+                        <input type="text" id="cfp_titre" name="titre" required />
+                    </div>
+
+                    <!-- Format -->
+                    <div class="form-group">
+                        <label for="cfp_format">Format *</label>
+                        <select id="cfp_format" name="format" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="conf30">Conférence (30 min)</option>
+                            <option value="conf45">Conférence (45 min)</option>
+                            <option value="atelier1h">Atelier (1h)</option>
+                            <option value="lightning">Lightning Talk (10 min)</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <!-- Niveau -->
+                    <div class="form-group">
+                        <label for="cfp_niveau">Niveau *</label>
+                        <select id="cfp_niveau" name="niveau" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="debutant">Débutant</option>
+                            <option value="intermediaire">Intermédiaire</option>
+                            <option value="avance">Avancé</option>
+                        </select>
+                    </div>
+
+                    <!-- Thématique -->
+                    <div class="form-group">
+                        <label for="cfp_theme">Thématique principale *</label>
+                        <select id="cfp_theme" name="theme" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="web">Web</option>
+                            <option value="mobile">Mobile</option>
+                            <option value="cloud">Cloud</option>
+                            <option value="ia">IA & Machine Learning</option>
+                            <option value="cyber">Cybersécurité</option>
+                            <option value="devops">DevOps</option>
+                            <option value="data">Data</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <!-- Description (150-500 caracteres) -->
+                    <div class="form-group">
+                        <label for="cfp_description">Description du talk (150 à 500 caractères) *</label>
+                        <textarea id="cfp_description" name="description" minlength="150" maxlength="500" rows="4" required></textarea>
+                        <span class="char-counter"><span id="cfpDescCount">0</span> / 500</span>
+                    </div>
+
+                    <!-- Bio courte -->
+                    <div class="form-group">
+                        <label for="cfp_bio">Bio du speaker (max 300 caractères)</label>
+                        <textarea id="cfp_bio" name="bio" maxlength="300" rows="2"></textarea>
+                        <span class="char-counter"><span id="cfpBioCount">0</span> / 300</span>
+                    </div>
+
+                    <!-- LinkedIn / GitHub -->
+                    <div class="form-group">
+                        <label for="cfp_url">Profil LinkedIn ou GitHub (optionnel)</label>
+                        <input type="url" id="cfp_url" name="url" placeholder="https://linkedin.com/in/..." />
+                    </div>
+
+                    <!-- Déjà présenté ? -->
+                    <div class="form-group">
+                        <label>Avez-vous déjà présenté ce talk ? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="deja_presente" value="oui" required /> Oui</label>
+                            <label><input type="radio" name="deja_presente" value="non" required /> Non</label>
+                        </div>
+                    </div>
+
+                    <!-- Disponibilités -->
+                    <div class="form-group">
+                        <label>Disponibilités</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="dispo" value="soir" /> Soir semaine</label>
+                            <label><input type="checkbox" name="dispo" value="samedi" /> Samedi</label>
+                            <label><input type="checkbox" name="dispo" value="flexible" /> Flexible</label>
+                        </div>
+                    </div>
+
+                    <!-- Co-speaker -->
+                    <div class="form-group">
+                        <label for="cfp_cospeaker">Co-speaker (nom et email, optionnel)</label>
+                        <input type="text" id="cfp_cospeaker" name="cospeaker" placeholder="Jean Dupont - jean@email.com" />
+                    </div>
+
+                    <!-- Message libre -->
+                    <div class="form-group">
+                        <label for="cfp_message">Message libre (optionnel)</label>
+                        <textarea id="cfp_message" name="message" rows="2"></textarea>
+                    </div>
+
+                    <!-- RGPD -->
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="cfp_rgpd" name="rgpd" required />
+                        <label for="cfp_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a> *</label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">Soumettre ma proposition</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== 5. RENVOI ENTREPRISE ===== -->
+        <section class="join-section business-cta">
+            <div class="container">
+                <h2>🏢 Vous êtes une entreprise ?</h2>
+                <p>Devenez partenaire et soutenez la communauté tech marseillaise.</p>
+                <a href="devenir-partenaire.html" class="btn btn--primary">Découvrir les offres partenaires</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (igual que en index.html) ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <img src="assets/img/logo-gdg-marseille-white.svg" alt="GDG Marseille" width="140" />
+                <p>© 2026 GDG Marseille — Association loi 1901</p>
+            </div>
+            <div class="footer__col">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Suivez-nous</h4>
+                <ul class="footer__socials">
+                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Discord">Discord</a></li>
+                    <li><a href="#" aria-label="Meetup">Meetup</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // ===== CONTADOR DE CARACTERES PARA CFP =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const desc = document.getElementById('cfp_description');
+            const descCount = document.getElementById('cfpDescCount');
+            if (desc) {
+                desc.addEventListener('input', function() {
+                    descCount.textContent = this.value.length;
+                });
+            }
+            const bio = document.getElementById('cfp_bio');
+            const bioCount = document.getElementById('cfpBioCount');
+            if (bio) {
+                bio.addEventListener('input', function() {
+                    bioCount.textContent = this.value.length;
+                });
+            }
+
+            // ===== PREVENIR ENVÍO (para simular) =====
+            document.querySelectorAll('.form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Formulaire soumis (simulation). Ici on enverra à Brevo plus tard.');
+                    // Aquí luego conectaremos con Brevo/API
+                });
+            });
+        });
+    </script>
+</body>
+</html>
