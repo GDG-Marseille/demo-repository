@@ -861,3 +861,157 @@ blockquote cite {
         padding: 1.5rem;
     }
 }
+/* ===== A PROPOS ===== */
+.about-section {
+    padding: 3rem 0;
+}
+.about-text {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* ===== MISSION ===== */
+.mission-section {
+    padding: 3rem 0;
+    background: #f8fbff;
+}
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.mission-item {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid #eef3fc;
+}
+.mission-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.mission-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.mission-item p {
+    color: #555;
+}
+
+/* ===== GDG OFFICIAL ===== */
+.gdg-official {
+    padding: 3rem 0;
+}
+.gdg-card {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border-left: 6px solid #4285F4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.gdg-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.gdg-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ===== TEAM ===== */
+.team-section {
+    padding: 3rem 0;
+    background: #fafafa;
+}
+.team-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.team-card {
+    background: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+.team-avatar {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+.team-card h3 {
+    font-size: 1.1rem;
+}
+.team-role {
+    color: #4285F4;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.team-bio {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.3rem;
+}
+.team-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 2rem;
+}
+
+/* ===== PARTNERS ABOUT ===== */
+.partners-about {
+    padding: 3rem 0;
+}
+.partners-about__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.partners-about__logos img {
+    max-height: 60px;
+}
+.partner-more {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4285F4;
+}
+.partners-about__cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
