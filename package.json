@@ -1,9 +1,12 @@
 {
-  "name": "demo-repo",
-  "version": "0.2.0",
-  "description": "A sample package.json",
-  "dependencies": {
-    "@primer/css": "17.0.1"
+  "name": "gdg-marseille-site",
+  "version": "1.0.0",
+  "description": "Site et API pour GDG Marseille",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
 }
