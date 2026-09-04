@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact · GDG Marseille</title>
-    <meta name="description" content="Contactez le GDG Marseille par formulaire, email ou réseaux sociaux." />
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="container header__inner">
             <a href="index.html" class="logo">
@@ -32,21 +31,18 @@
     </header>
 
     <main>
-
-        <!-- ===== HERO ===== -->
         <section class="page-hero">
             <div class="container">
-                <h1>📬 Contact</h1>
-                <p>Une question, une idée, une envie de collaborer ? Écrivez-nous !</p>
+                <h1>Contact</h1>
+                <p>Une question, une idée, une envie de collaborer ? Écrivez-nous.</p>
             </div>
         </section>
 
-        <!-- ===== FORMULAIRE DE CONTACT ===== -->
         <section class="contact-form-section">
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-form">
-                        <h2>Envoyez-nous un message</h2>
+                        <h2>📩 Envoyez-nous un message</h2>
                         <form class="form" id="formContact">
                             <div class="form-group">
                                 <label for="contact_nom">Nom complet *</label>
@@ -58,7 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="contact_sujet">Sujet *</label>
-                                <input type="text" id="contact_sujet" name="sujet" required />
+                                <input type="text" id="contact_sujet" name="sujet" required placeholder="Ex: Partenariat, événement, question..." />
                             </div>
                             <div class="form-group">
                                 <label for="contact_message">Message *</label>
@@ -68,48 +64,46 @@
                                 <input type="checkbox" id="contact_rgpd" name="rgpd" required />
                                 <label for="contact_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
                             </div>
+                            <div class="cf-turnstile" data-sitekey="TU_SITE_KEY"></div>
                             <button type="submit" class="btn btn--primary">Envoyer</button>
                         </form>
                     </div>
                     <div class="contact-info">
-                        <h2>Autres moyens</h2>
-                        <div class="contact-info__item">
+                        <h2>📬 Nos coordonnées</h2>
+                        <div class="contact-item">
                             <span class="contact-icon">✉️</span>
                             <div>
-                                <strong>Email</strong>
+                                <strong>Email</strong><br />
                                 <a href="mailto:contact@gdgmarseille.fr">contact@gdgmarseille.fr</a>
                             </div>
                         </div>
-                        <div class="contact-info__item">
-                            <span class="contact-icon">📱</span>
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
                             <div>
-                                <strong>Réseaux sociaux</strong>
-                                <ul class="contact-socials">
-                                    <li><a href="#" target="_blank">LinkedIn</a></li>
-                                    <li><a href="#" target="_blank">Instagram</a></li>
-                                    <li><a href="#" target="_blank">Discord</a></li>
-                                    <li><a href="#" target="_blank">Meetup</a></li>
-                                </ul>
+                                <strong>Réseaux sociaux</strong><br />
+                                <a href="#" target="_blank">LinkedIn</a> · 
+                                <a href="#" target="_blank">Instagram</a> · 
+                                <a href="#" target="_blank">Discord</a> · 
+                                <a href="#" target="_blank">Meetup</a>
                             </div>
                         </div>
-                        <div class="contact-info__item">
+                        <div class="contact-item">
                             <span class="contact-icon">📍</span>
                             <div>
-                                <strong>Adresse</strong>
-                                <p>Pas de lieu fixe permanent — on se retrouve chez nos partenaires !</p>
+                                <strong>Nous rencontrer</strong><br />
+                                Retrouvez-nous lors de nos événements.<br />
+                                <em>(Pas de lieu fixe en V1)</em>
                             </div>
                         </div>
-                        <div class="contact-info__note">
-                            ⚠️ Pas de carte Google Maps en V1.
+                        <div class="contact-note">
+                            <p>⏱️ Nous répondons dans les 48h ouvrées.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container footer__inner">
             <div class="footer__col">
@@ -137,18 +131,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('formContact');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('✅ Votre message a été envoyé (simulation). L\'équipe vous répondra sous 48h.');
-                    this.reset();
-                });
-            }
-        });
-    </script>
-
 </body>
 </html>
