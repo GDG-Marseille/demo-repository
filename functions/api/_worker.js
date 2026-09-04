@@ -4,19 +4,22 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // Rutas de la API
-    if (path.startsWith('/api/forms/')) {
-      const formType = path.replace('/api/forms/', '');
-      const handler = await import(`./forms/${formType}.js`);
-      return handler.default(request, env);
+    // Mapeo de rutas a módulos (importación dinámica)
+    const routes = {
+      '/api/forms/membre': () => import('./forms/membre.js'),
+      '/api/forms/cfp': () => import('./forms/cfp.js'),
+      '/api/forms/contact': () => import('./forms/contact.js'),
+      '/api/bevy/members': () => import('./bevy/members.js'),
+    };
+
+    for (const [route, importer] of Object.entries(routes)) {
+      if (path === route) {
+        const module = await importer();
+        return module.default(request, env);
+      }
     }
 
-    if (path === '/api/bevy/members') {
-      const handler = await import('./bevy/members.js');
-      return handler.default(request, env);
-    }
-
-    // Si no coincide, devolver 404
+    // Si la ruta no existe, devolver 404
     return new Response('Not Found', { status: 404 });
   }
 };
