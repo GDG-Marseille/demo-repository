@@ -1122,3 +1122,131 @@ blockquote cite {
         min-height: 600px;
     }
 }
+
+/* ===== CE QU'ON FAIT ENSEMBLE ===== */
+.what-we-do {
+    padding: 3rem 0;
+    background: #f8fbff;
+}
+.what-we-do .section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #555;
+}
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+.what-item {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #eef3fc;
+}
+.what-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.what-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.what-item p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ===== HEADER : botones de acción ===== */
+.nav__actions {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+.btn--small {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .nav__actions {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .nav__actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ===== CE QU'ON FAIT ENSEMBLE ===== */
+.what-we-do {
+    padding: 3rem 0;
+    background: #f8fbff;
+}
+.what-we-do .section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #555;
+}
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+.what-item {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #eef3fc;
+}
+.what-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.what-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.what-item p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+
+.brand-google-phrase {
+    background: linear-gradient(90deg, #4285F4 0%, #EA4335 35%, #FBBC05 65%, #34A853 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+/* ===== HEADER : botones de acción ===== */
+.nav__actions {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+.btn--small {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .nav__actions {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .nav__actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
