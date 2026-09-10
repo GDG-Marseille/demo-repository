@@ -1,26 +1,27 @@
-// ===== CARGAR HEADER REUTILIZABLE =====
-document.addEventListener("DOMContentLoaded", function() {
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        fetch('header.html')
-            .then(response => {
-                if (!response.ok) throw new Error('No se pudo cargar el header');
-                return response.text();
-            })
-            .then(data => {
-                headerContainer.innerHTML = data;
-                
-                // IMPORTANTE: Como el menú se carga dinámicamente de forma asíncrona,
-                // inicializamos el menú móvil AQUÍ DENTRO para que detecte el botón recién cargado.
-                initMobileMenu();
-            })
-            .catch(error => console.error('Error al cargar la cabecera:', error));
-    } else {
-        // Si por alguna razón la página ya tiene el header escrito en el HTML (como index.html)
-        initMobileMenu();
+// ===== CARGAR HEADER Y FOOTER REUTILIZABLES =====
+document.addEventListener("DOMContentLoaded", async () => {
+    async function loadComponent(id, file) {
+        const container = document.getElementById(id);
+        if (container) {
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    container.innerHTML = await response.text();
+                } else {
+                    console.error(`Erreur lors du chargement de ${file}: ${response.status}`);
+                }
+            } catch (error) {
+                console.error(`Erreur réseau pour ${file}:`, error);
+            }
+        }
     }
-});
 
+    // Cargar header y footer EN PARALELO (uno no bloquea al otro)
+    await Promise.all([
+        loadComponent('header-container', 'header.html'),
+        loadComponent('footer-container', 'footer.html')
+    ]);
+});
 // ===== MENÚ MÓVIL (Movido a una función para reutilizarla) =====
 function initMobileMenu() {
     const toggleBtn = document.querySelector('.nav__toggle');
