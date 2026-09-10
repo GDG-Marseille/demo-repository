@@ -1250,3 +1250,135 @@ blockquote cite {
         text-align: center;
     }
 }
+/* ===== AJUSTES ESPECÍFICOS PARA EL GRID "CE QU'ON FAIT ENSEMBLE" ===== */
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .what-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.what-item {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    border: 1px solid #eef3fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ===== SECCIÓN "CE QU'ON FAIT ENSEMBLE" (GRID DE RECTÁNGULOS) ===== */
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .what-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo base de cada rectángulo tarjeta */
+.what-item {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ===== GRID ASIMÉTRICO (2/3 y 1/3) PARA "CE QU'ON FAIT ENSEMBLE" ===== */
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .what-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo base de los rectángulos */
+.what-item {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Tarjeta grande que ocupa 2 de las 3 columnas (aprox. 2/3 del ancho) */
+.what-item--large {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.what-item--large .what-content {
+    flex: 1;
+}
+
+.what-media {
+    flex: 1;
+    height: 100%;
+    min-height: 180px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.what-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+}
+
+/* Tarjeta pequeña que ocupa 1 columna (aprox. 1/3 del ancho) */
+.what-item--small {
+    grid-column: span 1;
+}
+
+/* Adaptación para pantallas pequeñas / móviles */
+@media (max-width: 900px) {
+    .what-item--large,
+    .what-item--small {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+}
+
+/* Cajas de iconos */
+.what-icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.blue-bg { background: #eef3fc; }
+.green-bg { background: #e6f4ea; }
+.red-bg { background: #fce8e6; }
+.yellow-bg { background: #fef7e0; }
