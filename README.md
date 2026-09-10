@@ -1,3 +1,4 @@
+
 # GDG Marseille — Site web officiel
 
 La communauté tech de Marseille, propulsée par Google.
@@ -38,3 +39,13 @@ Association loi 1901, nous fédérons développeurs, étudiants et entreprises a
 ---
 
 © 2026 GDG Marseille — Association loi 1901
+
+
+
+
+
+TO TRY IT: 
+python -m http.server 8000
+http://localhost:8000/index.html
+
+

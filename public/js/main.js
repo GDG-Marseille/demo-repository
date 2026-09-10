@@ -1,15 +1,42 @@
-// ===== MENÚ MÓVIL =====
-document.addEventListener('DOMContentLoaded', function() {
+// ===== CARGAR HEADER REUTILIZABLE =====
+document.addEventListener("DOMContentLoaded", function() {
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) throw new Error('No se pudo cargar el header');
+                return response.text();
+            })
+            .then(data => {
+                headerContainer.innerHTML = data;
+                
+                // IMPORTANTE: Como el menú se carga dinámicamente de forma asíncrona,
+                // inicializamos el menú móvil AQUÍ DENTRO para que detecte el botón recién cargado.
+                initMobileMenu();
+            })
+            .catch(error => console.error('Error al cargar la cabecera:', error));
+    } else {
+        // Si por alguna razón la página ya tiene el header escrito en el HTML (como index.html)
+        initMobileMenu();
+    }
+});
+
+// ===== MENÚ MÓVIL (Movido a una función para reutilizarla) =====
+function initMobileMenu() {
     const toggleBtn = document.querySelector('.nav__toggle');
     const navList = document.querySelector('.nav__list');
     if (toggleBtn && navList) {
-        toggleBtn.addEventListener('click', function() {
+        // Evitamos duplicar event listeners si se llama varias veces
+        toggleBtn.replaceWith(toggleBtn.cloneNode(true));
+        const newToggleBtn = document.querySelector('.nav__toggle');
+
+        newToggleBtn.addEventListener('click', function() {
             const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
             this.setAttribute('aria-expanded', expanded);
             navList.classList.toggle('open');
         });
     }
-});
+}
 
 // ===== CONTADOR DE MIEMBROS (desde Bevy) =====
 async function fetchMemberCount() {
@@ -19,7 +46,6 @@ async function fetchMemberCount() {
         const data = await response.json();
         const counterEl = document.getElementById('memberCounter');
         if (counterEl && data.count !== undefined) {
-            // Animación simple
             let current = 0;
             const target = data.count;
             const step = Math.ceil(target / 60);
@@ -35,7 +61,6 @@ async function fetchMemberCount() {
         }
     } catch (error) {
         console.error('Error al cargar el contador:', error);
-        // Fallback: mostrar 0 o un valor por defecto
         const counterEl = document.getElementById('memberCounter');
         if (counterEl) counterEl.textContent = '0';
     }
@@ -51,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Deshabilitar el botón para evitar doble envío
             const submitBtn = this.querySelector('button[type="submit"]');
             if (submitBtn) {
                 submitBtn.disabled = true;
@@ -59,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const formData = new FormData(this);
-            // Determinar el endpoint según el ID del formulario
             let endpoint = '/api/forms/';
             if (this.id === 'formMembre') endpoint += 'membre';
             else if (this.id === 'formCFP') endpoint += 'cfp';
@@ -70,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (this.id === 'formPartner') endpoint += 'partner';
             else if (this.id === 'formInstitution') endpoint += 'institution';
             else {
-                // Si no coincide, usar el ID como fallback
                 endpoint += this.id.replace('form', '').toLowerCase();
             }
 
@@ -83,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (result.success) {
                     alert('✅ Envoi réussi !');
                     this.reset();
-                    // Resetear Turnstile (si existe)
                     if (window.turnstile) {
                         const widget = this.querySelector('.cf-turnstile');
                         if (widget) turnstile.reset(widget);
@@ -101,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('❌ Erreur réseau. Vérifiez votre connexion.');
                 console.error(err);
             } finally {
-                // Rehabilitar el botón
                 if (submitBtn) {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Envoyer';
