@@ -1382,3 +1382,47 @@ blockquote cite {
 .green-bg { background: #e6f4ea; }
 .red-bg { background: #fce8e6; }
 .yellow-bg { background: #fef7e0; }
+
+/* Estilos para los botones de colores en "3 façons de nous rejoindre" */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+.full-width {
+    display: block;
+    width: 100%;
+}
+
+/* Botón Azul */
+.btn--blue {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+.btn--blue:hover {
+    background-color: #2563eb;
+}
+
+/* Botón Amarillo */
+.btn--yellow {
+    background-color: #fbbf24;
+    color: #1f2937;
+}
+.btn--yellow:hover {
+    background-color: #f59e0b;
+}
+
+/* Botón Verde */
+.btn--green {
+    background-color: #22c55e;
+    color: #ffffff;
+}
+.btn--green:hover {
+    background-color: #16a34a;
+}
