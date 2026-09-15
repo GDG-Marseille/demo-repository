@@ -2490,3 +2490,617 @@ blockquote cite {
     border-color: #ffffff;
     transform: translateY(-2px);
 }
+
+/* ==========================================================
+   CSS COMPLETO Y EXCLUSIVO PARA DEVENIR-PARTENAIRE.HTML
+   ================================================---------- */
+
+/* 1. HERO B2B CON IMAGEN DE FONDO */
+.partner-hero-image {
+    position: relative;
+    background: url('../assets/img/community-meetup.jpg') no-repeat center center/cover;
+    padding: 12rem 0 8rem 0;
+    color: #ffffff;
+    text-align: left;
+}
+
+.partner-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partner-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.partner-hero-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fbc02d;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.partner-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+}
+
+.partner-hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 2.5rem;
+    max-width: 750px;
+}
+
+.partner-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-blue-rounded {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+.btn-blue-rounded:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* 2. BARRA DE 4 ESTADÍSTICAS BAJO EL HERO */
+.partner-stats-bar {
+    background-color: #ffffff;
+    padding: 3rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.partner-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+@media(max-width: 900px) {
+    .partner-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.partner-stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.partner-stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.blue-num { color: #3b82f6; }
+.red-num { color: #ef4444; }
+.green-num { color: #10b981; }
+.yellow-num { color: #f59e0b; }
+
+.partner-stat-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* 3. SECCIÓN PORQUÉ ASOCIARSE */
+.partner-why-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.partner-why-header-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.partner-why-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media(max-width: 900px) {
+    .partner-why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.partner-why-text h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+}
+
+.partner-why-text > p {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.partner-benefit-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.b-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+.blue-b { background: #eff6ff; color: #3b82f6; }
+.green-b { background: #f0fdf4; color: #10b981; }
+.red-b { background: #fef2f2; color: #ef4444; }
+
+.partner-benefit-row h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.2rem;
+}
+
+.partner-benefit-row p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.partner-why-visual {
+    position: relative;
+}
+
+.why-main-photo {
+    width: 100%;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    object-fit: cover;
+    height: 420px;
+}
+
+/* 4. 4 NIVELES DE SPONSORING (PRECIOS) */
+.pricing-section {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.section-main-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.section-main-subtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin-bottom: 4rem;
+}
+
+.pricing-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+@media(max-width: 1100px) {
+    .pricing-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 650px) {
+    .pricing-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tarjetas claras (Bronze, Silver, Gold) */
+.pricing-card-clean {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    padding: 2.5rem 1.8rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.card-tier-name {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #64748b;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.price-val {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2rem;
+}
+
+.price-sub {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+.price-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    flex-grow: 1;
+}
+
+.price-features-list li {
+    font-size: 0.85rem;
+    color: #475569;
+    margin-bottom: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1.4;
+}
+
+.check-icon {
+    flex-shrink: 0;
+}
+
+/* Tarjeta Gold (Popular) */
+.popular-card {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+}
+
+.popular-pill {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3b82f6;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-card-outline {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn-card-outline:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.btn-card-primary {
+    background: #3b82f6;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+.btn-card-primary:hover {
+    background: #2563eb;
+}
+
+/* Tarjeta Platinum (Oscura) */
+.pricing-card-dark {
+    background: #111827;
+    border-radius: 1.25rem;
+    padding: 2.5rem 1.8rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.platinum-tag {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fbc02d;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.price-val-dark {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.price-features-dark {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    flex-grow: 1;
+}
+
+.price-features-dark li {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 1.1rem;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.star-icon {
+    color: #fbc02d;
+}
+
+.btn-card-yellow {
+    background: #fbc02d;
+    color: #0f172a;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn-card-yellow:hover {
+    background: #f59e0b;
+}
+
+/* 5. SECCIÓN CONFIANZA */
+.trust-section {
+    padding: 4rem 0;
+    background-color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.trust-title-small {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.trust-logos-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.trust-logo-txt {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+/* 6. FORMULARIO B2B HÍBRIDO INFERIOR */
+.b2b-contact-section {
+    padding: 6rem 0;
+    background-color: #3b82f6; /* Fondo azul exterior de la sección de contacto */
+}
+
+.b2b-contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media(max-width: 900px) {
+    .b2b-contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.b2b-form-side {
+    padding: 3.5rem;
+}
+
+.b2b-form-side h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.b2b-subtext {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.b2b-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media(max-width: 600px) {
+    .b2b-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.b2b-form-side .form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.b2b-form-side label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 0.4rem;
+}
+
+.b2b-form-side input,
+.b2b-form-side textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: #0f172a;
+    background-color: #f8fafc;
+    font-family: inherit;
+}
+
+.b2b-form-side input:focus,
+.b2b-form-side textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #ffffff;
+}
+
+.btn-submit-blue {
+    background-color: #3b82f6;
+    color: #ffffff;
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.btn-submit-blue:hover {
+    background-color: #2563eb;
+}
+
+/* Lado derecho del formulario (Fondo oscuro) */
+.b2b-info-side {
+    background-color: #111827;
+    padding: 3.5rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.b2b-info-side h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.b2b-contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.b2b-icon {
+    font-size: 1.2rem;
+}
+
+.b2b-testimonial-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+.b2b-testimonial-box p {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.testimonial-author {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fbc02d;
+    display: block;
+}
