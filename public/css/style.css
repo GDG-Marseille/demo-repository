@@ -4106,3 +4106,459 @@ body {
 .social-links-row a:hover {
     color: #ffffff;
 }
+
+/* ==========================================================
+   GDG MARSEILLE - STYLESHEET (NOUS-SOUTENIR)
+   ================================================---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.support-page-body {
+    background-color: #fbfbfd;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-blue-accent { color: #3b82f6; }
+.text-center { text-align: center; }
+
+/* Botones genéricos */
+.btn-pill-blue {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: background 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+.btn-pill-blue:hover { background: #2563eb; }
+
+/* ==========================================================
+   1. HERO SECTION & PROGRESS CARD (2 Columnas)
+   ================================================---------- */
+.support-hero-section {
+    padding: 5rem 0 4rem 0;
+}
+
+.support-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-tag-pill {
+    display: inline-block;
+    background: #eff6ff;
+    color: #3b82f6;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.support-hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1e293b;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+}
+
+.support-hero-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Tarjeta de Progreso del Hero */
+.support-progress-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.progress-info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+}
+
+.progress-values-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.progress-collected {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+.progress-collected small {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.progress-target {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.progress-bar-track {
+    width: 100%;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+.progress-footer-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.progress-footer-row svg { color: #3b82f6; }
+
+/* Imagen de la derecha del Hero */
+.support-hero-image img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================
+   2. VENTILATION PAR POSTE (4 Columnas)
+   ================================================---------- */
+.breakdown-section {
+    padding: 4rem 0;
+}
+
+.section-title-center {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.section-title-center h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+.section-title-center p {
+    color: #64748b;
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.breakdown-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.breakdown-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.breakdown-icon-box {
+    width: 44px;
+    height: 44px;
+    background: #eff6ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.breakdown-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.breakdown-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   3. DÉDUCTION FISCALE (Banner Oscuro)
+   ================================================---------- */
+.tax-deduction-section {
+    padding: 2rem 0 4rem 0;
+}
+
+.tax-banner-box {
+    background: #111827;
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+}
+
+.tax-banner-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.tax-icon-circle {
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.tax-banner-left h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.tax-banner-left p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.tax-banner-right {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.2rem 2rem;
+    text-align: center;
+}
+
+.tax-card-small-title {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.tax-calc-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tax-initial strong, .tax-final strong {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.tax-initial span, .tax-final span {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+.tax-final strong { color: #22c55e; }
+
+.tax-arrow {
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+
+/* ==========================================================
+   4. CHOISISSEZ VOTRE IMPACT (3 Tiers / Packs)
+   ================================================---------- */
+.tiers-impact-section {
+    padding: 4rem 0 5rem 0;
+}
+
+.tiers-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.tier-card-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tier-card-popular {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+}
+
+.popular-badge-pill {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3b82f6;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+}
+
+.tier-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.tier-card-box h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+}
+
+.tier-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 1.5rem;
+}
+.tier-price small {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.tier-features-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.tier-features-list li {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 0.8rem;
+}
+
+.check-icon {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.btn-tier-outline, .btn-tier-solid {
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s;
+}
+
+.btn-tier-outline {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+}
+.btn-tier-outline:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.btn-tier-solid {
+    background: #3b82f6;
+    color: #ffffff;
+}
+.btn-tier-solid:hover {
+    background: #2563eb;
+}
+
+/* ==========================================================
+   5. FINAL DONATE SECTION
+   ================================================---------- */
+.final-donate-section {
+    padding: 3rem 0 6rem 0;
+}
+
+.final-donate-subtitle {
+    color: #64748b;
+    font-size: 1.05rem;
+    max-width: 550px;
+    margin: 0.5rem auto 2.5rem auto;
+}
+
+.trust-badges-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
