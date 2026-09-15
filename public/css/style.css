@@ -1,3 +1,4 @@
+
 /* RESET & BASE */
 * {
     margin: 0;
@@ -2041,4 +2042,451 @@ blockquote cite {
 
 .contact-submit-btn .send-icon {
     font-size: 0.9rem;
+}
+/* ==========================================================
+   CSS COMPLETO Y EXCLUSIVO PARA PÁGINA À PROPOS (a-propos.html)
+   ================================================---------- */
+/* ==========================================================
+   CSS COMPLETO Y EXCLUSIVO PARA PÁGINA À PROPOS (a-propos.html)
+ /* ==========================================================
+   CSS COMPLETO Y EXCLUSIVO PARA PÁGINA À PROPOS (a-propos.html)
+   ================================================---------- */
+
+/* 1. HERO CON IMAGEN DE FONDO Y CONTADORES (PROPORCIONES CORREGIDAS) */
+.apropos-hero-image {
+    position: relative;
+    background: url('../assets/img/community-meetup.jpg') no-repeat center center/cover;
+    /* Mayor altura general para que la caja oscura sea más grande y abarque todo holgadamente */
+    padding: 13rem 0 7rem 0; 
+    color: #ffffff;
+    text-align: left;
+}
+
+.apropos-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Capa oscura extendida que cubre todo el bloque de arriba a abajo con margen inferior */
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.96) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.apropos-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.apropos-hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+}
+
+.apropos-hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 3.5rem; /* Margen perfecto para separar del bloque de números */
+    max-width: 750px;
+}
+
+/* Estadísticas bien posicionadas y dentro de la caja oscura con espacio inferior */
+.apropos-stats-row {
+    display: flex;
+    gap: 4.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.apropos-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.apropos-stat-item .stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    margin-top: 0.4rem;
+}
+
+/* 1er número: Azul Google */
+.apropos-stat-item:nth-child(1) .stat-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #4285F4;
+}
+
+/* 2º número: Verde Google */
+.apropos-stat-item:nth-child(2) .stat-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #34A853;
+}
+
+/* 3er número: Amarillo/Naranja Google */
+.apropos-stat-item:nth-child(3) .stat-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #FBBC05;
+}
+
+
+/* 2. SECCIÓN NOTRE MISSION (4 CAJAS) */
+.apropos-mission-section {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.apropos-section-main-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 3rem;
+}
+
+.apropos-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .apropos-mission-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .apropos-mission-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.apropos-mission-card {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease;
+}
+
+.apropos-mission-card:hover {
+    transform: translateY(-4px);
+}
+
+.apropos-mission-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.blue-box { background-color: #e0f2fe; color: #0284c7; }
+.green-box { background-color: #dcfce7; color: #16a34a; }
+.orange-box { background-color: #ffedd5; color: #ea580c; }
+.red-box { background-color: #fee2e2; color: #dc2626; }
+
+.apropos-mission-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.6rem;
+}
+
+.apropos-mission-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+
+/* 3. SECCIÓN NOTRE HISTOIRE (DOS COLUMNAS Y MOCKUP) */
+.apropos-history-section {
+    padding: 5rem 0;
+    background-color: #ffffff;
+}
+
+.apropos-history-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .apropos-history-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+.apropos-history-visual {
+    position: relative;
+}
+
+.history-browser-mockup {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.browser-top-bar {
+    background: #f1f5f9;
+    padding: 0.6rem 1rem;
+    display: flex;
+    gap: 0.4rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.browser-top-bar .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot.red { background-color: #ef4444; }
+.dot.yellow { background-color: #f59e0b; }
+.dot.green { background-color: #10b981; }
+
+.browser-body-content {
+    padding: 1.2rem;
+}
+
+.mockup-tag {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 0.6rem;
+}
+
+.browser-body-content h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.8rem;
+}
+
+.mockup-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.mockup-text {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* Tarjeta flotante "Depuis 2025" */
+.history-floating-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #ffffff;
+    padding: 1rem 1.4rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.history-floating-badge .badge-year {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.history-floating-badge .badge-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.1rem;
+}
+
+.apropos-history-content .apropos-subtitle-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+}
+
+.apropos-history-content h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
+
+.apropos-history-content p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+/* 4. SECCIÓN L'ÉQUIPE ORGANISATRICE */
+.apropos-team-section {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.apropos-team-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin-bottom: 3.5rem;
+}
+
+.apropos-team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .apropos-team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 650px) {
+    .apropos-team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.apropos-team-card {
+    background: #ffffff;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.team-avatar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.2rem auto;
+    border: 3px solid #f1f5f9;
+}
+
+.apropos-team-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+}
+
+.team-card-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.blue-text { color: #2563eb; }
+.green-text { color: #16a34a; }
+.orange-text { color: #ea580c; }
+.red-text { color: #dc2626; }
+.yellow-text { color: #d97706; }
+
+
+/* 5. CAJA AZUL INFERIOR (REJOIGNEZ LE MOUVEMENT) */
+.apropos-cta-section {
+    padding: 5rem 0;
+    background-color: #ffffff;
+}
+
+.apropos-cta-box {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 1.5rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.25);
+}
+
+.apropos-cta-box h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.apropos-cta-box p {
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
+    color: #eff6ff;
+    line-height: 1.5;
+}
+
+.apropos-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-white-rounded {
+    background-color: #ffffff;
+    color: #1d4ed8;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-white-rounded:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.btn-outline-white-rounded {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.btn-outline-white-rounded:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    transform: translateY(-2px);
 }
