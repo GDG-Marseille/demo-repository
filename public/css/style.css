@@ -1426,3 +1426,110 @@ blockquote cite {
 .btn--green:hover {
     background-color: #16a34a;
 }
+/* ===== PARTENAIRES / ILS NOUS FONT CONFIANCE ===== */
+.partners {
+    padding: 3rem 0;
+    background-color: #ffffff; /* O el fondo que prefieras */
+}
+
+.section-subtitle-center {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.partners__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.partners__logos .partner-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.partners__logos .partner-name:hover,
+.partners__logos .partner-name.active {
+    color: #4285F4;
+}
+
+/* ===== BANNER BOTTOM (FONDO AZUL Y TEXTO BLANCO) ===== */
+/* ===== BANNER BOTTOM CORREGIDO Y EXACTO ===== */
+.banner-bottom {
+    background-color: #4285F4 !important;
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+.banner-bottom .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.banner-bottom .banner-tag {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem;
+}
+
+/* Letra ajustada a un tamaño normal, no gigante */
+.banner-bottom h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin-bottom: 2rem;
+}
+
+.banner-bottom__cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Botones rectangulares con puntas ligeramente redondeadas (border-radius de 0.5rem o 0.75rem) */
+.banner-bottom .btn--white {
+    background-color: #ffffff !important;
+    color: #4285F4 !important;
+    border: 2px solid #ffffff !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.75rem; /* Esquinas sutilmente redondeadas */
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.banner-bottom .btn--white:hover {
+    background-color: #f8f9fa !important;
+}
+
+.banner-bottom .btn--outline-white {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.75rem; /* Esquinas sutilmente redondeadas */
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.banner-bottom .btn--outline-white:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
