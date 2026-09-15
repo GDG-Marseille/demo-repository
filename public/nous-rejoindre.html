@@ -5,242 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nous rejoindre · GDG Marseille</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
-    <!-- Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="join-page-body">
 
-<!-- ===== HEADER DINÁMICO ===== -->
+    <!-- ===== HEADER DINÁMICO ===== -->
     <div id="header-container"></div>
 
-    <main>
-        <section class="page-hero">
+    <main class="join-main-content">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="join-hero-section">
             <div class="container">
-                <h1>Nous rejoindre</h1>
-                <p>Il y a plusieurs façons de faire partie de l'aventure GDG Marseille.</p>
+                <div class="hero-tag-pill">Google Developer Group Marseille</div>
+                <h1 class="join-hero-title">
+                    Rejoignez l'aventure<br>
+                    <span class="text-blue-accent">tech marseillaise</span>
+                </h1>
+                <p class="join-hero-subtitle">
+                    Que vous soyez développeur, designer, étudiant ou passionné, il y a une place<br>
+                    pour vous dans notre communauté.
+                </p>
+                <div class="join-hero-actions">
+                    <a href="#engagement" class="btn-pill-blue">Voir les opportunités <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                    <a href="#dernier-meetup" class="btn-pill-outline-dark">Dernier Meetup</a>
+                </div>
             </div>
         </section>
 
-        <!-- ===== MEMBRE ===== -->
-        <section class="join-section" id="membre">
+        <!-- ===== TROIS FAÇONS DE S'ENGAGER ===== -->
+        <section class="engagement-section" id="engagement">
             <div class="container">
-                <h2>👤 Devenir membre</h2>
-                <p>Rejoignez la communauté et participez à tous nos événements. Gratuit et ouvert à tous.</p>
-                <form class="form" id="formMembre">
-                    <div class="form-group">
-                        <label for="membre_prenom">Prénom *</label>
-                        <input type="text" id="membre_prenom" name="prenom" required />
+                <div class="section-title-center">
+                    <h2>Trois façons de s'engager</h2>
+                    <p>Choisissez le parcours qui vous ressemble le plus pour contribuer à l'écosystème local.</p>
+                </div>
+
+                <div class="engagement-grid-3">
+                    <div class="engagement-card">
+                        <div class="icon-box-blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                        </div>
+                        <h3>Devenir membre</h3>
+                        <p>Rejoignez notre Meetup et Discord pour ne jamais manquer un événement technique.</p>
+                        <a href="#" class="btn-card-full-blue">S'inscrire sur Meetup</a>
                     </div>
-                    <div class="form-group">
-                        <label for="membre_email">Email *</label>
-                        <input type="email" id="membre_email" name="email" required />
+
+                    <div class="engagement-card">
+                        <div class="icon-box-red">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                        </div>
+                        <h3>Prendre la parole</h3>
+                        <p>Partagez votre expertise. Nous vous aidons à préparer votre tout premier talk technique.</p>
+                        <a href="#" class="btn-card-outline-red">Soumettre un Talk</a>
                     </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="membre_rgpd" name="rgpd" required />
-                        <label for="membre_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
+
+                    <div class="engagement-card">
+                        <div class="icon-box-green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <h3>Devenir organisateur</h3>
+                        <p>Rejoignez la core team et aidez-nous à construire le futur de la tech dans le Sud.</p>
+                        <a href="#" class="btn-card-outline-green">Nous contacter</a>
                     </div>
-                    <!-- Turnstile -->
-                    <div class="cf-turnstile" data-sitekey="TU_SITE_KEY"></div>
-                    <button type="submit" class="btn btn--primary">Devenir membre</button>
-                </form>
+                </div>
             </div>
         </section>
 
-        <!-- ===== BÉNÉVOLE ===== -->
-        <section class="join-section" id="benevole">
+        <!-- ===== POURQUOI NOUS REJOINDRE ? (Distribución Exacta 2/3 y 1/3 cruzada) ===== -->
+        <section class="why-join-section">
             <div class="container">
-                <h2>🤝 Devenir bénévole</h2>
-                <p>Vous avez du temps et des compétences à offrir ? Rejoignez l'équipe organisatrice.</p>
-                <form class="form" id="formBenevole">
-                    <div class="form-group">
-                        <label for="bene_nom">Nom complet *</label>
-                        <input type="text" id="bene_nom" name="nom" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="bene_email">Email *</label>
-                        <input type="email" id="bene_email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="bene_profil">Votre profil / compétences</label>
-                        <textarea id="bene_profil" name="profil" rows="3" placeholder="Ex: développeur, community manager, designer..."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="bene_dispo">Disponibilités</label>
-                        <input type="text" id="bene_dispo" name="dispo" placeholder="Soir, week-end, flexible..." />
-                    </div>
-                    <div class="form-group">
-                        <label for="bene_motivation">Pourquoi voulez-vous nous aider ?</label>
-                        <textarea id="bene_motivation" name="motivation" rows="3"></textarea>
-                    </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="bene_rgpd" name="rgpd" required />
-                        <label for="bene_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
-                    </div>
-                    <div class="cf-turnstile" data-sitekey="TU_SITE_KEY"></div>
-                    <button type="submit" class="btn btn--primary">Postuler comme bénévole</button>
-                </form>
-            </div>
-        </section>
+                <div class="why-header">
+                    <h2>Pourquoi nous rejoindre ?</h2>
+                    <p>Bien plus qu'un simple groupe, une véritable famille technologique.</p>
+                </div>
 
-        <!-- ===== SPEAKER ===== -->
-        <section class="join-section" id="speaker">
-            <div class="container">
-                <h2>🎤 Proposer un talk / atelier</h2>
-                <p>Vous avez une expertise à partager ? Soumettez votre proposition.</p>
-                <form class="form" id="formSpeaker">
-                    <div class="form-group">
-                        <label for="speaker_nom">Prénom et Nom *</label>
-                        <input type="text" id="speaker_nom" name="nom" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="speaker_email">Email *</label>
-                        <input type="email" id="speaker_email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="speaker_titre">Titre du talk / atelier *</label>
-                        <input type="text" id="speaker_titre" name="titre" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="speaker_bio">Bio courte (max 300 caractères)</label>
-                        <textarea id="speaker_bio" name="bio" maxlength="300" rows="2"></textarea>
-                    </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="speaker_rgpd" name="rgpd" required />
-                        <label for="speaker_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
-                    </div>
-                    <div class="cf-turnstile" data-sitekey="TU_SITE_KEY"></div>
-                    <button type="submit" class="btn btn--primary">Proposer mon talk</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- ===== CALL FOR PAPERS ===== -->
-        <section class="join-section cfp" id="cfp">
-            <div class="container">
-                <h2>📢 Call for Papers</h2>
-                <p>Soumettez votre conférence complète pour nos prochains événements.</p>
-                <form class="form" id="formCFP">
-                    <div class="form-group">
-                        <label for="cfp_nom">Prénom et Nom *</label>
-                        <input type="text" id="cfp_nom" name="nom" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_email">Email *</label>
-                        <input type="email" id="cfp_email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_titre">Titre du talk / atelier *</label>
-                        <input type="text" id="cfp_titre" name="titre" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_format">Format *</label>
-                        <select id="cfp_format" name="format" required>
-                            <option value="">Sélectionnez...</option>
-                            <option value="conf30">Conférence (30 min)</option>
-                            <option value="conf45">Conférence (45 min)</option>
-                            <option value="atelier1h">Atelier (1h)</option>
-                            <option value="lightning">Lightning Talk (10 min)</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_niveau">Niveau *</label>
-                        <select id="cfp_niveau" name="niveau" required>
-                            <option value="">Sélectionnez...</option>
-                            <option value="debutant">Débutant</option>
-                            <option value="intermediaire">Intermédiaire</option>
-                            <option value="avance">Avancé</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_theme">Thématique principale *</label>
-                        <select id="cfp_theme" name="theme" required>
-                            <option value="">Sélectionnez...</option>
-                            <option value="web">Web</option>
-                            <option value="mobile">Mobile</option>
-                            <option value="cloud">Cloud</option>
-                            <option value="ia">IA & Machine Learning</option>
-                            <option value="cyber">Cybersécurité</option>
-                            <option value="devops">DevOps</option>
-                            <option value="data">Data</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_description">Description du talk (150 à 500 caractères) *</label>
-                        <textarea id="cfp_description" name="description" minlength="150" maxlength="500" rows="4" required></textarea>
-                        <span class="char-counter"><span id="cfpDescCount">0</span> / 500</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_bio">Bio du speaker (max 300 caractères)</label>
-                        <textarea id="cfp_bio" name="bio" maxlength="300" rows="2"></textarea>
-                        <span class="char-counter"><span id="cfpBioCount">0</span> / 300</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfp_url">Profil LinkedIn ou GitHub (optionnel)</label>
-                        <input type="url" id="cfp_url" name="url" placeholder="https://linkedin.com/in/..." />
-                    </div>
-                    <div class="form-group">
-                        <label>Avez-vous déjà présenté ce talk ? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="deja_presente" value="oui" required /> Oui</label>
-                            <label><input type="radio" name="deja_presente" value="non" required /> Non</label>
+                <div class="why-layout-asym-exact">
+                    <!-- Fila 1, Col 1: Azul (2/3) -->
+                    <div class="why-card blue-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                        </div>
+                        <h3>Connectez-vous aux meilleurs</h3>
+                        <p>Rencontrez des ingénieurs de chez Google, des CTOs locaux et des passionnés passionnants.</p>
+                        <div class="avatars-row">
+                            <div class="avatar-group">
+                                <img src="assets/img/avatar1.jpg" alt="User">
+                                <img src="assets/img/avatar2.jpg" alt="User">
+                                <img src="assets/img/avatar3.jpg" alt="User">
+                            </div>
+                            <span class="avatar-badge">+2k</span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Disponibilités</label>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="dispo" value="soir" /> Soir semaine</label>
-                            <label><input type="checkbox" name="dispo" value="samedi" /> Samedi</label>
-                            <label><input type="checkbox" name="dispo" value="flexible" /> Flexible</label>
+
+                    <!-- Fila 1, Col 2: Amarilla (1/3) -->
+                    <div class="why-card yellow-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0z"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3z"></path></svg>
+                        </div>
+                        <h3>Compétences</h3>
+                        <p>Ateliers pratiques sur Android, Cloud, AI et bien plus encore.</p>
+                    </div>
+
+                    <!-- Fila 2, Col 1: Blanca (1/3) -->
+                    <div class="why-card white-card">
+                        <h3>Fun & social</h3>
+                        <p>Parce que la tech c'est aussi partager une bière ou un café après les talks.</p>
+                        <div class="mini-img-preview">
+                            <img src="assets/img/social-event.jpg" alt="Social">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="cfp_cospeaker">Co-speaker (nom et email, optionnel)</label>
-                        <input type="text" id="cfp_cospeaker" name="cospeaker" placeholder="Jean Dupont - jean@email.com" />
+
+                    <!-- Fila 2, Col 2: Verde (2/3) -->
+                    <div class="why-card green-card">
+                        <div class="impact-content">
+                            <h3>Impact local</h3>
+                            <p>Contribuez au rayonnement de Marseille en tant que hub technologique européen majeur.</p>
+                        </div>
+                        <div class="impact-graphic-circle">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="cfp_message">Message libre (optionnel)</label>
-                        <textarea id="cfp_message" name="message" rows="2"></textarea>
-                    </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="cfp_rgpd" name="rgpd" required />
-                        <label for="cfp_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
-                    </div>
-                    <div class="cf-turnstile" data-sitekey="TU_SITE_KEY"></div>
-                    <button type="submit" class="btn btn--primary">Soumettre ma proposition</button>
-                </form>
+                </div>
             </div>
         </section>
 
-        <section class="join-section business-cta">
+        <!-- ===== LA COMMUNAUTÉ EN ACTION ===== -->
+        <section class="community-action-section">
             <div class="container">
-                <h2>🏢 Vous êtes une entreprise ?</h2>
-                <p>Devenez partenaire et soutenez la communauté tech marseillaise.</p>
-                <a href="devenir-partenaire.html" class="btn btn--primary">Découvrir les offres partenaires</a>
+                <h2 class="section-title-center mb-large">La communauté en action</h2>
+                <div class="action-grid-3">
+                    <div class="action-photo-card"><img src="assets/img/action1.jpg" alt="Action 1"></div>
+                    <div class="action-photo-card"><img src="assets/img/action2.jpg" alt="Action 2"></div>
+                    <div class="action-photo-card"><img src="assets/img/action3.jpg" alt="Action 3"></div>
+                </div>
             </div>
         </section>
+
+        <!-- ===== VOUS ÊTES UNE ENTREPRISE ? ===== -->
+        <section class="business-partner-section">
+            <div class="container">
+                <div class="business-banner-box">
+                    <div class="business-text-side">
+                        <div class="icon-box-light-blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <h3>Vous êtes une entreprise ?</h3>
+                        <p>Soutenez l'innovation locale, renforcez votre marque employeur et connectez-vous aux meilleurs talents tech de la région marseillaise.</p>
+                        <a href="devenir-partenaire.html" class="btn-pill-blue">Devenir partenaire</a>
+                    </div>
+                    <div class="business-img-side">
+                        <img src="assets/img/entreprise.jpg" alt="Entreprise partenariat">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRÊT À NOUS RENCONTRER ? ===== -->
+        <section class="dark-cta-section" id="dernier-meetup">
+            <div class="container">
+                <div class="dark-cta-box">
+                    <h2>Prêt à nous rencontrer ?</h2>
+                    <p>Notre prochain meetup est déjà en préparation. Ne manquez pas l'occasion de faire partie de l'aventure.</p>
+                    <a href="evenements.html" class="btn-pill-blue mb-spacer">Découvrir le prochain meetup</a>
+                    <div class="social-links-row">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Discord</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-<!-- ===== FOOTER DINÁMICO ===== -->
-<div id="footer-container"></div>
+    <!-- ===== FOOTER DINÁMICO ===== -->
+    <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
-    <script>
-        // Contadores de caracteres para CFP
-        document.addEventListener('DOMContentLoaded', function() {
-            const desc = document.getElementById('cfp_description');
-            if (desc) {
-                const count = document.getElementById('cfpDescCount');
-                desc.addEventListener('input', function() { count.textContent = this.value.length; });
-            }
-            const bio = document.getElementById('cfp_bio');
-            if (bio) {
-                const count = document.getElementById('cfpBioCount');
-                bio.addEventListener('input', function() { count.textContent = this.value.length; });
-            }
-        });
-    </script>
 </body>
 </html>

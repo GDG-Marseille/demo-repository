@@ -3703,3 +3703,406 @@ blockquote cite {
     font-size: 0.95rem;
     cursor: pointer;
 }
+/* ==========================================================
+   GDG MARSEILLE - STYLESHEET GLOBAL (NOUS-REJOINDRE)
+   ================================================---------- */
+
+/* Reset básico y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fbfbfd;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-blue-accent {
+    color: #3b82f6;
+}
+
+/* Botones genéricos de navegación y llamadas a la acción */
+.btn-pill-blue {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s;
+}
+.btn-pill-blue:hover {
+    background: #2563eb;
+}
+
+/* ==========================================================
+   1. HERO SECTION
+   ================================================---------- */
+.join-hero-section {
+    text-align: center;
+    padding: 6rem 0 4rem 0;
+    background: #fbfbfd;
+}
+
+.hero-tag-pill {
+    display: inline-block;
+    background: #eff6ff;
+    color: #3b82f6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.join-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.join-hero-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.join-hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-pill-outline-dark {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: border-color 0.2s;
+}
+.btn-pill-outline-dark:hover {
+    border-color: #94a3b8;
+}
+
+/* ==========================================================
+   2. TROIS FAÇONS DE S'ENGAGER
+   ================================================---------- */
+.engagement-section {
+    padding: 4rem 0 6rem 0;
+}
+
+.section-title-center {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+.section-title-center h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+.section-title-center p {
+    color: #64748b;
+    font-size: 1rem;
+}
+.mb-large { margin-bottom: 3rem; }
+
+.engagement-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.engagement-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-box-blue, .icon-box-red, .icon-box-green, .icon-box-light-blue {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.icon-box-blue { background: #eff6ff; color: #3b82f6; }
+.icon-box-red { background: #fef2f2; color: #ef4444; }
+.icon-box-green { background: #f0fdf4; color: #22c55e; }
+.icon-box-light-blue { background: #eff6ff; color: #3b82f6; }
+
+.engagement-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+}
+
+.engagement-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.btn-card-full-blue, .btn-card-outline-red, .btn-card-outline-green {
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.btn-card-full-blue { background: #3b82f6; color: #ffffff; }
+.btn-card-outline-red { background: transparent; border: 1px solid #fca5a5; color: #ef4444; }
+.btn-card-outline-green { background: transparent; border: 1px solid #86efac; color: #16a34a; }
+
+/* ==========================================================
+   3. POURQUOI NOUS REJOINDRE ? (Grid Asimétrico Exacto 2/3 y 1/3)
+   ================================================---------- */
+.why-join-section {
+    padding: 4rem 0;
+}
+
+.why-header {
+    margin-bottom: 3rem;
+}
+.why-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.4rem;
+}
+.why-header p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.why-layout-asym-exact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.why-card {
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fila Superior: Azul (2/3 de ancho) */
+.blue-card {
+    background: #3b82f6;
+    color: #ffffff;
+    grid-column: span 2;
+}
+.why-card-icon svg { width: 32px; height: 32px; }
+.blue-card h3 { font-size: 1.7rem; font-weight: 700; margin: 0.8rem 0; }
+.blue-card p { font-size: 1rem; opacity: 0.95; line-height: 1.5; margin-bottom: 2rem; }
+
+.avatars-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.avatar-group { display: flex; }
+.avatar-group img {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 2px solid #3b82f6;
+    margin-left: -10px;
+    object-fit: cover;
+}
+.avatar-group img:first-child { margin-left: 0; }
+.avatar-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Fila Superior: Amarilla (1/3 de ancho) */
+.yellow-card {
+    background: #fbbf24;
+    color: #1e293b;
+    grid-column: span 1;
+}
+.yellow-card .why-card-icon { margin-bottom: 1.2rem; }
+.yellow-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+.yellow-card p { font-size: 0.95rem; line-height: 1.5; color: #334155; }
+
+/* Fila Inferior: Blanca (1/3 de ancho) */
+.white-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+    grid-column: span 1;
+}
+.white-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+.white-card p { color: #64748b; font-size: 0.95rem; margin-bottom: 1.2rem; }
+.mini-img-preview img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Fila Inferior: Verde (2/3 de ancho) */
+.green-card {
+    background: #22c55e;
+    color: #ffffff;
+    grid-column: span 2;
+}
+.green-card h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+.green-card p { font-size: 1.05rem; opacity: 0.95; line-height: 1.6; }
+.impact-graphic-circle {
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* ==========================================================
+   4. LA COMMUNAUTÉ EN ACTION
+   ================================================---------- */
+.community-action-section {
+    padding: 5rem 0;
+}
+.action-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.action-photo-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ==========================================================
+   5. VOUS ÊTES UNE ENTREPRISE ?
+   ================================================---------- */
+.business-partner-section {
+    padding: 3rem 0 5rem 0;
+}
+.business-banner-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+}
+.business-text-side {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.business-text-side h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+.business-text-side p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.business-img-side {
+    flex: 1;
+}
+.business-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================
+   6. DARK CTA SECTION (FOOTER BANNER)
+   ================================================---------- */
+.dark-cta-section {
+    padding: 2rem 0 6rem 0;
+}
+.dark-cta-box {
+    background: #111827;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5rem 2rem;
+    color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+.dark-cta-box h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.dark-cta-box p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.5;
+}
+.mb-spacer {
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+.social-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.social-links-row a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.social-links-row a:hover {
+    color: #ffffff;
+}
