@@ -5028,3 +5028,152 @@ body.needs-page-body {
     border-color: #3b82f6;
     color: #3b82f6;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Forzar que el contenido del Hero esté en dos columnas lado a lado */
+.hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero__text-col {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero__image-col {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor principal de la tarjeta inclinada */
+.hero__tilt-card {
+    position: relative;
+    width: 100%;
+    background: #0f172a;
+    border-radius: 24px;
+    overflow: hidden;
+    transform: rotate(2deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    aspect-ratio: 4 / 3;
+}
+
+.hero__tilt-card .mockup-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mockup-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+    z-index: 2;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.mockup-logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.mockup-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mockup-nav span {
+    opacity: 0.8;
+}
+
+.mockup-btn {
+    background: #3b82f6;
+    padding: 4px 12px;
+    border-radius: 6px;
+    opacity: 1 !important;
+    font-weight: 600;
+}
+
+.mockup-hero-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    width: 100%;
+}
+
+.mockup-hero-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.mockup-hero-text p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Tarjeta flotante inferior (Sin rastro de la M) */
+.hero__floating-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 18px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 3;
+}
+
+.floating-icon {
+    font-size: 1.25rem;
+}
+
+.floating-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-title {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.floating-subtitle {
+    font-size: 0.85rem;
+    color: #0f172a;
+    font-weight: 700;
+}

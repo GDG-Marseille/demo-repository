@@ -14,43 +14,80 @@
     <div id="header-container"></div>
 
     <main>
-        <!-- ========== HERO ========== -->
-        <section class="hero">
-            <div class="container hero__content">
-                <div class="hero__text-col">
-                    <span class="hero__badge">✦ COMMUNAUTÉ TECH OFFICIELLE GOOGLE</span>
-                    <h1 class="hero__title">
-                        La communauté tech<br />
-                        de Marseille,<br />
-                        <span class="brand-google-phrase">propulsée par Google</span>.
-                    </h1>
-                    <p class="hero__subtitle">
-                        Parce que la 2<sup>e</sup> ville de France mérite une infrastructure de talents
-                        à la hauteur de son ambition.
-                    </p>
-                    <div class="hero__cta">
-                        <a href="nous-rejoindre.html" class="btn btn--primary">Rejoignez-nous <span class="arrow">↗</span></a>
-                        <a href="evenements.html" class="btn btn--secondary-outline">Voir les événements</a>
-                    </div>
-                    <div class="hero__members-info">
-                        <div class="hero__avatars">
-                            <img src="assets/img/avatar-placeholder.png" alt="Membres" />
-                        </div>
-                        <span>Rejoint par +170 développeurs passionnés</span>
-                    </div>
+
+
+
+
+
+
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+    <div class="container hero__content">
+        <div class="hero__text-col">
+            <span class="hero__badge">
+                <span class="badge-dot"></span> COMMUNAUTÉ TECH OFFICIELLE GOOGLE
+            </span>
+            <h1 class="hero__title">
+                La communauté tech<br />
+                de Marseille,<br />
+                <span class="brand-google-phrase">propulsée par Google</span>.
+            </h1>
+            <p class="hero__subtitle">
+                Parce que la 2<sup>e</sup> ville de France mérite une infrastructure de talents
+                à la hauteur de son ambition.
+            </p>
+            <div class="hero__cta">
+                <a href="nous-rejoindre.html" class="btn btn--primary">Rejoignez-nous <span class="arrow">🚀</span></a>
+                <a href="evenements.html" class="btn btn--secondary-outline">Voir les événements</a>
+            </div>
+            <div class="hero__members-info">
+                <div class="avatar-group">
+                    <img src="assets/img/avatar1.png" alt="Avatar" />
+                    <img src="assets/img/avatar2.png" alt="Avatar" />
+                    <img src="assets/img/avatar3.png" alt="Avatar" />
                 </div>
-                <div class="hero__image-col">
-                    <div class="hero__card-visual">
-                        <div class="hero__card-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <img src="assets/img/hero-visual.png" alt="Innovating by the Sea" />
+                <span>Rejoint par <strong>+150 membres passionnés</strong></span>
+            </div>
+        </div>
+
+        <div class="hero__image-col">
+            <div class="hero__tilt-card">
+                <!-- Barra superior simulada dentro de la imagen -->
+                <div class="mockup-header">
+                    <span class="mockup-logo">MARSEILLE TECH COMMUNITY</span>
+                    <nav class="mockup-nav">
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Connexion</span>
+                        <span>Blog</span>
+                        <span class="mockup-btn">Sign Up</span>
+                    </nav>
+                </div>
+
+                <!-- Título interior de la imagen -->
+                <div class="mockup-hero-text">
+                    <h2>Innovating by the Sea</h2>
+                    <p>Connect. Create. Inspire.</p>
+                </div>
+
+                <!-- Imagen de fondo -->
+                <img src="images/marsella.png" alt="Marseille Tech Community" class="mockup-bg-img" />
+
+                <!-- Tarjeta flotante inferior derecha (SIN LA M) -->
+                <div class="hero__floating-card">
+                    <div class="floating-icon">🏆</div>
+                    <div class="floating-text">
+                        <span class="floating-title">Prochain Meetup</span>
+                        <span class="floating-subtitle">DevFest Night Edition</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- ========== CE QU'ON FAIT ENSEMBLE (GRID ASIMÉTRICO) ========== -->
         <section class="what-we-do">
@@ -101,47 +138,45 @@
         </section>
 
         <!-- ========== PROCHAINS ÉVÉNEMENTS ========== -->
-  <!-- ========== PROCHAINS ÉVÉNEMENTS ========== -->
-<section class="events-preview">
-    <div class="container">
-        <div class="section-header-flex">
-            <div>
-                <h2 class="section-title">Événements à venir</h2>
-                <p class="section-subtitle-left">Ne manquez pas nos prochaines rencontres.</p>
-            </div>
-            <a href="evenements.html" class="link-action">Voir tout le calendrier →</a>
-        </div>
-        
-        <div class="events-grid">
-            <!-- Tarjeta grande izquierda con imagen de fondo -->
-            <article class="event-card event-card--featured" style="background-image: url('assets/img/image.png 1');">
-                <div class="event-card__overlay">
-                    <div class="event-tags-row">
-                        <span class="event-tag blue">WORKSHOP</span>
-                        <span class="event-date-small">12 Nov 2026</span>
+        <section class="events-preview">
+            <div class="container">
+                <div class="section-header-flex">
+                    <div>
+                        <h2 class="section-title">Événements à venir</h2>
+                        <p class="section-subtitle-left">Ne manquez pas nos prochaines rencontres.</p>
                     </div>
-                    <div class="event-card__content">
-                        <h3>DevFest Marseille 2026 : Night Edition</h3>
-                        <p>Une soirée pour coder, apprendre et propulser la tech marseillaise. Le lancement officiel du nouveau chapitre.</p>
-                        <a href="evenements.html" class="btn btn--white-solid">S'inscrire</a>
-                    </div>
+                    <a href="evenements.html" class="link-action">Voir tout le calendrier →</a>
                 </div>
-            </article>
+                
+                <div class="events-grid">
+                    <article class="event-card event-card--featured" style="background-image: url('assets/img/image.png 1');">
+                        <div class="event-card__overlay">
+                            <div class="event-tags-row">
+                                <span class="event-tag blue">WORKSHOP</span>
+                                <span class="event-date-small">12 Nov 2026</span>
+                            </div>
+                            <div class="event-card__content">
+                                <h3>DevFest Marseille 2026 : Night Edition</h3>
+                                <p>Une soirée pour coder, apprendre et propulser la tech marseillaise. Le lancement officiel du nouveau chapitre.</p>
+                                <a href="evenements.html" class="btn btn--white-solid">S'inscrire</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Tarjeta derecha vertical blanca -->
-            <article class="event-card event-card--side">
-                <div class="event-card__body">
-                    <span class="event-tag-green">Past Event</span>
-                    <h3>Lancement GDG Aix-Marseille</h3>
-                    <p>Revue du premier événement de co-hosting entre les chapitres locaux.</p>
-                    <p class="event-date">📅 26 Février 2026</p>
-                    <a href="evenements.html" class="btn btn--outline-blue">Voir le replay</a>
+                    <article class="event-card event-card--side">
+                        <div class="event-card__body">
+                            <span class="event-tag-green">Past Event</span>
+                            <h3>Lancement GDG Aix-Marseille</h3>
+                            <p>Revue du premier événement de co-hosting entre les chapitres locaux.</p>
+                            <p class="event-date">📅 26 Février 2026</p>
+                            <a href="evenements.html" class="btn btn--outline-blue">Voir le replay</a>
+                        </div>
+                    </article>
                 </div>
-            </article>
-        </div>
-    </div>
-</section>
-        <!-- ========== 3 FAÇONS DE REJOINDRE (BOTONES AZUL, AMARILLO, VERDE) ========== -->
+            </div>
+        </section>
+
+        <!-- ========== 3 FAÇONS DE REJOINDRE ========== -->
         <section class="cta-actions">
             <div class="container">
                 <h2 class="section-title">3 façons de nous rejoindre</h2>
@@ -170,34 +205,32 @@
         </section>
 
         <!-- ========== PARTENAIRES ========== -->
-<!-- ========== PARTENAIRES ========== -->
-<section class="partners">
-    <div class="container">
-        <h2 class="section-subtitle-center">ILS NOUS FONT CONFIANCE</h2>
-        <div class="partners__logos">
-            <span class="partner-name active">Epitech Marseille</span>
-            <span class="partner-name">Google for Developers</span>
-            <span class="partner-name">Accenture</span>
-            <span class="partner-name">Jaguar Network</span>
-            <span class="partner-name">Station Mobilité</span>
-        </div>
-    </div>
-</section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="section-subtitle-center">ILS NOUS FONT CONFIANCE</h2>
+                <div class="partners__logos">
+                    <span class="partner-name active">Epitech Marseille</span>
+                    <span class="partner-name">Google for Developers</span>
+                    <span class="partner-name">Accenture</span>
+                    <span class="partner-name">Jaguar Network</span>
+                    <span class="partner-name">Station Mobilité</span>
+                </div>
+            </div>
+        </section>
 
         <!-- ========== BANNER BOTTOM BLUE ========== -->
-<!-- ========== BANNER BOTTOM BLUE ========== -->
-<section class="banner-bottom">
-    <div class="banner-bottom__inner">
-        <div class="container">
-            <p class="banner-tag">Prêt à construire la tech du Sud ?</p>
-            <h2>On ne construit pas seulement des apps, on construit l'avenir de la tech à Marseille. Rejoignez notre communauté de passionnés dès aujourd'hui.</h2>
-            <div class="banner-bottom__cta">
-                <a href="nous-rejoindre.html" class="btn btn--white">Devenir membre</a>
-                <a href="contact.html" class="btn btn--outline-white">Nous contacter</a>
+        <section class="banner-bottom">
+            <div class="banner-bottom__inner">
+                <div class="container">
+                    <p class="banner-tag">Prêt à construire la tech du Sud ?</p>
+                    <h2>On ne construit pas seulement des apps, on construit l'avenir de la tech à Marseille. Rejoignez notre communauté de passionnés dès aujourd'hui.</h2>
+                    <div class="banner-bottom__cta">
+                        <a href="nous-rejoindre.html" class="btn btn--white">Devenir membre</a>
+                        <a href="contact.html" class="btn btn--outline-white">Nous contacter</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
     <!-- ===== FOOTER DINÁMICO ===== -->

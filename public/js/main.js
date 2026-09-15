@@ -16,11 +16,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    // Cargar header y footer EN PARALELO (uno no bloquea al otro)
+    // Cargar header y footer EN PARALELO
     await Promise.all([
         loadComponent('header-container', 'header.html'),
         loadComponent('footer-container', 'footer.html')
     ]);
+
+    // Inicializar el menú móvil UNA VEZ que el header ya está cargado en la página
+    initMobileMenu();
 });
 // ===== MENÚ MÓVIL (Movido a una función para reutilizarla) =====
 function initMobileMenu() {
