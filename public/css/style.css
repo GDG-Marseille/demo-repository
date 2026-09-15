@@ -1720,3 +1720,325 @@ blockquote cite {
 .btn--outline-blue:hover {
     background-color: rgba(66, 133, 244, 0.05);
 }
+
+/* ===== ESTILOS ESPECÍFICOS PÁGINA CONTACTO ===== */
+.page-hero-contact {
+    background-color: #f4f6fb;
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+}
+
+.page-hero-contact h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.page-hero-contact p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.contact-main-section {
+    padding: 3rem 0;
+    background-color: #fafafa;
+}
+
+.contact-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+    .contact-layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tarjetas de información de la izquierda */
+.contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.info-card__icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.blue-light-bg { background-color: #eef3fc; }
+.green-light-bg { background-color: #e6f4ea; }
+.yellow-light-bg { background-color: #fef7e0; }
+
+.info-card__content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.4rem;
+}
+
+.info-card__content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.info-link {
+    color: #4285F4;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
+.info-subtext {
+    font-size: 0.85rem !important;
+    color: #777 !important;
+    font-style: italic;
+}
+
+.info-social-icons {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+}
+
+/* Contenedor del formulario derecho */
+.contact-form-wrapper {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.form-exact .form-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-exact .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-exact label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.4rem;
+}
+
+.form-exact input,
+.form-exact select,
+.form-exact textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #fff;
+    color: #1a1a1a;
+    transition: border-color 0.2s;
+}
+
+.form-exact input:focus,
+.form-exact select:focus,
+.form-exact textarea:focus {
+    border-color: #4285F4;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66,133,244,0.15);
+}
+
+.form-exact .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.form-exact .checkbox-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.form-exact .checkbox-row label {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: normal;
+    display: inline;
+}
+
+.form-exact .checkbox-row a {
+    color: #4285F4;
+    text-decoration: underline;
+}
+
+.full-width-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #4285F4;
+    color: #fff;
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.full-width-btn:hover {
+    background-color: #3367d6;
+}
+
+/* 3 Tarjetas inferiores de la página de contacto */
+.contact-bottom-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+    .contact-bottom-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bottom-feature-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #eaeaea;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.bottom-feature-card .feature-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem auto;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.red-bg { background-color: #fce8e6; }
+.blue-bg { background-color: #eef3fc; }
+.green-bg { background-color: #e6f4ea; }
+
+.bottom-feature-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.bottom-feature-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Ajustes específicos para la parte final del formulario de contacto */
+
+.checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    accent-color: #4285F4;
+    flex-shrink: 0;
+}
+
+.checkbox-row label {
+    font-size: 0.88rem;
+    color: #4a5568;
+    font-weight: normal;
+    line-height: 1.4;
+    display: inline;
+}
+
+.checkbox-row label a {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+.checkbox-row label a:hover {
+    text-decoration: underline;
+}
+
+.turnstile-container {
+    margin-bottom: 1.5rem;
+}
+
+/* Botón de envío idéntico a la captura (más contenido, no 100% de ancho) */
+.contact-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: #4285F4;
+    color: #ffffff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(66, 133, 244, 0.2);
+}
+
+.contact-submit-btn:hover {
+    background-color: #3367d6;
+    box-shadow: 0 4px 8px rgba(66, 133, 244, 0.3);
+}
+
+.contact-submit-btn .send-icon {
+    font-size: 0.9rem;
+}
