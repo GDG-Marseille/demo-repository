@@ -29,16 +29,16 @@
                 <div class="events-search-wrapper">
                     <div class="search-input-group">
                         <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <input type="text" placeholder="Rechercher un événement..." />
+                        <input type="text" id="event-search-input" placeholder="Rechercher un événement..." />
                     </div>
-                    <div class="filter-pills-group">
-                        <button class="filter-pill active">Tous</button>
-                        <button class="filter-pill">IA</button>
-                        <button class="filter-pill">Cloud</button>
-                        <button class="filter-pill">Web</button>
-                        <button class="filter-pill">Mobile</button>
+                    <div class="filter-pills-group" id="filter-pills-container">
+                        <button class="filter-pill active" data-filter="tous">Tous</button>
+                        <button class="filter-pill" data-filter="ia">IA</button>
+                        <button class="filter-pill" data-filter="cloud">Cloud</button>
+                        <button class="filter-pill" data-filter="web">Web</button>
+                        <button class="filter-pill" data-filter="mobile">Mobile</button>
                     </div>
-                    <button class="btn-filtrer">Filtrer</button>
+                    <button class="btn-filtrer" id="btn-filtrer">Filtrer</button>
                 </div>
             </div>
         </section>
@@ -66,7 +66,7 @@
         <!-- ===== FEATURED EVENT (Imagen 1) ===== -->
         <section class="featured-event-section">
             <div class="container">
-                <div class="featured-banner">
+                <div class="featured-banner" data-tags="cloud web mobile ia devfest">
                     <!-- Overlay oscuro para legibilidad -->
                     <div class="featured-overlay"></div>
                     <div class="featured-content">
@@ -96,13 +96,13 @@
                         <h2 class="section-title-bold">Prochains événements</h2>
                         <p class="section-subtitle-gray">Ne manquez pas nos prochains meetups et ateliers.</p>
                     </div>
-                    <a href="#" class="link-voir-tout">Voir tout <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="#" class="link-voir-tout" id="link-voir-tout">Voir tout <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="upcoming-grid-2">
                     <!-- Tarjeta Izquierda (Imagen) -->
-                    <article class="ev-card-modern">
-                        <img src="assets/img/community-meetup.jpg" alt="Serverless Event" class="ev-card-img" />
+                    <article class="ev-card-modern" data-tags="ia cloud serverless">
+                        <img src="images/meet1.png" alt="Serverless Event" class="ev-card-img" />
                         <div class="ev-card-body">
                             <div class="ev-meta-row">
                                 <span class="ev-date-blue">14 Octobre 2026</span>
@@ -122,7 +122,7 @@
                     </article>
 
                     <!-- Tarjeta Derecha (Pasado, sin imagen) -->
-                    <article class="ev-card-modern no-img-card">
+                    <article class="ev-card-modern no-img-card" data-tags="ia web mobile">
                         <div class="ev-card-body full-height-body">
                             <span class="badge-past">Événement passé</span>
                             
@@ -179,7 +179,7 @@
 
                 <div class="archives-grid-3">
                     <!-- Archive 1 -->
-                    <div class="archive-card">
+                    <div class="archive-card" data-tags="mobile flutter">
                         <div class="arch-meta">
                             <span class="arch-badge badge-replay">REPLAY</span>
                             <span class="arch-date">Avril 2024</span>
@@ -192,7 +192,7 @@
                     </div>
 
                     <!-- Archive 2 -->
-                    <div class="archive-card">
+                    <div class="archive-card" data-tags="ia web gemini api">
                         <div class="arch-meta">
                             <span class="arch-badge badge-slides">SLIDES</span>
                             <span class="arch-date">Mars 2024</span>
@@ -205,7 +205,7 @@
                     </div>
 
                     <!-- Archive 3 -->
-                    <div class="archive-card">
+                    <div class="archive-card" data-tags="web performance core web vitals">
                         <div class="arch-meta">
                             <span class="arch-badge badge-pack">FULL PACK</span>
                             <span class="arch-date">Février 2024</span>
@@ -230,5 +230,72 @@
     <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('event-search-input');
+            const filterPills = document.querySelectorAll('.filter-pill');
+            const btnFiltrer = document.getElementById('btn-filtrer');
+            const linkVoirTout = document.getElementById('link-voir-tout');
+            const items = document.querySelectorAll('.featured-banner, .ev-card-modern, .archive-card');
+
+            let currentFilter = 'tous';
+
+            // Manejar clics en los botones de filtro (pills)
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.getAttribute('data-filter').toLowerCase();
+                    applyFilterAndSearch();
+                });
+            });
+
+            // Filtrar al escribir en la barra de búsqueda o hacer clic en "Filtrer"
+            if (searchInput) {
+                searchInput.addEventListener('input', applyFilterAndSearch);
+            }
+            if (btnFiltrer) {
+                btnFiltrer.addEventListener('click', applyFilterAndSearch);
+            }
+
+            // Restablecer filtros al hacer clic en "Voir tout"
+            if (linkVoirTout) {
+                linkVoirTout.addEventListener('click', function(e) {
+                    e.preventDefault(); // Evita recargar o ir a un enlace vacío
+                    currentFilter = 'tous';
+                    if (searchInput) searchInput.value = '';
+                    
+                    // Activar visualmente la píldora "Tous"
+                    filterPills.forEach(p => {
+                        if (p.getAttribute('data-filter').toLowerCase() === 'tous') {
+                            p.classList.add('active');
+                        } else {
+                            p.classList.remove('active');
+                        }
+                    });
+
+                    applyFilterAndSearch();
+                });
+            }
+
+            function applyFilterAndSearch() {
+                const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+                items.forEach(item => {
+                    const tags = (item.getAttribute('data-tags') || '').toLowerCase();
+                    const text = item.textContent.toLowerCase();
+
+                    const matchesFilter = (currentFilter === 'tous' || tags.includes(currentFilter));
+                    const matchesSearch = (query === '' || text.includes(query) || tags.includes(query));
+
+                    if (matchesFilter && matchesSearch) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
