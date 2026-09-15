@@ -3,71 +3,201 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard des besoins · GDG Marseille</title>
-    <meta name="description" content="Vous recrutez ou cherchez une opportunité ? Dites-nous vos besoins pour alimenter le Policy Lab du GDG." />
+    <title>Besoins de la communauté · GDG Marseille</title>
+    <meta name="description" content="Découvrez les besoins de la communauté et contribuez à l'écosystème tech marseillais." />
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="needs-page-body">
 
- <!-- ===== HEADER DINÁMICO ===== -->
+    <!-- ===== HEADER DINÁMICO ===== -->
     <div id="header-container"></div>
 
-    <main>
+    <main class="needs-main-content">
 
-        <!-- ===== HERO ===== -->
-        <section class="page-hero">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="needs-hero-section">
             <div class="container">
-                <h1>📊 Dashboard des besoins</h1>
-                <p>Vous recrutez ? Vous cherchez une opportunité ? Dites-nous ce dont vous avez besoin.</p>
-            </div>
-        </section>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <section class="dashboard-intro">
-            <div class="container">
-                <div class="dashboard-intro__text">
-                    <p>
-                        Ces données alimentent le <strong>Policy Lab</strong> du GDG Marseille : 
-                        nous analysons les tendances du marché, les compétences recherchées et les 
-                        opportunités pour mieux structurer l'écosystème tech marseillais.
-                    </p>
-                    <p>
-                        <strong>⚠️ Version simple en V1</strong> — un formulaire Google Form intégré. 
-                        Le dashboard complet avec visualisation des données est prévu pour la V2.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== GOOGLE FORM EMBED ===== -->
-        <section class="dashboard-form">
-            <div class="container">
-                <h2 class="section-title">📝 Remplissez le formulaire</h2>
-                <div class="form-iframe-container">
-                    <!-- Remplace le src par l'URL de ton Google Form -->
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/FAKE_ID/viewform?embedded=true" 
-                        width="100%" 
-                        height="800" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                        Chargement du formulaire...
-                    </iframe>
-                </div>
-                <p class="dashboard-note">
-                    🔒 Les données collectées sont anonymisées et utilisées uniquement à des fins d'étude territoriale. 
-                    (Coordination avec Mathias pour la sécurité des données.)
+                <div class="hero-tag-pill">Transparence & engagement</div>
+                <h1 class="needs-hero-title">
+                    <span class="text-blue-accent">Besoins</span> de la communauté
+                </h1>
+                <p class="needs-hero-desc">
+                    Le GDG Marseille est une communauté animée par des bénévoles.<br>
+                    Pour organiser des événements tech mémorables, nous avons<br>
+                    besoin de votre soutien. Découvrez comment vous pouvez contribuer.
                 </p>
+                <div class="needs-hero-actions">
+                    <a href="#besoins-prioritaires" class="btn-pill-green">Explorer les besoins ↓</a>
+                    <a href="devenir-partenaire.html" class="btn-pill-outline-dark">Devenir partenaire</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BESOINS PRIORITAIRES (GRID 5 CUADROS EXACTO) ===== -->
+        <section class="needs-priorities-section" id="besoins-prioritaires">
+            <div class="container">
+                <div class="priorities-header-row">
+                    <h2>Besoins prioritaires</h2>
+                    <p>Filtrez les demandes par catégorie pour trouver où vous pouvez agir.</p>
+                </div>
+
+                <!-- Filtros de categoría -->
+                <div class="filter-pills-row">
+                    <button class="filter-pill active">Tous</button>
+                    <button class="filter-pill">Lieux</button>
+                    <button class="filter-pill">Intervenants</button>
+                    <button class="filter-pill">Logistique</button>
+                    <button class="filter-pill">Sponsoring</button>
+                </div>
+
+                <!-- Grid de 5 Tarjetas (Asimétrico con la 4ta grande) -->
+                <div class="needs-grid-asym">
+
+                    <!-- Tarjeta 1: Amphi (Arriba Izquierda) -->
+                    <div class="need-card">
+                        <div class="card-top-row">
+                            <div class="need-icon-box blue-bg">📍</div>
+                            <span class="badge-status urgent">URGENT</span>
+                        </div>
+                        <div class="need-meta-row">
+                            <span class="tag-cat lieu">LIEUX</span>
+                            <span class="dot-separator">•</span>
+                            <span class="status-text">Ouvert</span>
+                        </div>
+                        <h3>Amphi pour 100 personnes</h3>
+                        <p>Nous recherchons un espace pour notre prochain grand meetup de l'automne. Accès PMR et système de projection indispensables.</p>
+                        <div class="card-footer-row">
+                            <div class="mini-avatars">
+                                <span class="mini-av m">M</span>
+                                <span class="mini-av j">J</span>
+                            </div>
+                            <a href="#" class="btn-card-action">Je peux aider ❤️</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Expert Google Cloud (Arriba Centro) -->
+                    <div class="need-card">
+                        <div class="card-top-row">
+                            <div class="need-icon-box yellow-bg">🎤</div>
+                            <span class="badge-status modere">MODÉRÉ</span>
+                        </div>
+                        <div class="need-meta-row">
+                            <span class="tag-cat intervenants">INTERVENANTS</span>
+                            <span class="dot-separator">•</span>
+                            <span class="status-text">En cours</span>
+                        </div>
+                        <h3>Expert Google Cloud</h3>
+                        <p>Nous cherchons un·e speaker pour une session technique sur Vertex AI et les LLMs. Format : 45 min + Q&A.</p>
+                        <div class="card-footer-row text-muted-small">
+                            1 proposition reçue
+                        </div>
+                        <a href="#" class="btn-card-action full-width-btn">Je peux aider</a>
+                    </div>
+
+                    <!-- Tarjeta 3: Buffet pour Meetup (Arriba Derecha) -->
+                    <div class="need-card">
+                        <div class="card-top-row">
+                            <div class="need-icon-box green-bg">🍕</div>
+                            <span class="badge-status urgent">URGENT</span>
+                        </div>
+                        <div class="need-meta-row">
+                            <span class="tag-cat logistique">LOGISTIQUE</span>
+                            <span class="dot-separator">•</span>
+                            <span class="status-text">Ouvert</span>
+                        </div>
+                        <h3>Buffet pour Meetup</h3>
+                        <p>Nous recherchons un partenaire traiteur ou sponsor pour le networking de fin d'événement (50 personnes) : pizzas ou buffet froid.</p>
+                        <div class="card-footer-row">
+                            <span class="info-icon">ℹ️</span>
+                            <a href="#" class="btn-card-action">Je peux aider</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Sponsor Goodies (Abajo Izquierda - Doble Ancho) -->
+                    <div class="need-card-wide">
+                        <div class="need-wide-left">
+                            <div class="need-icon-box red-bg">🎁</div>
+                            <h3>Sponsor Goodies</h3>
+                            <div class="need-meta-row mb-sm">
+                                <span class="tag-cat sponsoring">SPONSORING</span>
+                                <span class="dot-separator">•</span>
+                                <span class="status-text">Ouvert</span>
+                            </div>
+                        </div>
+                        <div class="need-wide-right">
+                            <p>Nous souhaitons offrir des t-shirts et stickers personnalisés lors de notre prochain DevFest Marseille. Nous recherchons un partenaire financier pour couvrir les frais de production (environ 500 €).</p>
+                            <p class="mt-sm"><strong>En échange :</strong> votre logo sur tous nos supports et une mention lors du discours d'ouverture.</p>
+                            <div class="wide-actions-row">
+                                <a href="#" class="btn-pill-blue">Financer ce projet</a>
+                                <a href="#" class="btn-pill-outline-gray">Voir les détails du pack</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5: Salle de Workshop (Abajo Derecha) -->
+                    <div class="need-card">
+                        <div class="card-top-row">
+                            <div class="need-icon-box light-blue-bg">🖥️</div>
+                            <span class="badge-status normal">NORMAL</span>
+                        </div>
+                        <div class="need-meta-row">
+                            <span class="tag-cat lieu">LIEUX</span>
+                            <span class="dot-separator">•</span>
+                            <span class="status-text">Ouvert</span>
+                        </div>
+                        <h3>Salle de Workshop</h3>
+                        <p>Nous recherchons une salle pour 15 à 20 personnes, avec prises électriques et bonne connexion Wi-Fi, pour un atelier pratique.</p>
+                        <div class="card-footer-row">
+                            <span class="date-text">📅 Janvier 2027</span>
+                            <a href="#" class="btn-card-action">Je peux aider</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION OSCURA: COMMENT FONCTIONNE LE PARTENARIAT ? ===== -->
+        <section class="how-it-works-dark">
+            <div class="container">
+                <div class="dark-box-wrapper">
+                    <h2>Comment fonctionne le partenariat ?</h2>
+                    
+                    <div class="steps-grid-3">
+                        <div class="step-item">
+                            <div class="step-num blue-num">1</div>
+                            <h4>Identifiez un besoin</h4>
+                            <p>Parcourez ce tableau et trouvez une demande qui correspond à vos ressources ou à votre expertise.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num green-num">2</div>
+                            <h4>Manifestez-vous</h4>
+                            <p>Cliquez sur « Je peux aider » pour nous envoyer un message direct avec vos coordonnées.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num yellow-num">3</div>
+                            <h4>On en discute</h4>
+                            <p>Un membre de l'équipe organisatrice reviendra vers vous sous 48h pour finaliser les détails.</p>
+                        </div>
+                    </div>
+
+                    <!-- Caja interna de la Carta de la comunidad -->
+                    <div class="charte-inner-box">
+                        <div class="charte-content">
+                            <h4>Charte de la communauté</h4>
+                            <p>Tous nos partenaires s'engagent à respecter le Code de Conduite du GDG Marseille. Nous privilégions les échanges fondés sur l'apport de valeur technologique et le soutien à l'écosystème local.</p>
+                        </div>
+                        <div class="charte-watermark-icon">🤝</div>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
-<!-- ===== FOOTER DINÁMICO ===== -->
-<div id="footer-container"></div>
+    <!-- ===== FOOTER DINÁMICO ===== -->
+    <div id="header-container"></div>
 
     <script src="js/main.js"></script>
 </body>

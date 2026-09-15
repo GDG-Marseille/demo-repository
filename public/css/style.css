@@ -4562,3 +4562,446 @@ body.support-page-body {
     color: #64748b;
     font-weight: 500;
 }
+
+
+/* ==========================================================
+   GDG MARSEILLE - STYLESHEET (DASHBOARD BESOINS & PARTENARIAT)
+   ================================================---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.needs-page-body {
+    background-color: #fbfbfd;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-blue-accent { color: #3b82f6; }
+
+/* Botones genéricos de la página */
+.btn-pill-green {
+    background: #22c55e;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+.btn-pill-green:hover { background: #16a34a; }
+
+.btn-pill-blue {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+.btn-pill-blue:hover { background: #2563eb; }
+
+.btn-pill-outline-dark {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.btn-pill-outline-gray {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 0.75rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* ==========================================================
+   1. HERO SECTION
+   ================================================---------- */
+.needs-hero-section {
+    text-align: center;
+    padding: 5rem 0 4rem 0;
+    background: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.08) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%);
+}
+
+.hero-tag-pill {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #16a34a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid #bbf7d0;
+}
+
+.needs-hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1e293b;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+}
+
+.needs-hero-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.needs-hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* ==========================================================
+   2. SECCIÓN DE PRIORIDADES Y FILTROS
+   ================================================---------- */
+.needs-priorities-section {
+    padding: 3rem 0 6rem 0;
+}
+
+.priorities-header-row {
+    margin-bottom: 1.5rem;
+}
+.priorities-header-row h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+.priorities-header-row p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.filter-pills-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.filter-pill {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.filter-pill.active, .filter-pill:hover {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+}
+
+/* ==========================================================
+   3. GRID ASIMÉTRICO DE LOS 5 CUADROS
+   ================================================---------- */
+.needs-grid-asym {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Tarjeta estándar (Ocupa 1 columna) */
+.need-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.2s;
+}
+.need-card:hover {
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05);
+}
+
+/* Tarjeta Ancha (Ocupa 2 columnas abajo a la izquierda - Tarjeta 4) */
+.need-card-wide {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    grid-column: span 2;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.need-wide-left {
+    flex: 0.8;
+}
+.need-wide-right {
+    flex: 1.2;
+}
+.need-wide-right p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.mt-sm { margin-top: 0.8rem; }
+.mb-sm { margin-bottom: 1rem; }
+
+.wide-actions-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+/* Elementos internos de las tarjetas */
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.need-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+.blue-bg { background: #eff6ff; }
+.yellow-bg { background: #fef9c3; }
+.green-bg { background: #f0fdf4; }
+.red-bg { background: #fef2f2; }
+.light-blue-bg { background: #f0fdfa; }
+
+.badge-status {
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+.badge-status.urgent { background: #fef2f2; color: #ef4444; }
+.badge-status.modere { background: #fefce8; color: #ca8a04; }
+.badge-status.normal { background: #f1f5f9; color: #475569; }
+
+.need-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+.tag-cat.lieu { color: #3b82f6; }
+.tag-cat.intervenants { color: #ca8a04; }
+.tag-cat.logistique { color: #16a34a; }
+.tag-cat.sponsoring { color: #ef4444; }
+
+.dot-separator { color: #cbd5e1; }
+.status-text { color: #64748b; font-weight: 500; }
+
+.need-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.6rem;
+}
+
+.need-card p {
+    color: #64748b;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.mini-avatars {
+    display: flex;
+}
+.mini-av {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    margin-left: -6px;
+}
+.mini-av.m { background: #f59e0b; }
+.mini-av.j { background: #3b82f6; }
+.mini-av:first-child { margin-left: 0; }
+
+.btn-card-action {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-card-action:hover { background: #2563eb; }
+
+.full-width-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.text-muted-small {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+.info-icon, .date-text {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   4. SECCIÓN OSCURA INFERIOR (COMMENT ÇA MARCHE + CHARTE)
+   ================================================---------- */
+.how-it-works-dark {
+    padding: 2rem 0 6rem 0;
+}
+
+.dark-box-wrapper {
+    background: #111827;
+    border-radius: 24px;
+    padding: 4rem 3rem;
+    color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.dark-box-wrapper > h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.steps-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.step-item h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.step-item p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+.blue-num { background: #3b82f6; color: #ffffff; }
+.green-num { background: #22c55e; color: #ffffff; }
+.yellow-num { background: #fbbf24; color: #1e293b; }
+
+/* Caja de la Charte interna dentro del bloque oscuro */
+.charte-inner-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.charte-content {
+    max-width: 750px;
+}
+.charte-content h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+}
+.charte-content p {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.charte-watermark-icon {
+    font-size: 5rem;
+    opacity: 0.15;
+    position: absolute;
+    right: 2rem;
+    bottom: -1rem;
+    user-select: none;
+}
