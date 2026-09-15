@@ -4,233 +4,231 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Événements · GDG Marseille</title>
-    <meta name="description" content="Retrouvez tous les événements tech à Marseille : Pizza & Code, GDG Connect, DevFest et plus." />
+    <meta name="description" content="Découvrez les prochains événements, meetups et conférences du GDG Marseille." />
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="events-page-body">
 
-<!-- ===== HEADER DINÁMICO ===== -->
+    <!-- ===== HEADER DINÁMICO ===== -->
     <div id="header-container"></div>
 
-    <main>
+    <main class="events-main-content">
 
-        <!-- ===== HERO ===== -->
-        <section class="page-hero">
+        <!-- ===== HERO SECTION (Imagen 1) ===== -->
+        <section class="events-hero">
             <div class="container">
-                <h1>Événements</h1>
-                <p>Venez coder, apprendre et réseauter avec la communauté tech de Marseille.</p>
-            </div>
-        </section>
+                <h1 class="events-hero-title">L'excellence tech en <span class="text-blue-accent">Méditerranée</span></h1>
+                <p class="events-hero-subtitle">
+                    Rejoignez la plus grande communauté de développeurs de Marseille pour<br>
+                    apprendre, partager et innover ensemble autour des technologies Google et<br>
+                    bien plus.
+                </p>
 
-        <!-- ===== FILTRES ===== -->
-        <section class="filters-section">
-            <div class="container">
-                <div class="filters-bar">
-                    <button class="filter-btn active" data-filter="all">Tous</button>
-                    <button class="filter-btn" data-filter="pizza">🍕 Pizza & Code</button>
-                    <button class="filter-btn" data-filter="connect">🔗 GDG Connect</button>
-                    <button class="filter-btn" data-filter="devfest">🚀 DevFest</button>
-                    <button class="filter-btn" data-filter="cyber">🔒 Cyber</button>
+                <!-- Search & Filter Bar -->
+                <div class="events-search-wrapper">
+                    <div class="search-input-group">
+                        <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" placeholder="Rechercher un événement..." />
+                    </div>
+                    <div class="filter-pills-group">
+                        <button class="filter-pill active">Tous</button>
+                        <button class="filter-pill">IA</button>
+                        <button class="filter-pill">Cloud</button>
+                        <button class="filter-pill">Web</button>
+                        <button class="filter-pill">Mobile</button>
+                    </div>
+                    <button class="btn-filtrer">Filtrer</button>
                 </div>
             </div>
         </section>
 
-        <!-- ===== ÉVÉNEMENTS À VENIR ===== -->
-        <section class="events-section">
+        <!-- ===== STATS SECTION (Imagen 1) ===== -->
+        <section class="events-stats-section">
             <div class="container">
-                <h2 class="section-title">📅 À venir</h2>
-                <div class="events-grid" id="upcomingEvents">
-
-                    <!-- Carte 1 : Pizza & Code -->
-                    <article class="event-card" data-type="pizza">
-                        <div class="event-card__badge">À venir</div>
-                        <h3>Pizza & Code #12</h3>
-                        <p class="event-meta">📆 12 juin 2026 · 19h – 22h</p>
-                        <p class="event-meta">📍 Epitech Marseille (13006)</p>
-                        <p class="event-desc">Code, pizza et bonne humeur autour d’un projet collaboratif. Cette fois : développement d’un mini-jeu en Python.</p>
-                        <div class="event-tags">
-                            <span>Python</span>
-                            <span>Jeu</span>
-                        </div>
-                        <a href="#" class="btn btn--primary btn--small">S'inscrire via Bevy</a>
-                    </article>
-
-                    <!-- Carte 2 : GDG Connect -->
-                    <article class="event-card" data-type="connect">
-                        <div class="event-card__badge">À venir</div>
-                        <h3>GDG Connect · Édition spéciale IA</h3>
-                        <p class="event-meta">📆 25 juin 2026 · 18h30 – 21h</p>
-                        <p class="event-meta">📍 La Coque · 13009</p>
-                        <p class="event-desc">Networking, retours d’expérience et table ronde sur l’impact de l’IA générative dans les entreprises marseillaises.</p>
-                        <div class="event-tags">
-                            <span>IA</span>
-                            <span>Networking</span>
-                        </div>
-                        <a href="#" class="btn btn--primary btn--small">S'inscrire via Bevy</a>
-                    </article>
-
-                    <!-- Carte 3 : DevFest -->
-                    <article class="event-card" data-type="devfest">
-                        <div class="event-card__badge">À venir</div>
-                        <h3>DevFest Marseille 2026</h3>
-                        <p class="event-meta">📆 15 juillet 2026 · 9h – 18h</p>
-                        <p class="event-meta">📍 Palais des Congrès · 13008</p>
-                        <p class="event-desc">La conférence annuelle des développeurs. 8 talks, 2 ateliers, et un espace startup. Thème : Cloud & Scalabilité.</p>
-                        <div class="event-tags">
-                            <span>Cloud</span>
-                            <span>Conférence</span>
-                        </div>
-                        <a href="#" class="btn btn--primary btn--small">S'inscrire via Bevy</a>
-                    </article>
-
-                    <!-- Carte 4 : Cyber -->
-                    <article class="event-card" data-type="cyber">
-                        <div class="event-card__badge">À venir</div>
-                        <h3>CyberMeet · Sécurité des APIs</h3>
-                        <p class="event-meta">📆 3 juillet 2026 · 18h30 – 20h30</p>
-                        <p class="event-meta">📍 CyberBase · 13006</p>
-                        <p class="event-desc">Atelier pratique sur la sécurisation des APIs REST et GraphQL. Avec démonstrations d’attaques et contre-mesures.</p>
-                        <div class="event-tags">
-                            <span>Cyber</span>
-                            <span>API</span>
-                        </div>
-                        <a href="#" class="btn btn--primary btn--small">S'inscrire via Bevy</a>
-                    </article>
-
+                <div class="stats-divider-box">
+                    <div class="stat-item">
+                        <span class="stat-number num-blue">150+</span>
+                        <span class="stat-label">MEMBRES</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number num-green">6+</span>
+                        <span class="stat-label">ÉVÉNEMENTS / AN</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number num-yellow">10</span>
+                        <span class="stat-label">SPEAKERS</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== ÉVÉNEMENTS PASSÉS ===== -->
-        <section class="events-section past-events">
+        <!-- ===== FEATURED EVENT (Imagen 1) ===== -->
+        <section class="featured-event-section">
             <div class="container">
-                <h2 class="section-title">📸 Événements passés</h2>
-                <p class="section-subtitle">La communauté vit, même en replay !</p>
-                <div class="events-grid">
-
-                    <article class="event-card past">
-                        <div class="event-card__badge past">✓ Passé</div>
-                        <h3>Pizza & Code #11</h3>
-                        <p class="event-meta">📆 15 mai 2026</p>
-                        <p class="event-desc">42 participants · Projet collaboratif autour de l’accessibilité web.</p>
-                        <div class="event-card__gallery">
-                            <span>📷 3 photos</span>
+                <div class="featured-banner">
+                    <!-- Overlay oscuro para legibilidad -->
+                    <div class="featured-overlay"></div>
+                    <div class="featured-content">
+                        <div class="featured-top-meta">
+                            <span class="badge-red">À LA UNE</span>
+                            <span class="featured-date">12 Novembre 2026</span>
                         </div>
-                    </article>
-
-                    <article class="event-card past">
-                        <div class="event-card__badge past">✓ Passé</div>
-                        <h3>GDG Connect · Printemps</h3>
-                        <p class="event-meta">📆 20 avril 2026</p>
-                        <p class="event-desc">55 participants · Table ronde avec les CTO de startups marseillaises.</p>
-                        <div class="event-card__gallery">
-                            <span>📷 5 photos</span>
+                        <h2 class="featured-title">DevFest Marseille 2026 :<br>Night Edition</h2>
+                        <p class="featured-desc">
+                            Le rendez-vous incontournable des passionnés de tech. Une soirée entière<br>
+                            de conférences, workshops et networking au bord de la Méditerranée.
+                        </p>
+                        <div class="featured-actions">
+                            <a href="#" class="btn-pill-blue">S'inscrire gratuitement <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                            <a href="#" class="btn-pill-outline">Voir le programme</a>
                         </div>
-                    </article>
-
-                    <article class="event-card past">
-                        <div class="event-card__badge past">✓ Passé</div>
-                        <h3>DevFest 2025</h3>
-                        <p class="event-meta">📆 10 décembre 2025</p>
-                        <p class="event-desc">120 participants · 10 talks · Retour en images.</p>
-                        <div class="event-card__gallery">
-                            <span>📷 12 photos</span>
-                        </div>
-                    </article>
-
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CO-ORGANISER UN ÉVÉNEMENT ===== -->
-        <section class="coorganize-section">
+        <!-- ===== PROCHAINS ÉVÉNEMENTS (Imagen 2) ===== -->
+        <section class="upcoming-events-section">
             <div class="container">
-                <h2 class="section-title">🤝 Organiser un événement avec nous</h2>
-                <p>Vous avez une idée d’atelier, de meetup ou de conférence ? On vous aide à la réaliser.</p>
+                <div class="section-header-flex">
+                    <div>
+                        <h2 class="section-title-bold">Prochains événements</h2>
+                        <p class="section-subtitle-gray">Ne manquez pas nos prochains meetups et ateliers.</p>
+                    </div>
+                    <a href="#" class="link-voir-tout">Voir tout <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
 
-                <form class="form" id="formCoorganize">
-                    <div class="form-group">
-                        <label for="co_nom">Votre nom *</label>
-                        <input type="text" id="co_nom" name="nom" required />
+                <div class="upcoming-grid-2">
+                    <!-- Tarjeta Izquierda (Imagen) -->
+                    <article class="ev-card-modern">
+                        <img src="assets/img/community-meetup.jpg" alt="Serverless Event" class="ev-card-img" />
+                        <div class="ev-card-body">
+                            <div class="ev-meta-row">
+                                <span class="ev-date-blue">14 Octobre 2026</span>
+                                <span class="ev-tag-gray">IA</span>
+                            </div>
+                            <h3 class="ev-title">Serverless Deep Dive with Google Cloud</h3>
+                            <p class="ev-desc">Apprenez à déployer des architectures scalables sans gérer d'infrastructure avec Cloud Run et Cloud Functions.</p>
+                            
+                            <div class="ev-footer-row">
+                                <div class="ev-location">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <span>The Babel Community, Marseille</span>
+                                </div>
+                                <button class="btn-card-blue">S'inscrire</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Derecha (Pasado, sin imagen) -->
+                    <article class="ev-card-modern no-img-card">
+                        <div class="ev-card-body full-height-body">
+                            <span class="badge-past">Événement passé</span>
+                            
+                            <h3 class="ev-title large-title-mt">Projet au délai impossible : comment l'IA nous a permis de livrer</h3>
+                            <p class="ev-desc flex-grow-text">
+                                Deadline avancée, projet sous tension... et pourtant livré.<br>
+                                Découvrez comment l'IA a permis de tenir un délai "impossible"<br>
+                                sur une refonte e-commerce Web & Mobile. Un retour<br>
+                                d'expérience technique, sans filtre, avec démo live.
+                            </p>
+                            
+                            <div class="ev-footer-col">
+                                <div class="ev-date-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>9 Juin 2026</span>
+                                </div>
+                                <button class="btn-card-outline-blue">Voir le programme</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CALL TO ACTION INTERVENANT (Imagen 2) ===== -->
+        <section class="speaker-cta-section">
+            <div class="container">
+                <div class="speaker-banner">
+                    <div class="speaker-text-side">
+                        <h3>Deviens intervenant</h3>
+                        <p>
+                            Tu as une expertise à partager ? Un retour d'expérience sur une<br>
+                            techno ? La scène du GDG Marseille t'attend. Nous accompagnons<br>
+                            les nouveaux speakers !
+                        </p>
+                        <a href="#" class="btn-white-blue-text">Soumettre un Talk</a>
                     </div>
-                    <div class="form-group">
-                        <label for="co_orga">Organisation / Entreprise</label>
-                        <input type="text" id="co_orga" name="orga" placeholder="Optionnel" />
+                    <div class="speaker-icon-side">
+                        <div class="megaphone-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="co_email">Email *</label>
-                        <input type="email" id="co_email" name="email" required />
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ARCHIVES & RESSOURCES (Imagen 3) ===== -->
+        <section class="archives-section">
+            <div class="container">
+                <div class="section-header-basic">
+                    <h2 class="section-title-bold">Archives & Ressources</h2>
+                    <p class="section-subtitle-gray">Retrouvez les slides de nos précédents événements.</p>
+                </div>
+
+                <div class="archives-grid-3">
+                    <!-- Archive 1 -->
+                    <div class="archive-card">
+                        <div class="arch-meta">
+                            <span class="arch-badge badge-replay">REPLAY</span>
+                            <span class="arch-date">Avril 2024</span>
+                        </div>
+                        <h4 class="arch-title">Flutter 3.22: Quoi de neuf pour le mobile ?</h4>
+                        <div class="arch-footer">
+                            <a href="#" class="arch-link active-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Video</a>
+                            <a href="#" class="arch-link mute-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides</a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="co_type">Type d’événement envisagé *</label>
-                        <select id="co_type" name="type" required>
-                            <option value="">Sélectionnez...</option>
-                            <option value="pizza">Pizza & Code</option>
-                            <option value="connect">GDG Connect</option>
-                            <option value="devfest">DevFest</option>
-                            <option value="cyber">CyberMeet</option>
-                            <option value="autre">Autre</option>
-                        </select>
+
+                    <!-- Archive 2 -->
+                    <div class="archive-card">
+                        <div class="arch-meta">
+                            <span class="arch-badge badge-slides">SLIDES</span>
+                            <span class="arch-date">Mars 2024</span>
+                        </div>
+                        <h4 class="arch-title">Introduction à Gemini API pour les devs JS</h4>
+                        <div class="arch-footer">
+                            <span class="arch-link disabled-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> No video</span>
+                            <a href="#" class="arch-link mute-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides</a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="co_message">Décrivez votre projet *</label>
-                        <textarea id="co_message" name="message" rows="4" placeholder="Idée, format, public visé, date souhaitée..." required></textarea>
+
+                    <!-- Archive 3 -->
+                    <div class="archive-card">
+                        <div class="arch-meta">
+                            <span class="arch-badge badge-pack">FULL PACK</span>
+                            <span class="arch-date">Février 2024</span>
+                        </div>
+                        <h4 class="arch-title">Web Performance: Core Web Vitals en 2024</h4>
+                        <div class="arch-footer">
+                            <a href="#" class="arch-link active-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Video</a>
+                            <a href="#" class="arch-link mute-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides</a>
+                        </div>
                     </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="co_rgpd" name="rgpd" required />
-                        <label for="co_rgpd">J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a></label>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Envoyer ma proposition</button>
-                </form>
+                </div>
+
+                <div class="archives-load-more">
+                    <button class="btn-load-more">Charger plus d'archives</button>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
-<!-- ===== FOOTER DINÁMICO ===== -->
-<div id="footer-container"></div>
+    <!-- ===== FOOTER DINÁMICO ===== -->
+    <div id="footer-container"></div>
 
-    <!-- ===== SCRIPTS ===== -->
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-            // --- FILTRES D'ÉVÉNEMENTS ---
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const eventCards = document.querySelectorAll('#upcomingEvents .event-card');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Désactiver tous les boutons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-
-                    const filter = this.dataset.filter;
-
-                    eventCards.forEach(card => {
-                        if (filter === 'all' || card.dataset.type === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // --- FORMULAIRE CO-ORGANISATION (simulation) ---
-            const coForm = document.getElementById('formCoorganize');
-            if (coForm) {
-                coForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('✅ Proposition de co-organisation envoyée (simulation). L\'équipe vous répondra sous 48h.');
-                    this.reset();
-                });
-            }
-
-        });
-    </script>
-
 </body>
 </html>
