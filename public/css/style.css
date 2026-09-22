@@ -5177,3 +5177,61 @@ body.needs-page-body {
     color: #0f172a;
     font-weight: 700;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ESTILOS FINALES PARA LOS CONTADORES (Números negros, iconos de color)
+   ========================================================================== */
+.partner-stat-card {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    text-align: center !important;
+}
+
+.partner-stat-card .partner-stat-number {
+    background-color: transparent !important;
+    color: #202124 !important; /* Números en negro/gris oscuro */
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin: 12px 0 4px 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+/* Colores exclusivos para los iconos superiores */
+.partner-stat-card .stat-icon {
+    font-size: 1.5rem !important;
+    background: none !important;
+    margin-bottom: 4px !important;
+}
+
+.partner-stat-card .blue-icon { color: #1a73e8 !important; }
+.partner-stat-card .red-icon { color: #ea4335 !important; }
+.partner-stat-card .green-icon { color: #34a853 !important; }
+.partner-stat-card .yellow-icon { color: #fbbc05 !important; }
+
+.partner-stat-card .partner-stat-label {
+    color: #5f6368 !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
