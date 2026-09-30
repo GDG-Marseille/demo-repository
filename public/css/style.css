@@ -5234,3 +5234,37 @@ body.needs-page-body {
     font-size: 0.9rem !important;
     font-weight: 500 !important;
 }
+
+/* ===== SECCIÓN PARTNERS: LETRA GRIS, LÍNEA AZUL AL PASAR EL RATÓN ===== */
+.partners__logos a.partner-name {
+    color: #94a3b8 !important; /* Letra gris por defecto para todos */
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+/* El texto se queda gris incluso al pasar el ratón o estar activo */
+.partners__logos a.partner-name:hover,
+.partners__logos a.partner-name.active {
+    color: #94a3b8 !important; 
+}
+
+/* La línea azul aparece únicamente al pasar el ratón (hover) o si tiene la clase active */
+.partners__logos a.partner-name::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6 !important;
+    transition: width 0.3s ease;
+}
+
+.partners__logos a.partner-name:hover::after,
+.partners__logos a.partner-name.active::after {
+    width: 100%;
+}
