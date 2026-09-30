@@ -230,72 +230,8 @@
     <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('event-search-input');
-            const filterPills = document.querySelectorAll('.filter-pill');
-            const btnFiltrer = document.getElementById('btn-filtrer');
-            const linkVoirTout = document.getElementById('link-voir-tout');
-            const items = document.querySelectorAll('.featured-banner, .ev-card-modern, .archive-card');
 
-            let currentFilter = 'tous';
+<script src="js/evenements.js"></script>
 
-            // Manejar clics en los botones de filtro (pills)
-            filterPills.forEach(pill => {
-                pill.addEventListener('click', function() {
-                    filterPills.forEach(p => p.classList.remove('active'));
-                    this.classList.add('active');
-                    currentFilter = this.getAttribute('data-filter').toLowerCase();
-                    applyFilterAndSearch();
-                });
-            });
-
-            // Filtrar al escribir en la barra de búsqueda o hacer clic en "Filtrer"
-            if (searchInput) {
-                searchInput.addEventListener('input', applyFilterAndSearch);
-            }
-            if (btnFiltrer) {
-                btnFiltrer.addEventListener('click', applyFilterAndSearch);
-            }
-
-            // Restablecer filtros al hacer clic en "Voir tout"
-            if (linkVoirTout) {
-                linkVoirTout.addEventListener('click', function(e) {
-                    e.preventDefault(); // Evita recargar o ir a un enlace vacío
-                    currentFilter = 'tous';
-                    if (searchInput) searchInput.value = '';
-                    
-                    // Activar visualmente la píldora "Tous"
-                    filterPills.forEach(p => {
-                        if (p.getAttribute('data-filter').toLowerCase() === 'tous') {
-                            p.classList.add('active');
-                        } else {
-                            p.classList.remove('active');
-                        }
-                    });
-
-                    applyFilterAndSearch();
-                });
-            }
-
-            function applyFilterAndSearch() {
-                const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-
-                items.forEach(item => {
-                    const tags = (item.getAttribute('data-tags') || '').toLowerCase();
-                    const text = item.textContent.toLowerCase();
-
-                    const matchesFilter = (currentFilter === 'tous' || tags.includes(currentFilter));
-                    const matchesSearch = (query === '' || text.includes(query) || tags.includes(query));
-
-                    if (matchesFilter && matchesSearch) {
-                        item.style.display = '';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
-</body>
+  </body>
 </html>
