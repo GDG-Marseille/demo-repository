@@ -5298,3 +5298,78 @@ body.needs-page-body {
     color: #000000 !important;
     border-color: #b0b0b0;
 }
+
+.hero__image-col {
+    position: relative;
+}
+
+/* El mockup mantiene su imagen limpia y redondeada */
+.hero__tilt-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.mockup-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mockup-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* La tarjeta está FUERA del mockup, por lo que flotará perfectamente encima */
+.hero__floating-card {
+    position: absolute;
+    bottom: -15px; /* Ajusta a tu gusto para que muerda la esquina inferior */
+    left: -20px;   /* Ajusta para que sobresalga por la izquierda */
+    z-index: 100;  /* Por encima del mockup sí o sí */
+    
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 12px 18px;
+    border-radius: 16px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transform: none !important;
+}
+
+.hero__floating-card .floating-icon {
+    width: 42px;
+    height: 42px;
+    background: #fde047;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.hero__floating-card .floating-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.hero__floating-card .floating-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.hero__floating-card .floating-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+}
+ 
