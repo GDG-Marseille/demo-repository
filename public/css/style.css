@@ -5269,4 +5269,32 @@ body.needs-page-body {
     width: 100%;
 }
 
- 
+ /* Estilo unificado para que ambos botones midan lo mismo y estén en línea */
+.hero__cta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Botón estilo encart adaptado para tener la misma dimensión y alineación */
+.btn--encart-outline {
+    background-color: #ffffff; /* O un blanco muy sutil según prefieras */
+    border: 1px solid #dcdcdc;
+    color: #000000 !important;
+    padding: 12px 24px; /* Ajusta esto para que coincida exactamente con la altura del botón de al lado */
+    border-radius: 8px; /* Ajusta el radio según el botón primario */
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: none; /* Evita efectos raros */
+}
+
+.btn--encart-outline:hover,
+.btn--encart-outline:active,
+.btn--encart-outline:focus {
+    background-color: #f8f9fa !important;
+    color: #000000 !important;
+    border-color: #b0b0b0;
+}
