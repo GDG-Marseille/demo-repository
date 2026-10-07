@@ -58,6 +58,7 @@ body {
 .header {
     background: #fff;
     border-bottom: 1px solid #eaeaea;
+padding: 20px 0;
 }
 .header__inner {
     display: flex;
@@ -65,6 +66,27 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
+
+ 
+
+/* 2. Asegúrate de que los dos botones del grupo tengan el mismo padding y espaciado */
+.header__cta-group {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio uniforme entre los dos botones */
+}
+
+.header__cta-group .btn {
+    padding: 12px 20px; /* Padding idéntico para ambos botones */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px; /* Asegura que la forma también sea uniforme */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .nav__list {
     display: flex;
     gap: 2rem;
