@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     headers: {
                         "Accept": "application/json",
                         "Content-Type": "application/json",
-                        "api-key": "TU_API_KEY_DE_BREVO_AQUÍ" // Te la dará Méryl[cite: 1]
+                        "api-key": "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" // Te la dará Méryl[cite: 1]
                     },
                     body: JSON.stringify(data)
                 });
