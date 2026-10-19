@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // 4. Contar cuántos hay en la lista total menos los 3 que se muestran
     if (membersCountText) {
         const totalCount = allMembers.length; // Cuenta los elementos reales de la lista (en este caso 5)
-        const remainingCount = totalCount - selectedMembers.length; // 5 - 3 = 2
+        const remainingCount = 163; // 5 - 3 = 2
         
-        membersCountText.innerHTML = `Rejoint par <strong>+${remainingCount} membres passionnés</strong>`;
+        membersCountText.innerHTML = `Rejoint par <strong>+${163} membres passionnés</strong>`;
     }
 });
