@@ -5427,4 +5427,20 @@ a.hero__floating-card {
     text-align: left;
 }
 
- 
+.hero__members-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 24px; /* <--- Añade o incrementa este valor para alejarlo de los botones */
+}
+
+.avatar-group {
+    display: flex;         /* Para que las 3 imágenes de los avatares se pongan una al lado de la otra */
+    align-items: center;
+}
+
+/* Opcional: si los avatares se solapan (efecto cascada) */
+.avatar-group img {
+    /* Ajusta según cómo tengas definidos tus avatares para que no se desalineen verticalmente */
+    display: block;
+}
