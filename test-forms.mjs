@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import submit from './functions/api/forms/submit.js';
+const env = { PRIVACY_APPROVED: 'true', BREVO_API_KEY: 'test-only', TURNSTILE_SECRET_KEY: 'test-only', BREVO_SENDER_EMAIL: 'sender@example.com', CONTACT_TO_EMAIL: 'team@example.com', BREVO_LIST_ID: '2' };
+const request = (fields = {}, origin = 'https://example.com') => {
+  const body = new FormData();
+  for (const [key, value] of Object.entries({ nom: 'Test', email: 'test@example.com', rgpd: 'on', motif: 'autre', message: 'Test message', 'cf-turnstile-response': 'test-token', ...fields })) body.set(key, value);
+  return new Request('https://example.com/api/forms/contact', { method: 'POST', headers: { Origin: origin }, body });
+};
+const calls = [];
+let captchaValid = true;
+let brevoStatus = 201;
+globalThis.fetch = async (url, options) => {
+  calls.push({ url, options });
+  if (url.includes('siteverify')) return Response.json({ success: captchaValid });
+  return Response.json({ messageId: 'mock' }, { status: brevoStatus });
+};
+assert.equal((await submit(request(), {}, 'contact')).status, 503);
+assert.equal(calls.length, 0);
+assert.equal((await submit(request({}, 'https://other.example'), env, 'contact')).status, 403);
+assert.equal((await submit(request({ motif: 'rappel' }), env, 'contact')).status, 400);
+assert.equal((await submit(request({ rgpd: '' }), env, 'contact')).status, 400);
+assert.equal((await submit(request({ motif: 'rappel', telephone: '+33 6 12 34 56 78' }), env, 'contact')).status, 200);
+assert.ok(calls.at(-1).url.endsWith('smtp/email'));
+assert.match(JSON.parse(calls.at(-1).options.body).textContent, /telephone: \+33/);
+assert.equal((await submit(request({ entreprise: 'Example' }), env, 'partner')).status, 200);
+assert.equal((await submit(request(), env, 'newsletter')).status, 200);
+assert.deepEqual(JSON.parse(calls.at(-1).options.body).listIds, [2]);
+captchaValid = false;
+assert.equal((await submit(request(), env, 'contact')).status, 400);
+captchaValid = true;
+brevoStatus = 500;
+assert.equal((await submit(request(), env, 'contact')).status, 502);
+console.log('10 form checks passed with mocked services; no external request sent.');

@@ -1,0 +1,21 @@
+Form activation checklist
+
+1. Revoke the formerly public Brevo key in Brevo. Removing it from source does
+   not revoke it or remove copies from earlier deployments/history.
+2. Set new BREVO_API_KEY and TURNSTILE_SECRET_KEY with wrangler secret put.
+3. Set TURNSTILE_SITE_KEY (public), BREVO_SENDER_EMAIL (verified sender),
+   CONTACT_TO_EMAIL (recipient), BREVO_LIST_ID (newsletter list).
+4. Replace the pending privacy pages with owner-approved notices, including
+   controller identity/contact, purposes, legal bases, retention, processors,
+   rights and withdrawal/unsubscribe information. Only then set PRIVACY_APPROVED=true.
+5. Serve /api/* from functions/api/_worker.js on the same origin as public/.
+   A static-only preview cannot process forms and will display unavailable status.
+6. Test configured forms in staging before deployment, including real delivery,
+   captcha failures and newsletter unsubscribe behavior. No real email was sent
+   during implementation tests.
+7. Supply the official HelloAsso campaign URL to replace the contact fallback.
+8. Confirm the displayed 150+ member figure and official DevFest name.
+
+API documentation:
+https://developers.brevo.com/reference/send-transac-email
+https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/
