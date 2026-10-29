@@ -6,6 +6,7 @@
     <title>Nous soutenir · GDG Marseille</title>
     <meta name="description" content="Soutenez la communauté tech de Marseille. Faites un don et bénéficiez d'une déduction fiscale." />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/support-progress.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body class="support-page-body">
@@ -34,15 +35,15 @@
                             <span class="progress-percent-top">80%</span>
                         </div>
                         <div class="progress-values-row">
-                            <span class="progress-collected">-1 600€ <small>récoltés</small></span>
+                            <span class="progress-collected">1 600€ <small>récoltés</small></span>
                             <span class="progress-target">Objectif: 2 000€</span>
                         </div>
-                        <div class="progress-bar-track">
-                            <div class="progress-bar-fill" style="width: 0%;"></div>
+                        <div class="progress-bar-track" role="progressbar" aria-label="Objectif annuel de collecte" aria-valuemin="0" aria-valuemax="2000" aria-valuenow="1600" aria-valuetext="1 600 euros récoltés sur 2 000 euros, soit 80 %">
+                            <div class="progress-bar-fill" style="width: 80%;"></div>
                         </div>
                         <div class="progress-footer-row">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <span>+150 contributeurs nous font déjà confiance</span>
+                            <span>Une communauté de passionnés mobilisés</span>
                         </div>
                     </div>
                 </div>
@@ -170,18 +171,15 @@
         <section class="final-donate-section" id="donate">
             <div class="container text-center">
                 <h2>Prêt à faire la différence ?</h2>
-                <p class="final-donate-subtitle">La transaction s'effectue via HelloAsso, la plateforme sécurisée dédiée aux associations françaises.</p>
+                <p class="final-donate-subtitle">Contactez notre équipe pour connaître les modalités de soutien.</p>
+                <p style="margin-bottom: 24px;"><a href="dashboard-besoins" style="color: #2563eb; text-decoration: underline;">Aider autrement : voir nos besoins</a></p>
                 
-                <a href="#" class="btn-pill-blue btn-large-icon" id="helloAssoBtn">
-                    Faire un don sur HelloAsso 
+                <a href="contact?motif=soutien#formContact" class="btn-pill-blue btn-large-icon">
+                    Nous contacter pour contribuer 
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
 
-                <div class="trust-badges-row">
-                    <span>🔒 Sécurisé SSL</span>
-                    <span>💙 100% à l'association</span>
-                    <span>📄 Reçu fiscal immédiat</span>
-                </div>
+
             </div>
         </section>
 

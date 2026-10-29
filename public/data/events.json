@@ -1,0 +1,51 @@
+{
+    "source": "https://www.meetup.com/google-developer-group-marseille/events/ical/",
+    "updatedAt": "2026-10-28T22:27:10+00:00",
+    "events": [
+        {
+            "id": "gdg-projet-ia-20260609",
+            "title": "Projet au délai impossible : comment l’IA nous a permis de livrer",
+            "start": "2026-06-09T00:00:00+02:00",
+            "end": "2026-06-10T00:00:00+02:00",
+            "description": "Deadline avancée, projet sous tension… et pourtant livré. Découvrez comment l’IA a permis de tenir un délai impossible sur une refonte e-commerce Web & Mobile.",
+            "url": "https://gdg.community.dev/events/details/google-gdg-marseille-presents-projet-au-delai-impossible-comment-lia-nous-a-permis-de-livrer/",
+            "location": "",
+            "tags": [
+                "ia",
+                "web",
+                "mobile"
+            ],
+            "image": null
+        },
+        {
+            "id": "315789568",
+            "title": "DevFest Marseille 2026",
+            "start": "2026-11-12T16:00:00+01:00",
+            "end": "2026-11-12T22:30:00+01:00",
+            "description": "🚀 Le tout premier DevFest débarque à Marseille ! Une journée pour apprendre et propulser la tech phocéenne. Pour marquer le lancement du nouveau chapitre GDG Marseille, nous vous proposons un format inédit pour notre tout premier DevFest ! Oubliez les conférences passives : cette…",
+            "url": "https://www.meetup.com/google-developer-group-marseille/events/315789568/",
+            "location": "",
+            "tags": [
+                "ia",
+                "cloud"
+            ],
+            "image": "images/devfest-conference.jpeg",
+            "cancelled": false
+        },
+        {
+            "id": "315789695",
+            "title": "GDG Marseille x Epitech Summit - IA, Cloud & Cyber 🚀",
+            "start": "2027-02-02T09:00:00+01:00",
+            "end": "2027-02-02T19:00:00+01:00",
+            "description": "💡 Un partenariat exclusif GDG Marseille x Epitech Summit Le 2 février, GDG Marseille s'associe à l'Epitech Summit pour vous proposer une session technique complète au cœur de l'écosystème marseillais ! L'Epitech Summit réunit étudiants, professionnels et passionnés pour explorer…",
+            "url": "https://www.meetup.com/google-developer-group-marseille/events/315789695/",
+            "location": "",
+            "tags": [
+                "ia",
+                "cloud"
+            ],
+            "image": "images/meet1.png",
+            "cancelled": false
+        }
+    ]
+}
