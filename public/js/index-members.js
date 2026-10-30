@@ -4,13 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const membersCountText = document.getElementById("dynamic-members-count");
     if (!avatarGroup) return;
 
-    // Los miembros reales de la comunidad
+    // Fictional decorative portraits, independent of the organizing team.
     const allMembers = [
-        { name: "Meryl Soratti", img: "images/person1.png" },
-        { name: "Eric Huang", img: "images/person2.png" },
-        { name: "Moussaadou Mirelli", img: "images/person3.png" },
-        { name: "Louis Savon", img: "images/person4.png" },
-        { name: "Mathilde Rodriguez", img: "images/person5.png" }
+        { img: "images/avatar-fictional-1.png" },
+        { img: "images/avatar-fictional-2.png" },
+        { img: "images/avatar-fictional-4.png" }
     ];
 
     // 1. Barajar la lista de forma aleatoria
@@ -20,15 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedMembers = shuffled.slice(0, 3);
 
     // 3. Pintar los 3 avatares en el HTML manteniendo la clase original de CSS
+    avatarGroup.setAttribute("aria-hidden", "true");
     avatarGroup.innerHTML = selectedMembers.map(member => `
-        <img src="${member.img}" alt="${member.name}" title="${member.name}" />
+        <img src="${member.img}" alt="" width="36" height="36" />
     `).join("");
 
     // 4. Contar cuántos hay en la lista total menos los 3 que se muestran
     if (membersCountText) {
-        const totalCount = allMembers.length; // Cuenta los elementos reales de la lista (en este caso 5)
-        const remainingCount = 163; // 5 - 3 = 2
-        
-        membersCountText.innerHTML = `Rejoint par <strong>+${163} membres passionnés</strong>`;
+        membersCountText.innerHTML = `Rejoint par <strong>150+ membres passionnés</strong>`;
     }
 });
