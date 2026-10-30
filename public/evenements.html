@@ -26,19 +26,23 @@
                 </p>
 
                 <!-- Search & Filter Bar -->
-                <div class="events-search-wrapper">
+                <form class="events-search-wrapper" id="events-search-form" role="search" aria-label="Rechercher des événements">
                     <div class="search-input-group">
                         <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <input type="text" id="event-search-input" placeholder="Rechercher un événement..." />
+                        <input type="search" id="event-search-input" aria-label="Rechercher un événement" placeholder="Rechercher un événement..." />
                     </div>
                     <div class="filter-pills-group" id="filter-pills-container">
-                        <button class="filter-pill active" data-filter="tous">Tous</button>
-                        <button class="filter-pill" data-filter="ia">IA</button>
-                        <button class="filter-pill" data-filter="cloud">Cloud</button>
-                        <button class="filter-pill" data-filter="web">Web</button>
-                        <button class="filter-pill" data-filter="mobile">Mobile</button>
+                        <button type="button" class="filter-pill active" data-filter="tous">Tous</button>
+                        <button type="button" class="filter-pill" data-filter="ia">IA</button>
+                        <button type="button" class="filter-pill" data-filter="cloud">Cloud</button>
+                        <button type="button" class="filter-pill" data-filter="web">Web</button>
+                        <button type="button" class="filter-pill" data-filter="mobile">Mobile</button>
                     </div>
-                    <button class="btn-filtrer" id="btn-filtrer">Filtrer</button>
+                    <button type="submit" class="btn-filtrer" id="btn-filtrer">Filtrer</button>
+                </form>
+                <div class="events-search-feedback">
+                    <p id="events-search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                    <button type="button" id="events-reset" hidden>Réinitialiser les filtres</button>
                 </div>
             </div>
         </section>
@@ -66,7 +70,7 @@
         <!-- ===== FEATURED EVENT (Imagen 1) ===== -->
         <section class="featured-event-section">
             <div class="container">
-                <div class="featured-banner" data-tags="cloud web mobile ia devfest" style="background-image: url('images/devfest.png'); background-size: cover; background-position: center;">
+                <div class="featured-banner" data-tags="cloud web mobile ia devfest" style="background-image: url('images/devfest-conference.jpeg'); background-size: cover; background-position: center 60%;">
                     <!-- Overlay oscuro para legibilidad -->
                     <div class="featured-overlay"></div>
                     <div class="featured-content">
@@ -80,7 +84,7 @@
                             
                         </p>
                         <div class="featured-actions">
-                           <a href="https://gdg.community.dev/events/details/google-gdg-marseille-presents-devfest-marseille-2026/" class="btn-pill-blue" target="_blank" rel="noopener noreferrer">S'inscrire gratuitement <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                           <a href="https://www.meetup.com/fr-fr/google-developer-group-marseille/events/315789568/" class="btn-pill-blue" target="_blank" rel="noopener noreferrer">S'inscrire gratuitement <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                             <a href="https://gdg.community.dev/events/details/google-gdg-marseille-presents-devfest-marseille-2026/" class="btn-pill-outline">Voir le programme</a>
                         </div>
                     </div>
@@ -102,13 +106,13 @@
                 <div class="upcoming-grid-2">
                     <!-- Tarjeta Izquierda (Imagen) -->
                     <article class="ev-card-modern" data-tags="ia cloud serverless">
-                        <img src="images/meet1.png" alt="Serverless Event" class="ev-card-img" />
+                        <img src="images/evenement-epitech-summit.png" alt="Serverless Event" class="ev-card-img" />
                         <div class="ev-card-body">
                             <div class="ev-meta-row">
                                 <span class="ev-date-blue">2 Février 2027</span>
                                 <span class="ev-tag-gray">IA, Cloud, Cyber</span>
                             </div>
-                            <h3 class="ev-title">GDG Marseille x Epitech Summit - IA, Cloud & Cyber 🚀</h3>
+                            <h3 class="ev-title">GDG Marseille x Epitech Summit - IA, Cloud & Cyber </h3>
                             <p class="ev-desc">GDG Marseille s'associe à l'Epitech Summit le 2 février ! Profitez d'un workshop IA pratique de 2h et de deux confs exclusives sur le Cloud et la Cybersécurité. Inscription gratuite mais places limitées !</p>
                             
                             <div class="ev-footer-row">
@@ -116,7 +120,7 @@
                                     <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                     <span>Epitech, Marseille</span>
                                 </div>
-                                <button class="btn-card-blue">S'inscrire</button>
+                                <a class="btn-card-blue" href="https://www.meetup.com/google-developer-group-marseille/events/315789695/">S'inscrire</a>
                             </div>
                         </div>
                     </article>
@@ -139,7 +143,7 @@
                                     <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                                     <span>9 Juin 2026</span>
                                 </div>
-                                <button class="btn-card-outline-blue">Voir le programme</button>
+                                <a class="btn-card-outline-blue" href="https://gdg.community.dev/events/details/google-gdg-marseille-presents-projet-au-delai-impossible-comment-lia-nous-a-permis-de-livrer/">Voir le programme</a>
                             </div>
                         </div>
                     </article>
@@ -158,7 +162,7 @@
                             techno ? La scène du GDG Marseille t'attend. Nous accompagnons<br>
                             les nouveaux speakers !
                         </p>
-                        <a href="#" class="btn-white-blue-text">Soumettre un Talk</a>
+                        <a href="contact?motif=talk#formContact" class="btn-white-blue-text">Soumettre un Talk</a>
                     </div>
                     <div class="speaker-icon-side">
                         <div class="megaphone-box">
@@ -169,7 +173,7 @@
             </div>
         </section>
 
-        <!-- ===== ARCHIVES & RESSOURCES (Imagen 3) ===== -->
+        <!-- V2 : Archives & Ressources, section conservée pour une activation ultérieure.
         <section class="archives-section">
             <div class="container">
                 <div class="section-header-basic">
@@ -178,7 +182,6 @@
                 </div>
 
                 <div class="archives-grid-3">
-                    <!-- Archive 1 -->
                     <div class="archive-card" data-tags="mobile flutter">
                         <div class="arch-meta">
                             <span class="arch-badge badge-replay">REPLAY</span>
@@ -186,12 +189,11 @@
                         </div>
                         <h4 class="arch-title">Flutter 3.22: Quoi de neuf pour le mobile ?</h4>
                         <div class="arch-footer">
-                            <a href="#" class="arch-link active-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Video</a>
-                            <a href="#" class="arch-link mute-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides</a>
+                            <span class="arch-link active-link" title="Ressource non disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Video — à venir</span>
+                            <span class="arch-link mute-link" title="Ressource non disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides — à venir</span>
                         </div>
                     </div>
 
-                    <!-- Archive 2 -->
                     <div class="archive-card" data-tags="ia web gemini api">
                         <div class="arch-meta">
                             <span class="arch-badge badge-slides">SLIDES</span>
@@ -200,11 +202,10 @@
                         <h4 class="arch-title">Introduction à Gemini API pour les devs JS</h4>
                         <div class="arch-footer">
                             <span class="arch-link disabled-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> No video</span>
-                            <a href="#" class="arch-link mute-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides</a>
+                            <span class="arch-link mute-link" title="Ressource non disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides — à venir</span>
                         </div>
                     </div>
 
-                    <!-- Archive 3 -->
                     <div class="archive-card" data-tags="web performance core web vitals">
                         <div class="arch-meta">
                             <span class="arch-badge badge-pack">FULL PACK</span>
@@ -212,8 +213,8 @@
                         </div>
                         <h4 class="arch-title">Web Performance: Core Web Vitals en 2024</h4>
                         <div class="arch-footer">
-                            <a href="#" class="arch-link active-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Video</a>
-                            <a href="#" class="arch-link mute-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides</a>
+                            <span class="arch-link active-link" title="Ressource non disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Video — à venir</span>
+                            <span class="arch-link mute-link" title="Ressource non disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Slides — à venir</span>
                         </div>
                     </div>
                 </div>
@@ -223,6 +224,7 @@
                 </div>
             </div>
         </section>
+        -->
 
     </main>
 
@@ -230,6 +232,7 @@
     <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
+    <script src="js/events-feed.js"></script>
 
 <script src="js/evenements.js"></script>
 

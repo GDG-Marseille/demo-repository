@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact · GDG Marseille</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         /* Oculta por completo cualquier enlace de troubleshoot generado por el widget */
         .cf-turnstile iframe + div, 
@@ -38,17 +38,17 @@
                     <div class="contact-info-cards">
                         <!-- Tarjeta 1: Écrivez-nous -->
                         <div class="info-card">
-                            <div class="info-card__icon blue-light-bg">✉️</div>
+                            <div class="info-card__icon blue-light-bg" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M16 8v7c0 3 6 2 6-3a10 10 0 1 0-4 8"/></svg></div>
                             <div class="info-card__content">
                                 <h3>Écrivez-nous</h3>
                                 <p>Pour toute question générale, proposition de partenariat ou de talk, envoyez-nous un message via le formulaire ci-dessous et nous vous répondrons dans les meilleurs délais.</p>
-                                <a href="mailto:hello@gdgmarseille.fr" class="info-link">hello@gdgmarseille.fr</a>
+                                <a href="mailto:contact@gdgmarseille.fr" class="info-link">contact@gdgmarseille.fr</a>
                             </div>
                         </div>
 
                         <!-- Tarjeta 2: Retrouvez-nous -->
                         <div class="info-card">
-                            <div class="info-card__icon green-light-bg">📍</div>
+                            <div class="info-card__icon green-light-bg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></div>
                             <div class="info-card__content">
                                 <h3>Retrouvez-nous</h3>
                                 <p>Nos meetups et événements se déroulent généralement à Marseille, dans des espaces de coworking ou chez nos partenaires locaux.</p>
@@ -58,14 +58,14 @@
 
                         <!-- Tarjeta 3: Suivez-nous -->
  <div class="info-card">
-    <div class="info-card__icon yellow-light-bg">🔗</div>
+    <div class="info-card__icon yellow-light-bg" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="4" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="18" cy="20" r="2"/><path d="m7 11 9-6M7 13l9 6"/></svg></div>
     <div class="info-card__content">
         <h3>Suivez-nous</h3>
         <p>Restez informés de nos prochains événements, ateliers et actualités tech en nous suivant sur nos réseaux sociaux.</p>
         <div class="info-social-icons">
             <!-- Sitio web oficial / GDG usando tu imagen -->
 <a href="https://gdg.community.dev/gdg-marseille/" target="_blank" title="Site web officiel GDG">
-                <img src="images/logo.jpeg" alt="Logo GDG Marseille" style="width: 24px; height: 24px; object-fit: contain; vertical-align: middle;">
+                <img src="images/logo-gdg-marseille.jpeg" alt="Logo GDG Marseille" style="width: 24px; height: 24px; object-fit: contain; vertical-align: middle;">
             </a>
             <!-- Instagram -->
             <a href="https://www.instagram.com/gdg_marseille/" target="_blank" title="Instagram">
@@ -79,9 +79,10 @@
     </div>
 </div>
 
+                    </div>
                     <!-- COLUMNA DERECHA: Formulario detallado -->
                     <div class="contact-form-wrapper">
-                        <form class="form-exact" id="formContact">
+                        <form class="form-exact" id="formContact" data-api-form="contact">
                             <div class="form-row-double">
                                 <div class="form-group">
                                     <label for="contact_prenom">Prénom</label>
@@ -104,6 +105,10 @@
                                     <option value="" disabled selected>Sélectionner un motif</option>
                                     <option value="evenement">Demande d'information sur un événement</option>
                                     <option value="partenariat">Proposition de partenariat</option>
+                                    <option value="rappel">Demande de rappel</option>
+                                    <option value="talk">Proposer un talk</option>
+                                    <option value="benevolat">Devenir bénévole</option>
+                                    <option value="soutien">Soutenir la communauté</option>
                                     <option value="autre">Autre question</option>
                                 </select>
                             </div>
@@ -113,21 +118,25 @@
                                 <textarea id="contact_message" name="message" rows="5" placeholder="Dites-nous comment nous pouvons vous aider..." required></textarea>
                             </div>
 
+                            <div class="form-group" id="phone-group" hidden>
+                                <label for="contact_phone">Téléphone pour le rappel</label>
+                                <input type="tel" id="contact_phone" name="telephone" autocomplete="tel" />
+                            </div>
                             <!-- Fila de aceptación -->
                             <div class="form-group checkbox-row">
                                 <input type="checkbox" id="contact_rgpd" name="rgpd" required />
                                 <label for="contact_rgpd">
-                                    J'accepte la <a href="politique-confidentialite.html" target="_blank">politique de confidentialité</a> et le <a href="traitement-donnees.html" target="_blank">traitement de mes données.</a>
+                                    J’accepte le <a href="politique-confidentialite#formulaires" target="_blank" rel="noopener">traitement de mes données</a> pour répondre à ma demande.
                                 </label>
                             </div>
 
                             <!-- Widget Turnstile -->
                             <div class="form-group turnstile-container">
-                                <div class="cf-turnstile" data-sitekey="TU_SITE_KEY"></div>
+                                <div class="captcha-slot"></div>
                             </div>
 
                             <button type="submit" class="btn btn--primary contact-submit-btn">
-                                Envoyer le message <span class="send-icon">➔</span>
+                                Envoyer le message <svg class="send-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 19 9-19 9 3-9-3-9Zm3 9h16"/></svg>
                             </button>
                         </form>
                     </div>
@@ -137,17 +146,17 @@
                 <!-- Bloque inferior de 3 tarjetas de valores -->
                 <div class="contact-bottom-features">
                     <div class="bottom-feature-card">
-                        <div class="feature-icon red-bg">❤️</div>
+                        <div class="feature-icon red-bg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21 3 12C-3 5 7-2 12 5c5-7 15 0 9 7Z"/></svg></div>
                         <h3>Communauté indépendante</h3>
                         <p>Nous sommes fiers de faire partie du réseau mondial GDG tout en restant ancrés localement.</p>
                     </div>
                     <div class="bottom-feature-card">
-                        <div class="feature-icon blue-bg">🎓</div>
+                        <div class="feature-icon blue-bg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m1 8 11-6 11 6-11 6L1 8Zm5 3v7l6 4 6-4v-7m5-3v10"/></svg></div>
                         <h3>Apprentissage & évolution</h3>
                         <p>D'Android au Cloud en passant par l'IA, nous couvrons les technologies qui comptent pour votre carrière et vos projets.</p>
                     </div>
                     <div class="bottom-feature-card">
-                        <div class="feature-icon green-bg">🤝</div>
+                        <div class="feature-icon green-bg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m2 10 6-7 4 2 4-2 6 7-4 5m-6-10-5 5 2 2 4-3 6 6-7 7-9-9Zm5 12-5-5m2 8-5-5m2 8-5-5"/></svg></div>
                         <h3>Collaboration ouverte</h3>
                         <p>Tout le monde est le bienvenu. Nous valorisons la diversité et des environnements inclusifs pour tous les passionnés de tech.</p>
                     </div>
@@ -161,5 +170,6 @@
     <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

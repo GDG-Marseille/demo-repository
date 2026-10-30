@@ -1,0 +1,108 @@
+/* Needs page reference layouts. */
+.needs-page-body .how-it-works-dark > .container { width: calc(100% - 56px); max-width: 1480px; padding: 0; }
+.needs-page-body .dark-box-wrapper { position: relative; overflow: hidden; background: #191b1d; border-radius: 28px; padding: 110px 80px 80px; box-shadow: none; }
+.needs-page-body .dark-box-wrapper > h2 { font-size: 32px; font-weight: 600; margin-bottom: 52px; }
+.needs-page-body .steps-grid-3 { width: 73%; gap: 40px; margin-bottom: 48px; }
+.needs-page-body .step-num { width: 48px; height: 48px; font-size: 20px; font-weight: 600; margin-bottom: 28px; }
+.needs-page-body .blue-num { background: #4285f4; }
+.needs-page-body .green-num { background: #34a853; }
+.needs-page-body .yellow-num { background: #fbbc04; color: #fff; }
+.needs-page-body .step-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 18px; }
+.needs-page-body .step-item p { font-size: 17px; line-height: 1.5; color: #c5c5c5; }
+.needs-page-body .step-item:nth-child(2) { max-width: 202px; }
+.needs-page-body .step-item:nth-child(2) .step-num { width: 43px; height: 43px; font-size: 18px; margin-bottom: 24px; }
+.needs-page-body .step-item:nth-child(2) h4 { font-size: 15px; line-height: 1.5; margin-bottom: 12px; }
+.needs-page-body .step-item:nth-child(2) p { font-size: 14px; line-height: 1.5; margin: 0; }
+.needs-page-body .charte-inner-box { width: 73%; padding: 32px; background: #2e3032; border: 1px solid #505254; border-radius: 16px; }
+.needs-page-body .charte-content h4 { font-size: 24px; font-weight: 500; margin-bottom: 12px; }
+.needs-page-body .charte-content p { color: #ccc; font-size: 17px; line-height: 1.5; }
+.needs-page-body .charte-watermark-icon { position: absolute; width: 24%; height: auto; right: 28px; bottom: 40px; color: #fff; opacity: .055; pointer-events: none; }
+@media (max-width: 1000px) {
+    .needs-page-body .dark-box-wrapper { padding: 64px 36px; }
+    .needs-page-body .steps-grid-3 { width: 100%; gap: 24px; }
+}
+@media (max-width: 700px) {
+    .needs-page-body .how-it-works-dark > .container { width: calc(100% - 32px); }
+    .needs-page-body .dark-box-wrapper { padding: 40px 24px; }
+    .needs-page-body .dark-box-wrapper > h2 { font-size: 26px; margin-bottom: 32px; }
+    .needs-page-body .steps-grid-3 { grid-template-columns: 1fr; gap: 32px; }
+    .needs-page-body .charte-inner-box { width: 100%; padding: 24px; }
+    .needs-page-body .charte-watermark-icon { display: none; }
+}
+#besoins-prioritaires > .container {
+    width: calc(100% - 56px);
+    max-width: 1480px;
+    padding: 0;
+}
+#besoins-prioritaires .needs-grid-asym {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+}
+#besoins-prioritaires .need-card,
+#besoins-prioritaires .need-card-wide {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 38px;
+    min-width: 0;
+}
+#besoins-prioritaires .need-card { min-height: 460px; }
+#besoins-prioritaires .need-icon-box { width: 52px; height: 52px; border-radius: 14px; font-size: 23px; }
+#besoins-prioritaires .need-icon-box svg { display: block; width: 28px; height: 28px; }
+#besoins-prioritaires .need-icon-box.blue-bg { color: #4285f4; background: #eff6ff; }
+#besoins-prioritaires .need-icon-box.yellow-bg { color: #fbbc04; background: #fefce8; }
+#besoins-prioritaires .need-icon-box.green-bg { color: #34a853; background: #f0fdf4; }
+#besoins-prioritaires .need-icon-box.light-blue-bg { color: #4285f4; background: #eff6ff; }
+#besoins-prioritaires .need-icon-box.red-bg { color: #ea4335; background: #fef2f2; }
+#besoins-prioritaires .card-top-row { margin-bottom: 24px; }
+#besoins-prioritaires .badge-status { font-size: 13px; padding: 6px 12px; }
+#besoins-prioritaires .need-meta-row { font-size: 15px; gap: 8px; margin-bottom: 18px; }
+#besoins-prioritaires .need-card h3,
+#besoins-prioritaires .need-card-wide h3 { font-size: 24px; line-height: 1.3; color: #1e293b; margin-bottom: 16px; }
+#besoins-prioritaires .need-card p,
+#besoins-prioritaires .need-wide-right p { font-size: 18px; line-height: 1.5; }
+#besoins-prioritaires .btn-card-action { font-size: 16px; padding: 12px 20px; }
+#besoins-prioritaires .text-muted-small,
+#besoins-prioritaires .info-icon,
+#besoins-prioritaires .date-text { font-size: 16px; }
+#besoins-prioritaires .need-card-wide { gap: 40px; }
+#besoins-prioritaires .wide-actions-row > a { flex: 1; }
+#besoins-prioritaires .need-wide-left { flex: 0 0 32%; }
+#besoins-prioritaires .need-wide-left .need-icon-box { margin-bottom: 20px; }
+#besoins-prioritaires .need-wide-left h3 { color: #202124; margin-bottom: 10px; }
+#besoins-prioritaires .need-wide-right { flex: 1; min-width: 0; }
+#besoins-prioritaires .need-wide-right p { color: #505563; }
+#besoins-prioritaires .need-wide-right .mt-sm { margin-top: 28px; }
+#besoins-prioritaires .wide-actions-row { gap: 16px; margin-top: 28px; align-items: stretch; }
+#besoins-prioritaires .wide-actions-row > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    box-shadow: none;
+}
+#besoins-prioritaires .wide-actions-row .btn-pill-blue { background: #4285f4; color: #fff; }
+#besoins-prioritaires .wide-actions-row .btn-pill-outline-gray { background: #fff; border: 1px solid #dedee2; color: #202124; }
+@media (max-width: 1100px) {
+    #besoins-prioritaires .need-card,
+    #besoins-prioritaires .need-card-wide { padding: 24px; }
+    #besoins-prioritaires .needs-grid-asym { gap: 24px; }
+    #besoins-prioritaires .need-card h3,
+    #besoins-prioritaires .need-card-wide h3 { font-size: 20px; }
+    #besoins-prioritaires .need-card p,
+    #besoins-prioritaires .need-wide-right p { font-size: 16px; }
+}
+@media (max-width: 800px) {
+    #besoins-prioritaires > .container { width: calc(100% - 32px); }
+    #besoins-prioritaires .needs-grid-asym { grid-template-columns: minmax(0, 1fr); }
+    #besoins-prioritaires .need-card { min-height: 0; }
+    #besoins-prioritaires .need-card-wide { grid-column: auto; flex-direction: column; align-items: stretch; }
+    #besoins-prioritaires .wide-actions-row { flex-wrap: wrap; }
+    #besoins-prioritaires .wide-actions-row > a { flex: 1 1 180px; }
+}
