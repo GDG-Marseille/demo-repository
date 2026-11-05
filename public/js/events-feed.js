@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function link(className, label, url) {
         const a = el('a', className, label);
         a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
         return a;
     }
     function background(node, event) {
@@ -106,7 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
             && Number.isFinite(Date.parse(e.start)) && Number.isFinite(Date.parse(e.end)) && safeUrl(e.url)
             && Array.isArray(e.tags) && e.tags.every(t => typeof t === 'string'));
         if (!valid) throw new Error('Invalid event');
-        events = data.events.filter(e => !e.cancelled);
+        events = data.events.filter(e => !e.cancelled).map(event => ({
+            ...event,
+            title: /Epitech Summit/i.test(event.title) ? event.title.replace(/🚀\uFE0F?/gu, '').trim() : event.title,
+            description: /DevFest/i.test(event.title) ? event.description.replace(/🚀\uFE0F?\s*/gu, '').trim() : event.description,
+        }));
         render();
     }
     async function refresh() {

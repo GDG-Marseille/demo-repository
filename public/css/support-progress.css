@@ -9,9 +9,19 @@
 .support-progress-card .progress-bar-fill { background: #4285f4; border-radius: 12px; }
 .support-progress-card .progress-footer-row { color: #505563; font-size: 14px; }
 .support-progress-card .progress-footer-row svg { color: #505563; }
+@media (max-width: 1100px) {
+    .support-progress-card .progress-info-row { align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .support-progress-card .progress-percent-top { position: static; margin-left: auto; }
+    .support-progress-card .progress-values-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+    .support-progress-card .progress-target { padding-top: 0; text-align: left; white-space: nowrap; }
+    .support-progress-card .progress-collected { font-size: 30px; }
+    .support-progress-card .progress-collected small { display: block; margin-top: 4px; font-size: 14px; }
+    .support-progress-card .progress-footer-row { align-items: flex-start; line-height: 1.5; }
+    .support-progress-card .progress-footer-row svg { flex-shrink: 0; margin-top: 3px; }
+}
 @media (max-width: 480px) {
     .support-progress-card { padding: 20px; }
-    .support-progress-card .progress-percent-top { right: 20px; top: 48px; }
+    .support-progress-card .progress-percent-top { position: static; }
     .support-progress-card .progress-collected { font-size: 28px; }
     .support-progress-card .progress-collected small { font-size: 13px; }
     .support-progress-card .progress-target { font-size: 12px; }

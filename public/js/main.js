@@ -24,6 +24,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Inicializar el menú móvil UNA VEZ que el header ya está cargado en la página
     initMobileMenu();
+    // Reuse the footer's social logos and destinations throughout the site.
+    const socialLinks = document.querySelector('.footer__socials-circles');
+    if (socialLinks) {
+        document.querySelectorAll('.info-social-icons').forEach(group => {
+            group.classList.add('social-links-shared');
+            group.replaceChildren(...[...socialLinks.children].map(link => link.cloneNode(true)));
+        });
+    }
 });
 // ===== MENÚ MÓVIL (Movido a una función para reutilizarla) =====
 function initMobileMenu() {
@@ -34,11 +42,31 @@ function initMobileMenu() {
         toggleBtn.replaceWith(toggleBtn.cloneNode(true));
         const newToggleBtn = document.querySelector('.nav__toggle');
 
-        newToggleBtn.addEventListener('click', function() {
-            const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
-            this.setAttribute('aria-expanded', expanded);
-            navList.classList.toggle('open');
+        navList.id = 'primary-navigation';
+        newToggleBtn.setAttribute('aria-controls', navList.id);
+        const links = [...navList.querySelectorAll('a')];
+        function setOpen(open, restoreFocus = false) {
+            newToggleBtn.setAttribute('aria-expanded', String(open));
+            newToggleBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+            newToggleBtn.textContent = open ? '×' : '☰';
+            navList.classList.toggle('open', open);
+            if (open) links[0]?.focus();
+            else if (restoreFocus) newToggleBtn.focus();
+        }
+        newToggleBtn.setAttribute('aria-label', 'Ouvrir le menu');
+        newToggleBtn.addEventListener('click', () => setOpen(newToggleBtn.getAttribute('aria-expanded') !== 'true'));
+        links.forEach(link => link.addEventListener('click', () => setOpen(false)));
+        document.addEventListener('keydown', event => {
+            if (newToggleBtn.getAttribute('aria-expanded') !== 'true') return;
+            if (event.key === 'Escape') { event.preventDefault(); setOpen(false, true); }
+            if (event.key === 'Tab') {
+                const controls = [newToggleBtn, ...links];
+                const index = controls.indexOf(document.activeElement);
+                if (event.shiftKey && index === 0) { event.preventDefault(); links.at(-1)?.focus(); }
+                else if (!event.shiftKey && index === controls.length - 1) { event.preventDefault(); newToggleBtn.focus(); }
+            }
         });
+        window.matchMedia('(max-width: 768px)').addEventListener('change', () => setOpen(false));
     }
 }
 

@@ -38,9 +38,8 @@
         const updateButton = () => {
             const email = form.querySelector('input[name="email"]');
             const consent = form.querySelector('input[name="rgpd"]');
-            const invalidNewsletter = kind === 'newsletter' &&
-                (!email?.value.trim() || !email.validity.valid || !consent?.checked);
-            button.disabled = sending || invalidNewsletter;
+            const invalid = !form.checkValidity() || !email?.value.trim() || !email.validity.valid || !consent?.checked;
+            button.disabled = sending || invalid;
         };
         const setup = () => setupPromise ||= (async () => {
             const settings = await config();
