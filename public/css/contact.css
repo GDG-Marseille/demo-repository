@@ -1,0 +1,72 @@
+/* Contact page proportions from the supplied design reference. */
+.page-hero-contact {
+    background: linear-gradient(110deg, #f0f5f4, #edf0fc);
+    padding: 80px 0;
+    text-align: left;
+}
+.page-hero-contact > .container,
+.contact-main-section > .container {
+    width: calc(100% - 56px);
+    max-width: 1360px;
+    padding: 0;
+}
+.page-hero-contact h1 { font-size: 56px; line-height: 1.2; margin-bottom: 28px; }
+.page-hero-contact p { max-width: 740px; margin: 0; font-size: 20px; line-height: 1.5; color: #505563; }
+.contact-main-section { padding: 84px 0 64px; background: #faf9fd; }
+.contact-layout-grid { grid-template-columns: minmax(0, .705fr) minmax(0, 1fr); gap: 26px; margin-bottom: 64px; }
+.contact-info-cards { gap: 26px; }
+.info-card { padding: 50px; border: 1px solid #dedee1; border-radius: 14px; gap: 26px; box-shadow: none; }
+.info-card__icon { width: 52px; height: 52px; border-radius: 50%; }
+.info-card__icon svg, .feature-icon svg, .contact-submit-btn svg {
+    width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.blue-light-bg { color: #4285f4; }
+.green-light-bg { color: #34a853; }
+.yellow-light-bg { color: #fbbc04; }
+.info-card__content { min-width: 0; }
+.info-card__content h3 { font-size: 24px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
+.info-card__content p, .info-card__content .info-subtext { font-size: 18px !important; line-height: 1.45; color: #505563 !important; }
+.info-link { font-size: 18px; font-style: italic; font-weight: 400; overflow-wrap: anywhere; }
+.info-social-icons a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 9px; background: #e5e4e9; }
+.info-social-icons img { filter: grayscale(1); }
+.contact-form-wrapper { padding: 80px; border-radius: 14px; border: 1px solid #dedee1; box-shadow: 0 1px 2px #0000000a; }
+.form-exact .form-row-double { gap: 26px; }
+.form-exact .form-group { margin-bottom: 26px; }
+.form-exact label { font-size: 16px; line-height: 1.4; }
+.form-exact input:not([type='checkbox']), .form-exact select, .form-exact textarea {
+    padding: 14px 24px; font-size: 18px; border-color: #dedee1; min-height: 52px;
+}
+.form-exact textarea { height: 182px; resize: vertical; }
+.form-exact .checkbox-row { margin-top: 38px; align-items: center; gap: 14px; }
+.form-exact .checkbox-row input[type='checkbox'] { width: 22px; height: 22px; }
+.form-exact .checkbox-row label { font-size: 18px; line-height: 1.45; }
+.form-exact .checkbox-row a { text-decoration: none; }
+.contact-submit-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; width: 336px; max-width: 100%; min-height: 72px; border: 0; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 600; }
+.contact-bottom-features { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 0; }
+.bottom-feature-card { padding: 50px 38px; background: #f5f4f7; border: 1px solid #eeedf1; border-radius: 14px; box-shadow: none; }
+.bottom-feature-card .feature-icon { width: 68px; height: 68px; border-radius: 20px; margin-bottom: 26px; }
+.feature-icon svg { width: 30px; height: 30px; }
+.feature-icon.red-bg { color: #ea4335; background: #f7e4e6; }
+.feature-icon.blue-bg { color: #4285f4; background: #e4eafa; }
+.feature-icon.green-bg { color: #34a853; background: #e3eee8; }
+.bottom-feature-card h3 { font-size: 24px; font-weight: 600; line-height: 1.3; }
+.bottom-feature-card p { font-size: 18px; line-height: 1.45; color: #505563; }
+@media (max-width: 1100px) {
+    .info-card { padding: 32px; gap: 20px; }
+    .contact-form-wrapper { padding: 48px 32px; }
+}
+@media (max-width: 900px) {
+    .contact-layout-grid, .contact-bottom-features { grid-template-columns: 1fr; }
+    .page-hero-contact h1 { font-size: 44px; }
+}
+@media (max-width: 540px) {
+    .page-hero-contact > .container, .contact-main-section > .container { width: calc(100% - 32px); }
+    .page-hero-contact, .contact-main-section { padding: 48px 0; }
+    .info-card { padding: 24px; gap: 16px; }
+    .info-card__content h3 { font-size: 21px; }
+    .contact-form-wrapper { padding: 32px 24px; }
+    .form-exact .form-row-double { grid-template-columns: 1fr; gap: 0; }
+    .page-hero-contact h1 { font-size: 36px; }
+}
+/* Keep the anchored form below the shared header. */
+#formContact { scroll-margin-top: 100px; }

@@ -24,6 +24,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Inicializar el menú móvil UNA VEZ que el header ya está cargado en la página
     initMobileMenu();
+    // Reuse the footer's social logos and destinations throughout the site.
+    const socialLinks = document.querySelector('.footer__socials-circles');
+    if (socialLinks) {
+        document.querySelectorAll('.info-social-icons').forEach(group => {
+            group.classList.add('social-links-shared');
+            group.replaceChildren(...[...socialLinks.children].map(link => link.cloneNode(true)));
+        });
+    }
 });
 // ===== MENÚ MÓVIL (Movido a una función para reutilizarla) =====
 function initMobileMenu() {
@@ -34,103 +42,38 @@ function initMobileMenu() {
         toggleBtn.replaceWith(toggleBtn.cloneNode(true));
         const newToggleBtn = document.querySelector('.nav__toggle');
 
-        newToggleBtn.addEventListener('click', function() {
-            const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
-            this.setAttribute('aria-expanded', expanded);
-            navList.classList.toggle('open');
-        });
-    }
-}
-
-// ===== CONTADOR DE MIEMBROS (desde Bevy) =====
-async function fetchMemberCount() {
-    try {
-        const response = await fetch('/api/bevy/members');
-        if (!response.ok) throw new Error('Error al obtener contador');
-        const data = await response.json();
-        const counterEl = document.getElementById('memberCounter');
-        if (counterEl && data.count !== undefined) {
-            let current = 0;
-            const target = data.count;
-            const step = Math.ceil(target / 60);
-            function animate() {
-                if (current < target) {
-                    current += step;
-                    if (current > target) current = target;
-                    counterEl.textContent = current;
-                    requestAnimationFrame(animate);
-                }
-            }
-            animate();
+        navList.id = 'primary-navigation';
+        newToggleBtn.setAttribute('aria-controls', navList.id);
+        const links = [...navList.querySelectorAll('a')];
+        function setOpen(open, restoreFocus = false) {
+            newToggleBtn.setAttribute('aria-expanded', String(open));
+            newToggleBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+            newToggleBtn.textContent = open ? '×' : '☰';
+            navList.classList.toggle('open', open);
+            if (open) links[0]?.focus();
+            else if (restoreFocus) newToggleBtn.focus();
         }
-    } catch (error) {
-        console.error('Error al cargar el contador:', error);
-        const counterEl = document.getElementById('memberCounter');
-        if (counterEl) counterEl.textContent = '0';
+        newToggleBtn.setAttribute('aria-label', 'Ouvrir le menu');
+        newToggleBtn.addEventListener('click', () => setOpen(newToggleBtn.getAttribute('aria-expanded') !== 'true'));
+        links.forEach(link => link.addEventListener('click', () => setOpen(false)));
+        document.addEventListener('keydown', event => {
+            if (newToggleBtn.getAttribute('aria-expanded') !== 'true') return;
+            if (event.key === 'Escape') { event.preventDefault(); setOpen(false, true); }
+            if (event.key === 'Tab') {
+                const controls = [newToggleBtn, ...links];
+                const index = controls.indexOf(document.activeElement);
+                if (event.shiftKey && index === 0) { event.preventDefault(); links.at(-1)?.focus(); }
+                else if (!event.shiftKey && index === controls.length - 1) { event.preventDefault(); newToggleBtn.focus(); }
+            }
+        });
+        window.matchMedia('(max-width: 768px)').addEventListener('change', () => setOpen(false));
     }
 }
 
-// Ejecutar al cargar la página
-fetchMemberCount();
+// Le nombre de membres affiché est maintenu dans le contenu du site.
 
-// ===== ENVÍO DE FORMULARIOS =====
-document.addEventListener('DOMContentLoaded', function() {
-    const forms = document.querySelectorAll('.form');
-    forms.forEach(form => {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Envoi en cours...';
-            }
 
-            const formData = new FormData(this);
-            let endpoint = '/api/forms/';
-            if (this.id === 'formMembre') endpoint += 'membre';
-            else if (this.id === 'formCFP') endpoint += 'cfp';
-            else if (this.id === 'formContact') endpoint += 'contact';
-            else if (this.id === 'formBenevole') endpoint += 'benevole';
-            else if (this.id === 'formSpeaker') endpoint += 'speaker';
-            else if (this.id === 'formCoorganize') endpoint += 'coorganize';
-            else if (this.id === 'formPartner') endpoint += 'partner';
-            else if (this.id === 'formInstitution') endpoint += 'institution';
-            else {
-                endpoint += this.id.replace('form', '').toLowerCase();
-            }
+const formScript = document.createElement('script');
+formScript.src = 'js/forms.js';
+document.body.appendChild(formScript);
 
-            try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    body: formData
-                });
-                const result = await response.json();
-                if (result.success) {
-                    alert('✅ Envoi réussi !');
-                    this.reset();
-                    if (window.turnstile) {
-                        const widget = this.querySelector('.cf-turnstile');
-                        if (widget) turnstile.reset(widget);
-                    }
-                } else {
-                    let errorMsg = '❌ Erreur : ';
-                    if (result.errors && result.errors.length > 0) {
-                        errorMsg += result.errors.join(', ');
-                    } else {
-                        errorMsg += result.error || 'Veuillez réessayer.';
-                    }
-                    alert(errorMsg);
-                }
-            } catch (err) {
-                alert('❌ Erreur réseau. Vérifiez votre connexion.');
-                console.error(err);
-            } finally {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Envoyer';
-                }
-            }
-        });
-    });
-});

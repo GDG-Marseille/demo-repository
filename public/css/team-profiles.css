@@ -1,0 +1,10 @@
+#apropos-team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+#apropos-team-grid .team-avatar-img { display: block; width: 90px; height: 90px; object-fit: cover; flex-shrink: 0; }
+#apropos-team-grid img[src="images/charlotte-portrait.jpg"] { object-position: center top; }
+#apropos-team-grid img[src="images/meryl-conference.jpeg"] { filter: brightness(1.65) contrast(.9); }
+.team-avatar-initials { display: flex; align-items: center; justify-content: center; background: #eaf1ff; color: #4285f4; font-size: 28px; font-weight: 600; }
+.team-profile-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 16px; margin-top: 16px; }
+.team-profile-links a { color: #2563eb; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.team-profile-links a:focus-visible { outline: 2px solid #4285f4; outline-offset: 4px; }
+@media (max-width: 1000px) { #apropos-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 550px) { #apropos-team-grid { grid-template-columns: 1fr; } }

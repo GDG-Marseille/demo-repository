@@ -1,0 +1,44 @@
+#pricing-section { background: #f5f4f8; padding: 60px 0 80px; font-family: 'Inter', sans-serif; color: #202124; }
+#pricing-section > .container { width: calc(100% - 56px); max-width: 1480px; padding: 0; }
+#pricing-section .section-main-title { font-family: inherit; font-size: 36px; font-weight: 600; line-height: 1.3; color: #202124; margin: 0 0 20px; }
+#pricing-section .section-main-subtitle { font-size: 18px; color: #505563; margin: 0 0 76px; }
+#pricing-section .pricing-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; align-items: stretch; }
+#pricing-section .pricing-card-clean, #pricing-section .pricing-card-dark { padding: 38px 36px; border-radius: 14px; min-width: 0; display: flex; flex-direction: column; box-shadow: none; }
+#pricing-section .pricing-card-clean { background: #fff; border: 1px solid #dedee2; }
+#pricing-section .pricing-card-dark { background: #191b1d; border: 1px solid #191b1d; }
+#pricing-section .price-header { margin: 0 0 30px; }
+#pricing-section .card-tier-name, #pricing-section .platinum-tag { display: block; font-size: 18px; font-weight: 400; letter-spacing: .06em; margin: 0 0 14px; color: #505563; }
+#pricing-section .popular-card .card-tier-name { color: #4285ff; }
+#pricing-section .platinum-tag { color: #fbbc04; }
+#pricing-section .price-val, #pricing-section .price-val-dark { font-size: 34px; font-weight: 400; line-height: 1.3; letter-spacing: -.03em; color: #202124; white-space: nowrap; }
+#pricing-section .price-val-dark { color: #fff; }
+#pricing-section .price-sub { font-size: 13px; font-weight: 400; letter-spacing: 0; color: #505563; }
+#pricing-section .price-features-list, #pricing-section .price-features-dark { display: flex; flex-direction: column; gap: 20px; padding: 0; margin: 0 0 46px; list-style: none; flex: 1; }
+#pricing-section .price-features-list li, #pricing-section .price-features-dark li { display: flex; align-items: center; gap: 10px; font-size: 18px; line-height: 1.5; margin: 0; color: #202124; }
+#pricing-section .price-features-dark li { color: #c5c5c5; }
+#pricing-section .check-icon, #pricing-section .star-icon { display: flex; flex: 0 0 15px; color: #34a853; }
+#pricing-section .star-icon { color: #fbbc04; }
+#pricing-section .check-icon svg, #pricing-section .star-icon svg { width: 15px; height: 15px; }
+#pricing-section .popular-card { position: relative; border: 2px solid #4285ff; box-shadow: 0 0 0 4px #4285ff14; }
+#pricing-section .popular-pill { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 6px 18px; border-radius: 24px; font-size: 16px; font-weight: 400; text-transform: none; background: #4285f4; color: white; line-height: 1.3; }
+#pricing-section .btn-card-outline, #pricing-section .btn-card-primary, #pricing-section .btn-card-yellow { display: flex; justify-content: center; align-items: center; min-height: 56px; padding: 12px; border-radius: 8px; font-size: 18px; font-weight: 400; line-height: 1.3; margin-top: auto; text-align: center; }
+#pricing-section .btn-card-outline { border: 2px solid #4285ff; color: #4285ff; background: #fff; }
+#pricing-section .btn-card-primary { background: #4285f4; color: #fff; box-shadow: 0 3px 5px #00000015; }
+#pricing-section .btn-card-yellow { background: #fbbc04; color: #202124; }
+@media (max-width: 1200px) { #pricing-section .pricing-card-clean, #pricing-section .pricing-card-dark { padding: 30px 24px; } #pricing-section .price-features-list li, #pricing-section .price-features-dark li { font-size: 16px; } }
+@media (max-width: 960px) { #pricing-section .pricing-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; } }
+@media (max-width: 560px) { #pricing-section > .container { width: calc(100% - 32px); } #pricing-section .pricing-grid-4 { grid-template-columns: 1fr; } #pricing-section .section-main-title { font-size: 28px; } #pricing-section .section-main-subtitle { margin-bottom: 48px; } }
+#formPartner .partner-consent { margin: 20px 0; }
+#formPartner .partner-consent label { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; font-weight: 400; line-height: 1.5; cursor: pointer; }
+#formPartner .partner-consent input[type="checkbox"] { flex: 0 0 18px; width: 18px; height: 18px; margin: 2px 0 0; padding: 0; accent-color: #4285f4; }
+#formPartner .partner-consent span { min-width: 0; }
+#formPartner .partner-consent a { color: #2563eb; text-decoration: underline; }
+#partner-form .b2b-info-side { background: #191b1d; justify-content: flex-start; }
+#partner-form .b2b-contact-info-item { flex: 0 0 auto; gap: 16px; margin-bottom: 26px; font-size: 18px; color: #eee; }
+#partner-form .b2b-icon { width: 24px; height: 24px; flex: 0 0 24px; color: #fbbc04; }
+#partner-form a.b2b-text { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+#partner-form a.b2b-text:hover { text-decoration: underline; }
+#partner-form .b2b-testimonial-box { margin-top: auto; background: #252729; border-color: #ffffff18; }
+#partner-form .b2b-testimonial-box p { color: #bdbdbd; font-size: 18px; line-height: 1.5; }
+#partner-form .testimonial-author { color: #f1f1f1; font-size: 18px; font-weight: 400; }
+@media (max-width: 768px) { #partner-form .b2b-testimonial-box { margin-top: 32px; } }
