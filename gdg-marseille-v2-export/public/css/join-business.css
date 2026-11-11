@@ -1,0 +1,59 @@
+/* Only the company banner: preserve the restored layout elsewhere. */
+.join-page-body .business-partner-section {
+    background: #efedf2;
+    padding: 72px 0;
+}
+.join-page-body .business-partner-section > .container {
+    width: calc(100% - 56px);
+    max-width: 1480px;
+    padding: 0;
+}
+.join-page-body .business-banner-box {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+}
+.join-page-body .business-text-side { padding: 0; }
+.join-page-body .business-text-side h3 { color: #202124; }
+.join-page-body .business-text-side p { color: #4b505e; }
+.join-page-body .business-text-side .icon-box-light-blue {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    background: #dfe3f3;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    color: #4285f4;
+}
+.join-page-body .business-text-side .icon-box-light-blue svg { width: 32px; height: 32px; }
+.join-page-body .business-text-side .btn-pill-blue {
+    width: 304px;
+    max-width: 100%;
+    min-height: 42px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+}
+.join-page-body .business-img-side img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 584 / 256;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 24px;
+    box-shadow: 0 6px 14px #00000012;
+}
+@media (max-width: 700px) {
+    .join-page-body .business-partner-section { padding: 48px 0; }
+    .join-page-body .business-partner-section > .container { width: calc(100% - 32px); }
+    .join-page-body .business-banner-box { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
