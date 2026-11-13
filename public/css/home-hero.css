@@ -2,7 +2,7 @@
 .what-we-do > .container { padding: 0; max-width: 1700px; width: 86%; }
 .what-we-do .section-title { color: #202124; font-weight: 600; margin-bottom: 18px; }
 .what-we-do .section-subtitle { max-width: 800px; color: #505563; font-size: 18px; line-height: 1.5; margin: 0 auto 88px; }
-.what-we-do .what-grid { gap: 28px; align-items: start; }
+.what-we-do .what-grid { gap: 28px; align-items: stretch; }
 .what-we-do .what-item { background: #fff; border: 1px solid #dedede; border-radius: 14px; box-shadow: none; padding: 48px; }
 .what-we-do .what-item--large { gap: 40px; }
 .what-we-do .what-item h3 { color: #202124; font-size: 22px; font-weight: 600; margin: 26px 0 14px; line-height: 1.35; }

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             pill.setAttribute('aria-pressed', String(active));
         });
         status.textContent = count === 0
-            ? 'Aucun événement ne correspond à votre recherche. Essayez un autre mot-clé ou une autre catégorie.'
+            ? 'Aucun événement ne correspond à votre recherche. Essayez un autre mot-clé.'
             : count + (count === 1 ? ' événement trouvé.' : ' événements trouvés.');
         resetButton.hidden = !words.length && currentFilter === 'tous';
     }
