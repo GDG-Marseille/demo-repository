@@ -1,13 +1,41 @@
 {
   "_aide": "Pour ajouter un soutien : copier un bloc dans « soutiens », renseigner nom, url, logo (fichier dans /images/partenaires/), type et niveau, puis mettre actif à true. Le montant n'est jamais affiché : seul le niveau l'est. Mettre actif à false pour masquer.",
   "niveaux": [
-    { "id": "platinum",   "label": "Partenaire Platinum", "groupe": "entreprise" },
-    { "id": "majeur",     "label": "Partenaire Majeur",   "groupe": "entreprise" },
-    { "id": "partenaire", "label": "Partenaire",          "groupe": "entreprise" },
-    { "id": "pionnier",   "label": "Partenaire Pionnier", "groupe": "entreprise" },
-    { "id": "champion",   "label": "Mécène Champion",     "groupe": "mecene" },
-    { "id": "engage",     "label": "Mécène Engagé",       "groupe": "mecene" },
-    { "id": "individuel", "label": "Mécène",              "groupe": "mecene" }
+    {
+      "id": "platinum",
+      "label": "Partenaire Platinum",
+      "groupe": "entreprise"
+    },
+    {
+      "id": "gold",
+      "label": "Partenaire Gold",
+      "groupe": "entreprise"
+    },
+    {
+      "id": "silver",
+      "label": "Partenaire Silver",
+      "groupe": "entreprise"
+    },
+    {
+      "id": "bronze",
+      "label": "Partenaire Bronze",
+      "groupe": "entreprise"
+    },
+    {
+      "id": "champion",
+      "label": "Mécène Champion",
+      "groupe": "mecene"
+    },
+    {
+      "id": "engage",
+      "label": "Mécène Engagé",
+      "groupe": "mecene"
+    },
+    {
+      "id": "individuel",
+      "label": "Mécène",
+      "groupe": "mecene"
+    }
   ],
   "soutiens": [
     {
