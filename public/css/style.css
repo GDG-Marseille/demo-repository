@@ -2532,7 +2532,7 @@ blockquote cite {
 /* 1. HERO B2B CON IMAGEN DE FONDO */
 .partner-hero-image {
     position: relative;
-    background: url('../images/partenariat-hero.png') no-repeat center center/cover;
+    background: url('../images/devfest-orateur.jpg') no-repeat center center/cover;
     padding: 0;
     color: #ffffff;
     text-align: left;
@@ -3302,7 +3302,7 @@ blockquote cite {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    background: url('../images/devfest-conference.jpeg') center/cover no-repeat;
+    background: url('../images/devfest-workshop.jpg') center/cover no-repeat;
     min-height: 450px;
     display: flex;
     align-items: flex-end;
