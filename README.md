@@ -22,8 +22,6 @@ Ce dossier contient les pages et les modifications du site, avec les formulaires
 | `PARTNER_TO_EMAIL` | Boîte qui reçoit les propositions de partenariat. |
 | `TURNSTILE_SITE_KEY` | Clé publique du widget, autorisé sur le domaine déployé. |
 | `TURNSTILE_SECRET_KEY` | Clé privée Turnstile. |
-| `CRON_SECRET` | Secret aléatoire long (au moins 32 caractères) pour protéger la tâche de conservation. |
-| `RETENTION_MODE` | `dry-run` pour vérifier les comptes, puis `live` pour activer le retrait de la liste newsletter. |
 
 Créer dans Brevo les attributs de contact de type **texte** : `GDG_NEWSLETTER_CONSENT_AT`, `GDG_NEWSLETTER_CONSENT_VERSION`, `GDG_NEWSLETTER_CONSENT_TEXT`, `GDG_NEWSLETTER_CONSENT_SOURCE`. Les messages contact/partenariat passent par l’API transactionnelle de Brevo vers la boîte e-mail configurée.
 
@@ -31,9 +29,7 @@ Créer dans Brevo les attributs de contact de type **texte** : `GDG_NEWSLETTER_C
 
 Le bouton newsletter reste désactivé tant que l’adresse est invalide ou que l’accord n’est pas coché. Le serveur vérifie aussi l’accord et Turnstile. Une inscription conserve la date et le texte de l’accord ; elle ne réactive pas un contact déjà bloqué chez Brevo.
 
-La tâche `/api/retention` s’exécute quotidiennement selon la programmation Vercel. En mode `live`, elle retire de la **liste newsletter** les contacts dont l’accord enregistré date de trois ans, après relecture de leur fiche. Elle ne supprime pas les contacts du CRM, ni les listes d’exclusion, ni les e-mails. Une simple ouverture ne renouvelle pas la durée. Les contacts sans date exploitable sont laissés en place pour examen manuel.
-
-Contrôler le résultat en `dry-run` avant d’activer `live`. Surveiller les exécutions dans Vercel ; une erreur est signalée avec un code HTTP d’échec, sans données personnelles. La procédure est limitée à 10 000 contacts et à la durée de la fonction. La suppression dans les boîtes e-mail, les journaux et les sauvegardes reste à organiser dans les services concernés. Le lien de désinscription doit être présent dans chaque campagne Brevo.
+La tâche automatique de retrait (`api/retention.js`) est **désactivée** : elle n'est plus programmée dans `vercel.json`, et `CRON_SECRET` / `RETENTION_MODE` ne sont plus nécessaires. La politique de confidentialité indique que la liste est revue régulièrement, sans retrait automatique. Le lien de désinscription doit être présent dans chaque campagne Brevo. Pour réactiver la tâche, remettre le bloc `crons` et la fonction `api/retention.js` dans `vercel.json`, puis configurer ces deux variables.
 
 ## Événements et vérification
 

@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const teamMembers = [
         {
             name: "Méryl Stretti",
-            role: "Fondatrice & Organisatrice principale",
+            role: "Fondatrice & Lead Organizer",
             roleClass: "blue-text",
             img: "images/meryl-conference.jpeg",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/merylstretti/" }, { label: "Site web", url: "https://kwdcreative.fr/" }]
         },
         {
             name: "Eric Huang",
-            role: "Responsable des technologies et des projets",
+            role: "Conseil et support tech",
             roleClass: "green-text",
             img: "images/eric-portrait.png",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/eric-huang-lin/" }, { label: "Site web", url: "https://ams-cg.com/" }]

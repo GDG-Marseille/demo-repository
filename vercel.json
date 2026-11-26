@@ -16,19 +16,10 @@
       "maxDuration": 60,
       "includeFiles": "public/data/events.json"
     },
-    "api/retention.js": {
-      "maxDuration": 60
-    },
     "api/submit.js": {
       "maxDuration": 60
     }
   },
-  "crons": [
-    {
-      "path": "/api/retention",
-      "schedule": "0 3 * * *"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

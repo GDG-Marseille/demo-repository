@@ -5843,3 +5843,32 @@ html { scroll-padding-top: 96px; }
     .events-page-body .speaker-banner { flex-direction: column; padding: 28px; }
     .events-page-body .speaker-icon-side, .events-page-body .megaphone-box { max-width: 100%; min-width: 0; }
 }
+
+/* ==========================================================
+   Corrections responsive : grilles de 3 colonnes qui ne se repliaient pas
+   (page Événements : archives ; page Nous rejoindre : parcours, pourquoi, action)
+   ========================================================== */
+@media (max-width: 1024px) {
+    .archives-grid-3,
+    .engagement-grid-3,
+    .action-grid-3,
+    .why-layout-asym-exact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 640px) {
+    .archives-grid-3,
+    .engagement-grid-3,
+    .action-grid-3,
+    .why-layout-asym-exact {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+    /* Les cartes asymétriques s'étendaient sur 2 colonnes : une seule colonne sur mobile. */
+    .why-layout-asym-exact > * { grid-column: auto; }
+    .why-card { padding: 1.75rem; }
+    .engagement-card { padding: 1.5rem; }
+    .page-hero-contact h1 { font-size: 32px; line-height: 1.25; }
+    .page-hero-contact p { font-size: 17px; }
+    .info-card { padding: 28px 20px; }
+}

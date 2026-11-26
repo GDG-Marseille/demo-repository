@@ -1,0 +1,38 @@
+{
+  "_aide": "Pour ajouter un soutien : copier un bloc dans « soutiens », renseigner nom, url, logo (fichier dans /images/partenaires/), type et niveau, puis mettre actif à true. Le montant n'est jamais affiché : seul le niveau l'est. Mettre actif à false pour masquer.",
+  "niveaux": [
+    { "id": "platinum",   "label": "Partenaire Platinum", "groupe": "entreprise" },
+    { "id": "majeur",     "label": "Partenaire Majeur",   "groupe": "entreprise" },
+    { "id": "partenaire", "label": "Partenaire",          "groupe": "entreprise" },
+    { "id": "pionnier",   "label": "Partenaire Pionnier", "groupe": "entreprise" },
+    { "id": "champion",   "label": "Mécène Champion",     "groupe": "mecene" },
+    { "id": "engage",     "label": "Mécène Engagé",       "groupe": "mecene" },
+    { "id": "individuel", "label": "Mécène",              "groupe": "mecene" }
+  ],
+  "soutiens": [
+    {
+      "nom": "Epitech Marseille",
+      "url": "https://www.epitech.eu/",
+      "logo": "",
+      "description": "École d'informatique partenaire du GDG Marseille.",
+      "niveau": null,
+      "actif": true
+    },
+    {
+      "nom": "DevIT jobs",
+      "url": "https://devitjobs.fr/",
+      "logo": "",
+      "description": "Plateforme d'emploi tech partenaire du GDG Marseille.",
+      "niveau": null,
+      "actif": true
+    },
+    {
+      "nom": "[Nom du photographe à renseigner]",
+      "url": "",
+      "logo": "",
+      "description": "Photographe, soutien en nature du GDG Marseille.",
+      "niveau": null,
+      "actif": false
+    }
+  ]
+}
