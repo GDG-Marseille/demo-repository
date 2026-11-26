@@ -101,3 +101,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .dark-cta-box a, .dark-cta-box span, .dark-cta-box li { color: #cbd5e1; }
 /* Zones tactiles confortables dans le pied de page */
 .footer__col li a, .footer__legal a { display: inline-block; padding: 8px 0; }
+
+.footer__credit { color: #4b5563; font-size: 14px; padding: 8px 0; }

@@ -35,15 +35,20 @@
       "id": "individuel",
       "label": "Mécène",
       "groupe": "mecene"
+    },
+    {
+      "id": "nature",
+      "label": "Soutien en nature",
+      "groupe": "mecene"
     }
   ],
   "soutiens": [
     {
       "nom": "Epitech Marseille",
       "url": "https://www.epitech.eu/",
-      "logo": "",
-      "description": "École d'informatique partenaire du GDG Marseille.",
-      "niveau": null,
+      "logo": "images/partenaires/epitech.svg",
+      "description": "Partenaire principal : accueille nos événements dans ses locaux.",
+      "niveau": "platinum",
       "actif": true
     },
     {
@@ -51,16 +56,16 @@
       "url": "https://devitjobs.fr/",
       "logo": "",
       "description": "Plateforme d'emploi tech partenaire du GDG Marseille.",
-      "niveau": null,
+      "niveau": "bronze",
       "actif": true
     },
     {
-      "nom": "[Nom du photographe à renseigner]",
+      "nom": "Guillaume Bleyer",
       "url": "",
       "logo": "",
-      "description": "Photographe, soutien en nature du GDG Marseille.",
-      "niveau": null,
-      "actif": false
+      "description": "Photographe : photos de nos événements, soutien en nature.",
+      "niveau": "nature",
+      "actif": true
     }
   ]
 }
