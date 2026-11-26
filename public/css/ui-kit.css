@@ -1,0 +1,103 @@
+/* ==========================================================
+   Base commune : en-tête photo, trois styles de boutons, accessibilité
+   Chargée en dernier pour harmoniser l'existant. Pensée mobile d'abord.
+   ========================================================== */
+:root {
+    --gdg-blue: #1967d2;        /* texte blanc dessus : contraste 5,4:1 */
+    --gdg-blue-dark: #174ea6;
+    --gdg-ink: #202124;
+    --gdg-muted: #4b5563;       /* contraste 7,6:1 sur blanc */
+}
+
+/* ---------- Trois styles de boutons ----------
+   1. Principal  : .btn-primary   (action la plus importante de la page)
+   2. Secondaire : .btn-secondary (action alternative, fond clair)
+   3. Clair      : .btn-light     (sur photo ou fond sombre) */
+.btn-primary, .btn-secondary, .btn-light,
+.btn--primary, .btn--blue, .btn--green, .btn--yellow, .btn-pill-blue, .btn-card-blue, .btn-card-primary, .btn-blue-rounded,
+.btn--outline, .btn--outline-blue, .btn-card-outline, .btn-pill-outline-gray, .btn-pill-outline-dark,
+.btn--white, .btn--white-solid, .btn--outline-white, .btn-outline-white-rounded, .btn-pill-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 44px; padding: 12px 22px;
+    border: 2px solid transparent; border-radius: 10px;
+    font: inherit; font-size: 16px; font-weight: 600; line-height: 1.2; text-align: center; text-decoration: none;
+    cursor: pointer; box-shadow: none;
+    transition: background-color .15s, color .15s, border-color .15s;
+}
+.btn-primary, .btn--primary, .btn--blue, .btn--green, .btn--yellow, .btn-pill-blue, .btn-card-blue, .btn-card-primary, .btn-blue-rounded {
+    background: var(--gdg-blue); border-color: var(--gdg-blue); color: #fff;
+}
+.btn-primary:hover, .btn--primary:hover, .btn--blue:hover, .btn--green:hover, .btn--yellow:hover, .btn-pill-blue:hover,
+.btn-card-blue:hover, .btn-card-primary:hover, .btn-blue-rounded:hover { background: var(--gdg-blue-dark); border-color: var(--gdg-blue-dark); color: #fff; }
+.btn-secondary, .btn--outline, .btn--outline-blue, .btn-card-outline, .btn-pill-outline-gray, .btn-pill-outline-dark {
+    background: #fff; border-color: var(--gdg-blue); color: var(--gdg-blue);
+}
+.btn-secondary:hover, .btn--outline:hover, .btn--outline-blue:hover, .btn-card-outline:hover, .btn-pill-outline-gray:hover, .btn-pill-outline-dark:hover { background: #e8f0fe; color: var(--gdg-blue-dark); }
+.btn-light, .btn--white, .btn--white-solid { background: #fff; border-color: #fff; color: var(--gdg-ink); }
+.btn-light:hover, .btn--white:hover, .btn--white-solid:hover { background: #e8f0fe; border-color: #e8f0fe; color: var(--gdg-ink); }
+.btn--outline-white, .btn-outline-white-rounded, .btn-pill-outline { background: transparent; border-color: #fff; color: #fff; }
+.btn--outline-white:hover, .btn-outline-white-rounded:hover, .btn-pill-outline:hover { background: rgba(255,255,255,.16); color: #fff; }
+.btn-primary svg, .btn-secondary svg, .btn-light svg { flex: none; }
+
+/* Focus clavier visible partout */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid #1a73e8; outline-offset: 3px;
+}
+.skip-link { position: absolute; left: 12px; top: -60px; z-index: 1000; padding: 10px 16px; background: #fff; color: var(--gdg-ink); border-radius: 8px; font-weight: 600; }
+.skip-link:focus { top: 12px; }
+
+/* Textes secondaires lisibles (anciens gris trop clairs) */
+.section-subtitle, .section-subtitle-gray, .section-subtitle-left, .ev-desc, .text-muted-small { color: var(--gdg-muted); }
+
+/* ---------- En-tête commun avec photo ---------- */
+.hero-photo {
+    position: relative; isolation: isolate; display: flex; align-items: center; text-align: left;
+    min-height: clamp(320px, 62vw, 460px); padding: 56px 0;
+    color: #fff; background: #0f172a center / cover no-repeat; /* la photo est posée en ligne sur chaque page */
+}
+.hero-photo::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(180deg, rgba(15,23,42,.72) 0%, rgba(15,23,42,.62) 100%);
+}
+.hero-photo > .container { width: 100%; }
+.hero-photo__tag {
+    display: inline-block; margin: 0 0 16px; padding: 6px 14px; border-radius: 999px;
+    background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4);
+    color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+}
+.hero-photo h1, .hero-photo .events-hero-title, .hero-photo .join-hero-title {
+    margin: 0 0 16px; max-width: 760px; color: #fff; font-size: clamp(30px, 6.4vw, 52px); font-weight: 800; line-height: 1.15; text-align: left;
+}
+.hero-photo .text-blue-accent, .hero-photo .accent { color: #8ab4f8; }
+.hero-photo p, .hero-photo .events-hero-subtitle, .hero-photo .join-hero-subtitle {
+    max-width: 640px; margin: 0 0 24px; color: #eef2f7; font-size: clamp(16px, 2.4vw, 20px); line-height: 1.55; text-align: left;
+}
+.hero-photo br { display: none; }
+.hero-photo__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }
+.hero-photo .events-search-wrapper { margin: 8px 0 0; max-width: 720px; }
+.hero-photo .events-search-feedback p, .hero-photo .events-search-feedback button { color: #eef2f7; }
+
+@media (min-width: 900px) {
+    .hero-photo { padding: 80px 0; }
+    .hero-photo::before { background: linear-gradient(90deg, rgba(15,23,42,.82) 0%, rgba(15,23,42,.55) 55%, rgba(15,23,42,.3) 100%); }
+}
+
+/* Boutons d'en-tête : pleine largeur sur téléphone, côte à côte ensuite */
+.hero-photo__actions > a { flex: 1 1 100%; }
+.hero-photo .events-search-feedback { text-align: left; }
+@media (min-width: 600px) { .hero-photo__actions > a { flex: 0 0 auto; } }
+
+/* Contrastes : liens du pied de page et champs */
+.footer a, .footer__newsletter-form a { color: #1967d2; }
+.footer__col a { color: #374151; }
+.footer__newsletter-form input[type="email"]::placeholder, input::placeholder, textarea::placeholder { color: #6b7280; opacity: 1; }
+.pricing-card-clean .btn-card-primary, #pricing-section .btn-card-primary { background: #1967d2; border-color: #1967d2; color: #fff; }
+#pricing-section .btn-card-outline, .btn-card-outline { color: #1967d2; border-color: #1967d2; }
+.popular-pill, .partner-campus-cta, .btn-filtrer { background: #1967d2; color: #fff; }
+.card-tier-name, #pricing-section .popular-card .card-tier-name { color: #1967d2; }
+
+/* Textes clairs sur fonds sombres (ne pas assombrir) */
+.dark-cta-box p, .dark-cta-box h3, .how-it-works-dark p { color: #cbd5e1; }
+.dark-cta-box a, .dark-cta-box span, .dark-cta-box li { color: #cbd5e1; }
+/* Zones tactiles confortables dans le pied de page */
+.footer__col li a, .footer__legal a { display: inline-block; padding: 8px 0; }

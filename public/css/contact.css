@@ -20,8 +20,8 @@
 .info-card__icon svg, .feature-icon svg, .contact-submit-btn svg {
     width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
 }
-.blue-light-bg { color: #4285f4; }
-.green-light-bg { color: #34a853; }
+.blue-light-bg { color: #1967d2; }
+.green-light-bg { color: #188038; }
 .yellow-light-bg { color: #fbbc04; }
 .info-card__content { min-width: 0; }
 .info-card__content h3 { font-size: 24px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
@@ -47,8 +47,8 @@
 .bottom-feature-card .feature-icon { width: 68px; height: 68px; border-radius: 20px; margin-bottom: 26px; }
 .feature-icon svg { width: 30px; height: 30px; }
 .feature-icon.red-bg { color: #ea4335; background: #f7e4e6; }
-.feature-icon.blue-bg { color: #4285f4; background: #e4eafa; }
-.feature-icon.green-bg { color: #34a853; background: #e3eee8; }
+.feature-icon.blue-bg { color: #1967d2; background: #e4eafa; }
+.feature-icon.green-bg { color: #188038; background: #e3eee8; }
 .bottom-feature-card h3 { font-size: 24px; font-weight: 600; line-height: 1.3; }
 .bottom-feature-card p { font-size: 18px; line-height: 1.45; color: #505563; }
 @media (max-width: 1100px) {

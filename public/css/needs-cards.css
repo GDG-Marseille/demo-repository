@@ -4,7 +4,7 @@
 .needs-page-body .dark-box-wrapper > h2 { font-size: 32px; font-weight: 600; margin-bottom: 52px; }
 .needs-page-body .steps-grid-3 { width: 73%; gap: 40px; margin-bottom: 48px; }
 .needs-page-body .step-num { width: 48px; height: 48px; font-size: 20px; font-weight: 600; margin-bottom: 28px; }
-.needs-page-body .blue-num { background: #4285f4; }
+.needs-page-body .blue-num { background: #1967d2; }
 .needs-page-body .green-num { background: #34a853; }
 .needs-page-body .yellow-num { background: #fbbc04; color: #fff; }
 .needs-page-body .step-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 18px; }
@@ -49,10 +49,10 @@
 #besoins-prioritaires .need-card { min-height: 460px; }
 #besoins-prioritaires .need-icon-box { width: 52px; height: 52px; border-radius: 14px; font-size: 23px; }
 #besoins-prioritaires .need-icon-box svg { display: block; width: 28px; height: 28px; }
-#besoins-prioritaires .need-icon-box.blue-bg { color: #4285f4; background: #eff6ff; }
+#besoins-prioritaires .need-icon-box.blue-bg { color: #1967d2; background: #eff6ff; }
 #besoins-prioritaires .need-icon-box.yellow-bg { color: #fbbc04; background: #fefce8; }
-#besoins-prioritaires .need-icon-box.green-bg { color: #34a853; background: #f0fdf4; }
-#besoins-prioritaires .need-icon-box.light-blue-bg { color: #4285f4; background: #eff6ff; }
+#besoins-prioritaires .need-icon-box.green-bg { color: #188038; background: #f0fdf4; }
+#besoins-prioritaires .need-icon-box.light-blue-bg { color: #1967d2; background: #eff6ff; }
 #besoins-prioritaires .need-icon-box.red-bg { color: #ea4335; background: #fef2f2; }
 #besoins-prioritaires .card-top-row { margin-bottom: 24px; }
 #besoins-prioritaires .badge-status { font-size: 13px; padding: 6px 12px; }
@@ -87,7 +87,7 @@
     text-align: center;
     box-shadow: none;
 }
-#besoins-prioritaires .wide-actions-row .btn-pill-blue { background: #4285f4; color: #fff; }
+#besoins-prioritaires .wide-actions-row .btn-pill-blue { background: #1967d2; color: #fff; }
 #besoins-prioritaires .wide-actions-row .btn-pill-outline-gray { background: #fff; border: 1px solid #dedee2; color: #202124; }
 @media (max-width: 1100px) {
     #besoins-prioritaires .need-card,

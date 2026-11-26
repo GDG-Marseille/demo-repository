@@ -1,5 +1,16 @@
+// Chemins absolus en ligne (pages 404 et sous-dossiers), relatifs en test local
+const BASE = location.protocol === 'file:' ? '' : '/';
 // ===== CARGAR HEADER Y FOOTER REUTILIZABLES =====
 document.addEventListener("DOMContentLoaded", async () => {
+    // Cible du lien « Aller au contenu »
+    const mainEl = document.querySelector('main');
+    if (mainEl && !mainEl.id) { mainEl.id = 'main'; mainEl.setAttribute('tabindex', '-1'); }
+    // Mesure d'audience sans cookie (Vercel Web Analytics), uniquement en ligne
+    if (location.protocol.startsWith('http') && !document.querySelector('script[data-analytics]')) {
+        const a = document.createElement('script');
+        a.defer = true; a.src = '/_vercel/insights/script.js'; a.dataset.analytics = 'true';
+        document.head.appendChild(a);
+    }
     async function loadComponent(id, file) {
         const container = document.getElementById(id);
         if (container) {
@@ -18,8 +29,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Cargar header y footer EN PARALELO
     await Promise.all([
-        loadComponent('header-container', 'header.html'),
-        loadComponent('footer-container', 'footer.html')
+        loadComponent('header-container', BASE + 'header.html'),
+        loadComponent('footer-container', BASE + 'footer.html')
     ]);
 
     // Inicializar el menú móvil UNA VEZ que el header ya está cargado en la página
@@ -74,6 +85,6 @@ function initMobileMenu() {
 
 
 const formScript = document.createElement('script');
-formScript.src = 'js/forms.js';
+formScript.src = BASE + 'js/forms.js';
 document.body.appendChild(formScript);
 

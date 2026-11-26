@@ -32,7 +32,7 @@
 .events-preview .btn--white-solid { padding: 14px 40px; font-size: 18px; font-weight: 400; }
 .events-preview .event-card--side { background: #fff; border: 1px solid #dedede; padding: 40px; }
 .events-preview .event-card__body { padding: 0; }
-.events-preview .event-tag-green { text-transform: none; color: #34a853; background: #f5f4f7; font-size: 14px; font-weight: 400; padding: 7px 14px; margin-bottom: 26px; }
+.events-preview .event-tag-green { text-transform: none; color: #188038; background: #f5f4f7; font-size: 14px; font-weight: 400; padding: 7px 14px; margin-bottom: 26px; }
 .events-preview .event-card--side h3 { font-size: 24px; font-weight: 600; line-height: 1.4; margin-bottom: 22px; }
 .events-preview .event-card--side p { font-size: 17px; line-height: 1.5; color: #505563; }
 .events-preview .event-card--side .event-date { display: flex; align-items: center; gap: 12px; margin: 48px 0 24px; font-size: 16px; }
