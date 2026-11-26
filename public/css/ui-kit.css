@@ -103,3 +103,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer__col li a, .footer__legal a { display: inline-block; padding: 8px 0; }
 
 .footer__credit { color: #4b5563; font-size: 14px; padding: 8px 0; }
+
+.brand-strip { height: 6px; background: linear-gradient(90deg,#4285f4 0 25%,#ea4335 25% 50%,#fbbc04 50% 75%,#34a853 75% 100%); }
