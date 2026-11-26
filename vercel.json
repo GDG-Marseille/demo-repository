@@ -34,5 +34,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/dashboard-besoins",
+      "destination": "/nous-soutenir#besoins",
+      "permanent": true
+    },
+    {
+      "source": "/dashboard-besoins.html",
+      "destination": "/nous-soutenir#besoins",
+      "permanent": true
+    }
   ]
 }

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = el('article', 'ev-card-modern' + (safeImage(event.image) ? '' : ' no-img-card'));
         card.dataset.tags = event.tags.join(' ');
         if (safeImage(event.image)) {
-            const img = el('img', 'ev-card-img'); img.src = event.image; img.alt = ''; img.loading = 'lazy'; card.append(img);
+            const img = el('img', 'ev-card-img'); img.src = event.image; img.alt = 'Visuel : ' + event.title; img.loading = 'lazy'; card.append(img);
         }
         const body = el('div', 'ev-card-body full-height-body');
         const meta = el('div', 'ev-meta-row');
@@ -108,10 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
             && Number.isFinite(Date.parse(e.start)) && Number.isFinite(Date.parse(e.end)) && safeUrl(e.url)
             && Array.isArray(e.tags) && e.tags.every(t => typeof t === 'string'));
         if (!valid) throw new Error('Invalid event');
+        const clean = value => String(value).replace(/🚀\uFE0F?\s*/gu, '').replace(/\s{2,}/g, ' ').trim();
         events = data.events.filter(e => !e.cancelled).map(event => ({
             ...event,
-            title: /Epitech Summit/i.test(event.title) ? event.title.replace(/🚀\uFE0F?/gu, '').trim() : event.title,
-            description: /DevFest/i.test(event.title) ? event.description.replace(/🚀\uFE0F?\s*/gu, '').trim() : event.description,
+            title: clean(event.title),
+            description: /DevFest/i.test(event.title)
+                ? "Le tout premier DevFest débarque à Marseille ! Oubliez les conférences passives : une journée inédite pour apprendre, coder et propulser la tech phocéenne ensemble."
+                : clean(event.description),
         }));
         render();
     }

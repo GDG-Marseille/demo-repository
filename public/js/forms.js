@@ -95,7 +95,7 @@
             } catch {
                 message(kind === 'newsletter'
                     ? 'L’inscription n’a pas pu aboutir. Réessayez dans quelques instants.'
-                    : 'Votre demande n’a pas pu être envoyée. Réessayez ou écrivez à contact@gdgmarseille.fr.');
+                    : 'Votre demande n’a pas pu être envoyée. Réessayez ou écrivez à ' + (kind === 'partner' ? 'partenariat@gdgmarseille.fr' : 'contact@gdgmarseille.fr') + '.');
             } finally {
                 sending = false;
                 updateButton();

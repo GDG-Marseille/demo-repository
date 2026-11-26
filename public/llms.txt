@@ -1,0 +1,31 @@
+# GDG Marseille
+
+> GDG Marseille (Google Developer Group Marseille) est une communauté tech indépendante de développeurs, designers et curieux passionnés par les technologies Google, basée à Marseille. C'est une association à but non lucratif (SIREN 103 493 177). Les Google Developer Groups sont des entités indépendantes de Google.
+
+## Ce que fait le GDG Marseille
+- Organise des meetups, workshops, hackathons et talks techniques à Marseille (IA, Cloud, Android, Web, Flutter).
+- Accueille les débutants comme les experts. L'adresse exacte de chaque événement est communiquée à l'inscription.
+
+## Prochain événement
+- GDG Marseille x Epitech Summit : IA & Android, le 2 février 2027, à Epitech Marseille. Au programme : un workshop IA avec Tamas Piros et un talk sur la voix sur Android avec Elaine Dias Batista. Inscription : https://www.meetup.com/google-developer-group-marseille/events/315789695/
+- Événement passé : DevFest Marseille 2026 (12 novembre 2026).
+
+## Pages principales
+- Accueil : https://www.gdgmarseille.fr/
+- Événements : https://www.gdgmarseille.fr/evenements
+- À propos et équipe : https://www.gdgmarseille.fr/a-propos
+- Rejoindre la communauté : https://www.gdgmarseille.fr/nous-rejoindre
+- Devenir partenaire (entreprises, écoles) : https://www.gdgmarseille.fr/devenir-partenaire
+- Soutenir par un don et besoins de la communauté : https://www.gdgmarseille.fr/nous-soutenir
+- Partenaires et mécènes : https://www.gdgmarseille.fr/partenaires
+- Contact : https://www.gdgmarseille.fr/contact
+
+## Rejoindre et suivre
+- Communauté GDG : https://gdg.community.dev/gdg-marseille/
+- Meetup : https://www.meetup.com/fr-fr/google-developer-group-marseille/
+- LinkedIn : https://www.linkedin.com/company/gdgmarseille
+- Instagram : https://www.instagram.com/gdg_marseille/
+
+## Contact
+- Général : contact@gdgmarseille.fr
+- Partenariats : partenariat@gdgmarseille.fr

@@ -31,7 +31,8 @@ a.pw-card:focus-visible { outline: 2px solid #4285f4; outline-offset: 3px; }
 .pw-join { background: #f3f5fa; padding: 56px 0; }
 .pw-join h2 { text-align: center; color: #202124; margin-bottom: 8px; }
 .pw-join-lead { text-align: center; color: #4a4f5a; margin-bottom: 32px; }
-.pw-join-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+.pw-join-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 1040px; margin: 0 auto; }
+@media (min-width: 720px) { .pw-join-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .pw-join-card { background: #fff; border-radius: 16px; border: 1px solid #e0e3e8; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
 .pw-join-card h3 { margin: 0; color: #202124; }
 .pw-join-card p { margin: 0; color: #4a4f5a; line-height: 1.6; flex: 1; }

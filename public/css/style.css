@@ -2667,6 +2667,7 @@ blockquote cite {
 }
 
 .partner-why-header-icon {
+    color: #4285f4;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -5872,3 +5873,20 @@ html { scroll-padding-top: 96px; }
     .page-hero-contact p { font-size: 17px; }
     .info-card { padding: 28px 20px; }
 }
+
+
+/* ==========================================================
+   Ajustements recette (événements) et base mobile
+   ========================================================== */
+.ev-tag-gray, .badge-past { background: transparent; border: 0; padding: 0; border-radius: 0; font-size: 0.8rem; font-weight: 600; color: #64748b; }
+.badge-past { color: #166534; }
+.btn-card-blue, .btn-pill-outline, .btn-pill-blue, .btn-card-outline, .btn--outline-blue { text-decoration: none; }
+.btn-card-blue:hover, .btn-pill-outline:hover, .btn-pill-blue:hover { text-decoration: none; }
+
+/* Mobile d'abord : évite le zoom automatique d'iOS dans les champs, images fluides, cibles tactiles confortables. */
+html { -webkit-text-size-adjust: 100%; }
+img, svg, video { max-width: 100%; }
+img { height: auto; }
+input, select, textarea { font-size: 16px; min-height: 44px; }
+textarea { min-height: 120px; }
+.nav__list a, .footer a { padding-block: 6px; }
