@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             .sort((a, b) => Date.parse(a.start) - Date.parse(b.start))[0];
         if (!next) {
             card.hidden = true;
+            document.getElementById('hv-floatlink')?.remove();
             link('hv-main-cta', 'https://www.meetup.com/fr-fr/google-developer-group-marseille/', 'Voir le calendrier Meetup');
             document.getElementById('hv-main-cta')?.setAttribute('href', 'https://www.meetup.com/fr-fr/google-developer-group-marseille/');
             return;
