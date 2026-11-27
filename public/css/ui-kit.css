@@ -116,3 +116,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .dark-cta-box a.btn-pill-blue, .dark-cta-box a.btn-primary, .dark-cta-box a.btn-light { color: #fff; }
 .dark-cta-box a.btn-light { color: #0f172a; }
+
+.hero-photo > .container { width: min(1200px, 90%); margin-inline: auto; }

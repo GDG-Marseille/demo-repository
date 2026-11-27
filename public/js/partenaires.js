@@ -63,29 +63,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error('HTTP ' + response.status);
         const data = await response.json();
         const actifs = (data.soutiens || []).filter(item => item.actif);
-        const sizeByIndex = ['xl', 'lg', 'md', 'sm'];
-        let rendered = 0;
-
-        const groups = [
-            { groupe: 'entreprise', titre: null },
-            { groupe: 'mecene', titre: null }
-        ];
-        groups.forEach(({ groupe }) => {
-            const niveaux = data.niveaux.filter(level => level.groupe === groupe);
-            niveaux.forEach((level, index) => {
-                const items = actifs.filter(item => item.niveau === level.id);
-                if (!items.length) return;
-                root.append(section(level.label, items, groupe === 'mecene' ? 'sm' : sizeByIndex[index] || 'sm'));
-                rendered += items.length;
-            });
+        const ordre = (data.niveaux || []).map(level => level.id);
+        const libelle = Object.fromEntries((data.niveaux || []).map(level => [level.id, level.label]));
+        actifs.sort((x, y) => {
+            const ix = ordre.indexOf(x.niveau), iy = ordre.indexOf(y.niveau);
+            return (ix < 0 ? 99 : ix) - (iy < 0 ? 99 : iy);
         });
-
-        const sansNiveau = actifs.filter(item => !data.niveaux.some(level => level.id === item.niveau));
-        if (sansNiveau.length) {
-            root.append(section('Ils nous soutiennent', sansNiveau, 'md'));
-            rendered += sansNiveau.length;
+        if (!actifs.length) {
+            root.append(el('p', 'pw-empty', 'Les premiers partenaires seront présentés ici très bientôt.'));
+        } else {
+            const grid = el('div', 'pw-grid pw-grid--strip');
+            actifs.forEach(item => {
+                const wrapper = card(item, 'sm');
+                const label = libelle[item.niveau];
+                if (label) wrapper.append(el('span', 'pw-badge', label));
+                grid.append(wrapper);
+            });
+            root.append(grid);
         }
-        if (!rendered) root.append(el('p', 'pw-empty', 'Les premiers partenaires seront présentés ici très bientôt.'));
     } catch (error) {
         console.error('Impossible de charger les partenaires', error);
         root.append(el('p', 'pw-empty', 'La liste des partenaires est momentanément indisponible.'));
