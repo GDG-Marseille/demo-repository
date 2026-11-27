@@ -13,109 +13,99 @@
     <meta property="og:title" content="À propos du GDG Marseille · Mission et équipe" />
     <meta property="og:description" content="Découvrez l'histoire, la mission et l'équipe du GDG Marseille, communauté tech indépendante de développeurs passionnés par les technologies Google." />
     <meta property="og:url" content="https://www.gdgmarseille.fr/a-propos" />
-    <meta property="og:image" content="https://www.gdgmarseille.fr/images/marseille-vieux-port.png" />
+    <meta property="og:image" content="https://www.gdgmarseille.fr/images/devfest-workshop.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/team-profiles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/ui-kit.css" />
+    <link rel="stylesheet" href="css/about-v2.css" />
+    <link rel="stylesheet" href="css/motion.css" />
 </head>
 <body>
 
     <!-- ===== HEADER DINÁMICO ===== -->
     <div id="header-container"></div>
 
-    <main>
+    <main class="ab">
 
-        <!-- ===== HERO CON IMAGEN DE FONDO Y CONTADORES ===== -->
         <section class="hero-photo" style="background-image: url('images/devfest-talk.jpg');">
             <div class="container">
                 <span class="hero-photo__tag">Qui sommes-nous</span>
                 <h1>À propos du GDG Marseille</h1>
-                <p>Communauté tech indépendante de développeurs passionnés par les technologies Google, basée à Marseille.</p>
+                <p>Une communauté indépendante, portée par des passionnés, qui rend la tech accessible à tous, à Marseille.</p>
                 
             </div>
         </section>
 
-        <!-- ===== SECCIÓN: NOTRE MISSION (4 CAJAS) ===== -->
-        <section class="apropos-mission-section">
-            <div class="container">
-                <h2 class="apropos-section-main-title">Notre mission</h2>
-                
-                <div class="apropos-mission-grid">
-                    <!-- Caja 1 -->
-                    <div class="apropos-mission-card">
-                        <div class="apropos-mission-icon blue-box" aria-hidden="true"><svg viewBox="0 0 24 24" style="fill: currentColor; stroke: none"><path fill-rule="evenodd" d="M12 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM6 16c0-2.67 4-4 6-4s6 1.33 6 4v1H6Zm2.2-1h7.6c-.8-.6-2.6-1-3.8-1s-3 .4-3.8 1Z"/><circle cx="4" cy="10" r="2"/><circle cx="20" cy="10" r="2"/><path d="M0 17v-2c0-1.6 2.7-2.5 5.3-2A5 5 0 0 0 4 16v1Zm24 0v-2c0-1.6-2.7-2.5-5.3-2a5 5 0 0 1 1.3 3v1Z"/></svg></div>
-                        <h3>Inclusivité</h3>
-                        <p>Un espace ouvert à tous, quel que soit le niveau d'expertise, favorisant l'entraide et le partage.</p>
-                    </div>
-                    <!-- Caja 2 -->
-                    <div class="apropos-mission-card">
-                        <div class="apropos-mission-icon green-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 15a7 7 0 1 1 8 0l-1 2H9l-1-2Zm1 5h6m-4 3h2"/></svg></div>
-                        <h3>Innovation</h3>
-                        <p>Explorer les dernières avancées technologiques et transformer les idées en solutions réelles.</p>
-                    </div>
-                    <!-- Caja 3 -->
-                    <div class="apropos-mission-card">
-                        <div class="apropos-mission-icon orange-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6"/></svg></div>
-                        <h3>Open Source</h3>
-                        <p>Promouvoir la collaboration ouverte et contribuer activement à l'écosystème global.</p>
-                    </div>
-                    <!-- Caja 4 -->
-                    <div class="apropos-mission-card">
-                        <div class="apropos-mission-icon red-box" aria-hidden="true"><svg viewBox="0 0 24 24" style="fill: currentColor; stroke: none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 17.93C7.05 19.44 4 16.08 4 12c0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93Zm6.9-2.54A1.99 1.99 0 0 0 16 16h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.93 5.77 20 8.64 20 12c0 2.08-.8 3.97-2.1 5.39Z"/></svg></div>
-                        <h3>Impact</h3>
-                        <p>Utiliser la technologie pour créer un changement positif au sein de la cité phocéenne.</p>
-                    </div>
+        <div class="ab-ticker" aria-label="Nos valeurs : Partage, Bienveillance, Curiosité, Excellence technique, Accessibilité, Inclusion, Esprit communautaire"><div class="ab-ticker__track" aria-hidden="true"><span>Partage</span><i>•</i><span>Bienveillance</span><i>•</i><span>Curiosité</span><i>•</i><span>Excellence technique</span><i>•</i><span>Accessibilité</span><i>•</i><span>Inclusion</span><i>•</i><span>Esprit communautaire</span><i>•</i><span>Partage</span><i>•</i><span>Bienveillance</span><i>•</i><span>Curiosité</span><i>•</i><span>Excellence technique</span><i>•</i><span>Accessibilité</span><i>•</i><span>Inclusion</span><i>•</i><span>Esprit communautaire</span><i>•</i></div></div>
+
+        <section class="ab-s">
+            <div class="ab-wrap">
+                <h2 class="ab-t">Où on va, et comment</h2>
+                <p class="ab-sub">Notre vision est le cap. Notre mission est ce qu'on fait, concrètement, à chaque événement.</p>
+                <div class="ab-vm">
+                    <article>
+                        <div><span class="ab-label">Notre vision</span>
+                        <p>Faire du GDG Marseille la communauté tech la plus inspirante du Sud de la France, où développeurs, étudiants, experts et entreprises se rencontrent pour apprendre, partager et construire l'avenir des technologies Google.</p></div>
+                    </article>
+                    <article>
+                        <div><span class="ab-label">Notre mission</span>
+                        <p>Créer des expériences qui rendent les technologies Google accessibles à tous, favorisent le partage de connaissances et renforcent l'écosystème tech marseillais.</p></div>
+                        <small>Apprendre. Partager. Construire. Ensemble.</small>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SECCIÓN: NOTRE HISTOIRE (DOS COLUMNAS) ===== -->
-        <section class="apropos-history-section">
-            <div class="container">
-                <div class="apropos-history-grid">
-                    <!-- Columna Izquierda: Imagen con tarjeta flotante -->
-                    <div class="apropos-history-visual">
-                        <div class="history-browser-mockup">
-                            <div class="browser-top-bar">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                            </div>
-                            <div class="browser-body-content">
-                                <span class="mockup-tag">Accueil Événements À Propos Membres Contact</span>
-                                <h2>À Propos de GDG Marseille</h2>
-                                <img src="images/communaute-atelier.png" alt="Meetup GDG Marseille" class="mockup-img" />
-                                <p class="mockup-text">Fondé en 2025, GDG Marseille est une communauté dynamique de développeurs passionnés et engagés dans l'écosystème tech local. Nous organisons des meetups réguliers, des ateliers pratiques et des conférences pour partager les connaissances autour des technologies Google, du Cloud, de l'IA et bien plus encore.</p>
-                            </div>
-                        </div>
-                        <div class="history-floating-badge">
-                            <span class="badge-year">Depuis 2025</span>
-                            <span class="badge-sub">Une aventure humaine</span>
-                        </div>
-                    </div>
+        <section class="ab-s ab-bg">
+            <div class="ab-wrap">
+                <h2 class="ab-t">Ce qui nous guide</h2>
+                <p class="ab-sub">Sept valeurs, que tu retrouves à chaque rencontre.</p>
+                <div class="ab-values"><div class="ab-card"><b>1</b><h3>Partage</h3><p>On apprend mieux ensemble : chacun apporte ce qu’il sait.</p></div><div class="ab-card"><b>2</b><h3>Bienveillance</h3><p>Aucune question n’est bête. On s’écoute et on s’entraide.</p></div><div class="ab-card"><b>3</b><h3>Curiosité</h3><p>On teste, on explore, on pose des questions.</p></div><div class="ab-card"><b>4</b><h3>Excellence technique</h3><p>Des contenus précis, préparés avec soin.</p></div><div class="ab-card"><b>5</b><h3>Accessibilité</h3><p>Gratuit, ouvert à tous les niveaux, du débutant à l’expert.</p></div><div class="ab-card"><b>6</b><h3>Inclusion</h3><p>Chacun a sa place, quel que soit son parcours.</p></div><div class="ab-card"><b>7</b><h3>Esprit communautaire</h3><p>Bénévoles, partenaires, participants : une seule communauté.</p></div></div>
+            </div>
+        </section>
 
-                    <!-- Columna Derecha: Textos de historia -->
-                    <div class="apropos-history-content">
-                        <span class="apropos-subtitle-tag">NOTRE HISTOIRE</span>
-                        <h2>D'une conviction marseillaise à une communauté tech</h2>
-                        <p>
-                            Je m'appelle Méryl, Marseillaise et passionnée d'entrepreneuriat. J'en avais assez de devoir monter à Paris à chaque fois qu'on voulait vivre un vrai événement tech. Je voulais changer les choses, ici, chez nous.
-                        </p>
-                        <p>
-                            Aujourd'hui, GDG Marseille est devenu un acteur incontournable de l'innovation locale. Nous organisons des conférences techniques, des hackathons et des ateliers pratiques qui rassemblent des développeurs de toute la région Sud.
-                        </p>
-                        <p>
-                            À l'heure où l'IA automatise toujours plus, notre conviction reste la même : remettre l'humain au centre. Notre force réside dans notre indépendance et notre ancrage local — nous ne sommes pas Google, nous sommes la communauté qui fait vivre ses technologies ici, sous le soleil de Provence.
-                        </p>
-                    </div>
+        <section class="ab-band" style="background-image: url('images/devfest/df-14.jpg');">
+            <div class="ab-wrap">
+                <blockquote>Un endroit où quelqu'un qui maîtrise une techno depuis dix ans peut discuter avec quelqu'un qui l'a découverte il y a dix jours.</blockquote>
+                <cite>Méryl Stretti, à l'ouverture du DevFest Marseille 2026</cite>
+            </div>
+        </section>
+
+        <section class="ab-s">
+            <div class="ab-wrap">
+                <h2 class="ab-t">Notre ambition</h2>
+                <p class="ab-sub">Trois étapes pour y arriver.</p>
+                <div class="ab-amb">
+                    <div><em>Court terme</em><p>Fédérer une communauté locale active, remplir chaque événement et faire vivre la communauté en ligne.</p></div>
+                    <div><em>Moyen terme</em><p>Devenir la référence Google Developer Group dans le Sud, et attirer davantage d'intervenants et de partenaires.</p></div>
+                    <div><em>Long terme</em><p>Faire du DevFest Marseille un rendez-vous incontournable de la communauté tech française.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SECCIÓN: L'ÉQUIPE ORGANISATRICE ===== -->
-<!-- ===== SECCIÓN: L'ÉQUIPE ORGANISATRICE ===== -->
+        <section class="ab-s ab-bg">
+            <div class="ab-wrap">
+                <div class="ab-indep">
+                    <strong>Ni entreprise, ni école, ni agence.</strong>
+                    <p>Le GDG Marseille est une communauté indépendante, portée par des passionnés. Les Google Developer Groups sont indépendants de Google : nous ne sommes pas Google, nous sommes la communauté qui fait vivre ses technologies à Marseille. La communauté est la vedette, Google est un facilitateur.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-s">
+            <div class="ab-wrap ab-story">
+                <div>
+                    <h2 class="ab-t">Notre histoire</h2>
+                    <p>Je m'appelle Méryl, Marseillaise et passionnée d'entrepreneuriat. J'en avais assez de devoir monter à Paris à chaque fois qu'on voulait vivre un vrai événement tech. Je voulais changer les choses, ici, chez nous.</p>
+                    <p>Aujourd'hui, le GDG Marseille organise des conférences techniques, des ateliers pratiques et d'autres événements qui rassemblent des développeurs de toute la région Sud, portés par des bénévoles.</p>
+                    <p>À l'heure où l'IA automatise toujours plus, notre conviction reste la même : remettre l'humain au centre.</p>
+                </div>
+                <figure><img src="images/meryl-conference.jpeg" alt="Méryl Stretti, fondatrice du GDG Marseille, sur scène" loading="lazy"></figure>
+            </div>
+        </section>
+
         <section class="apropos-team-section">
             <div class="container">
                 <h2 class="apropos-section-main-title">L'équipe organisatrice</h2>
@@ -125,9 +115,7 @@
                 <div class="apropos-team-grid" id="apropos-team-grid"></div>
             </div>
         </section>
-        
 
-        <!-- ===== SECCIÓN INFERIOR: REJOIGNEZ LE MOUVEMENT (CAJA AZUL GRANDE) ===== -->
         <section class="apropos-cta-section">
             <div class="container">
                 <div class="apropos-cta-box">

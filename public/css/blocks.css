@@ -1,0 +1,19 @@
+/* Blocs réutilisables : calendrier 2027 et questions fréquentes (préfixe blk-) */
+.blk { padding: 72px 0; background: #f8fafc; }
+.blk .blk-wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+.blk h2 { font-size: clamp(28px,4.6vw,44px); line-height: 1.1; letter-spacing: -.03em; font-weight: 900; color: #0f172a; margin-bottom: 12px; }
+.blk .blk-sub { color: #475569; font-size: 18px; max-width: 640px; margin-bottom: 30px; }
+.blk-line { display: grid; gap: 16px; }
+.blk-line div { background: #fff; border-radius: 20px; padding: 22px; border-left: 8px solid #4285f4; box-shadow: 0 10px 30px rgba(15,23,42,.08); }
+.blk-line div:nth-child(2) { border-color: #ea4335; } .blk-line div:nth-child(3) { border-color: #34a853; }
+.blk-line b { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #475569; }
+.blk-line h3 { font-size: 22px; margin: 4px 0; color: #0f172a; } .blk-line p { color: #475569; }
+.blk-faqgrid { display: grid; gap: 28px; }
+.blk-acc details { border-top: 1px solid #e2e8f0; padding: 20px 0; }
+.blk-acc details:last-child { border-bottom: 1px solid #e2e8f0; }
+.blk-acc summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 800; font-size: 19px; color: #0f172a; }
+.blk-acc summary::-webkit-details-marker { display: none; }
+.blk-acc summary::after { content: "+"; flex: none; width: 34px; height: 34px; border-radius: 50%; background: #e8f0fe; color: #1967d2; display: grid; place-items: center; font-size: 22px; font-weight: 700; line-height: 1; transition: background .2s, color .2s, rotate .3s; }
+.blk-acc details[open] summary::after { content: "–"; background: #1967d2; color: #fff; }
+.blk-acc p { margin-top: 12px; color: #475569; max-width: 620px; }
+@media (min-width: 900px) { .blk-line { grid-template-columns: repeat(3, 1fr); } .blk-faqgrid { grid-template-columns: 1fr 1.4fr; gap: 64px; } }

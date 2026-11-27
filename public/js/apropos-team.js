@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const teamMembers = [
         {
             name: "Méryl Stretti",
-            role: "Fondatrice & Lead Organizer",
+            role: "Fondatrice & organisatrice principale",
             roleClass: "blue-text",
             img: "images/meryl-conference.jpeg",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/merylstretti/" }, { label: "Site web", url: "https://kwdcreative.fr/" }]

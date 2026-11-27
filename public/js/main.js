@@ -84,6 +84,10 @@ function initMobileMenu() {
 // Le nombre de membres affiché est maintenu dans le contenu du site.
 
 
+const motionScript = document.createElement('script');
+motionScript.src = BASE + 'js/motion.js';
+document.body.appendChild(motionScript);
+
 const formScript = document.createElement('script');
 formScript.src = BASE + 'js/forms.js';
 document.body.appendChild(formScript);

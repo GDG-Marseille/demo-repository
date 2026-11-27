@@ -2082,7 +2082,7 @@ blockquote cite {
 /* 1. HERO CON IMAGEN DE FONDO Y CONTADORES (PROPORCIONES CORREGIDAS) */
 .apropos-hero-image {
     position: relative;
-    background: url('../images/communaute-reunion-gdg.png') no-repeat center center/cover;
+    background: url('../images/devfest/df-12.jpg') no-repeat center center/cover;
     /* Mayor altura general para que la caja oscura sea más grande y abarque todo holgadamente */
     padding: 0;
     color: #ffffff;

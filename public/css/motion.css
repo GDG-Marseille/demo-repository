@@ -1,0 +1,38 @@
+/* Mouvement : apparitions au défilement, survols, entrée des en-têtes. Désactivé si l'utilisateur demande moins d'animations. */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: no-preference) {
+  .motion [data-reveal] { opacity: 0; translate: 0 32px; transition: opacity .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms), translate .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms); will-change: opacity, translate; }
+  .motion [data-reveal].in { opacity: 1; translate: 0 0; }
+  .motion [data-reveal="left"] { translate: -40px 0; } .motion [data-reveal="right"] { translate: 40px 0; }
+  .motion [data-reveal="left"].in, .motion [data-reveal="right"].in { translate: 0 0; }
+  .motion [data-reveal="zoom"] { translate: 0 0; scale: .94; transition: opacity .8s ease var(--d,0ms), scale .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms); }
+  .motion [data-reveal="zoom"].in { scale: 1; }
+  /* entrée des en-têtes */
+  .motion .hero-photo > .container > *, .motion .hv-hero .hv-wrap > div:first-child > * { opacity: 0; translate: 0 26px; animation: mv-up .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  .motion .hero-photo > .container > *:nth-child(1), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(1) { animation-delay: .05s; }
+  .motion .hero-photo > .container > *:nth-child(2), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(2) { animation-delay: .17s; }
+  .motion .hero-photo > .container > *:nth-child(3), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(3) { animation-delay: .29s; }
+  .motion .hero-photo > .container > *:nth-child(4), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(4) { animation-delay: .41s; }
+  .motion .hero-photo > .container > *:nth-child(n+5), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(n+5) { animation-delay: .5s; }
+  .motion .hv-photo { animation: mv-pop 1s cubic-bezier(.2,.8,.2,1) .15s both; }
+  .motion .hv-brace { animation: mv-float 4s ease-in-out 1s infinite; }
+  @keyframes mv-up { to { opacity: 1; translate: 0 0; } }
+  @keyframes mv-pop { from { opacity: 0; translate: 40px 20px; scale: .96; } to { opacity: 1; translate: 0 0; scale: 1; } }
+  @keyframes mv-float { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: 0 -10px; rotate: 4deg; } }
+  /* parallaxe douce des photos d'en-tête */
+  .hero-photo { background-position: center calc(50% + var(--py, 0px)); }
+  .hv-photocard img { translate: 0 var(--py, 0px); scale: 1.08; }
+  /* survols vivants */
+  .hv-who a, .hv-line div, .apropos-mission-card, .cta-card, .ev-card-modern, .pw-card, .engagement-card, .why-card, .ab-card, .blk-line div, .action-photo-card, .apropos-team-card, .pricing-card-clean {
+    transition: translate .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s, border-color .3s; }
+  .hv-who a:hover, .hv-line div:hover, .apropos-mission-card:hover, .cta-card:hover, .ev-card-modern:hover, .pw-card:hover, .engagement-card:hover, .why-card:hover, .ab-card:hover, .blk-line div:hover, .action-photo-card:hover, .apropos-team-card:hover, .pricing-card-clean:hover {
+    translate: 0 -8px; box-shadow: 0 22px 44px rgba(15,23,42,.16); }
+  .btn-primary, .btn-secondary, .btn-light { transition: translate .2s, background-color .2s, color .2s, box-shadow .2s; }
+  .btn-primary:hover, .btn-secondary:hover, .btn-light:hover { translate: 0 -3px; box-shadow: 0 10px 22px rgba(25,103,210,.28); }
+  .btn-primary:active, .btn-secondary:active, .btn-light:active { translate: 0 0; }
+  .hv-mos figure img, .wall__item img { transition: scale .6s cubic-bezier(.2,.7,.2,1); } .hv-mos figure:hover img { scale: 1.07; }
+  .header { transition: box-shadow .3s, background-color .3s; } .header.is-scrolled { box-shadow: 0 6px 24px rgba(15,23,42,.1); }
+  /* bandeau défilant des valeurs */
+  .ab-ticker__track { animation: mv-marquee 34s linear infinite; } .ab-ticker:hover .ab-ticker__track { animation-play-state: paused; }
+  @keyframes mv-marquee { to { translate: -50% 0; } }
+}

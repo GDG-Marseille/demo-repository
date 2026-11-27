@@ -1,0 +1,55 @@
+/* Page À propos : vision, mission, valeurs, ambition (préfixe ab-) */
+.ab { background: #fff; color: #0f172a; }
+.ab-wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+.ab-s { padding: 76px 0; }
+.ab h2.ab-t { font-size: clamp(30px,5vw,48px); line-height: 1.08; letter-spacing: -.03em; font-weight: 900; margin-bottom: 12px; color: #0f172a; }
+.ab-sub { color: #475569; font-size: 18px; max-width: 640px; margin-bottom: 34px; }
+.ab-label { display: inline-block; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: 13px; margin-bottom: 14px; }
+/* bandeau défilant */
+.ab-ticker { overflow: hidden; background: #0f172a; color: #fff; padding: 18px 0; white-space: nowrap; }
+.ab-ticker__track { display: inline-flex; gap: 0; width: max-content; }
+.ab-ticker span { font-weight: 900; font-size: clamp(20px,3vw,30px); letter-spacing: -.01em; padding: 0 22px; }
+.ab-ticker span:nth-child(4n+1) { color: #8ab4f8; } .ab-ticker span:nth-child(4n+2) { color: #f28b82; } .ab-ticker span:nth-child(4n+3) { color: #fdd663; } .ab-ticker span:nth-child(4n) { color: #81c995; }
+.ab-ticker i { font-style: normal; color: #64748b; padding: 0 4px; }
+/* vision et mission */
+.ab-vm { display: grid; gap: 18px; }
+.ab-vm article { border-radius: 28px; padding: 34px 30px; min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; }
+.ab-vm article:first-child { background: #0f172a; color: #fff; }
+.ab-vm article:last-child { background: #1967d2; color: #fff; }
+.ab-vm .ab-label { color: #fdd663; }
+.ab-vm article:last-child .ab-label { color: #fff; opacity: .85; }
+.ab-vm p { font-size: clamp(22px,3vw,32px); line-height: 1.25; font-weight: 800; letter-spacing: -.02em; }
+.ab-vm small { display: block; margin-top: 22px; font-size: 16px; font-weight: 500; opacity: .8; }
+/* valeurs */
+.ab-values { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
+.ab-card { background: #fff; border-radius: 22px; padding: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(15,23,42,.06); }
+.ab-card b { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; color: #fff; font-size: 18px; margin-bottom: 14px; }
+.ab-card:nth-child(4n+1) b { background: #1967d2; } .ab-card:nth-child(4n+2) b { background: #c5221f; } .ab-card:nth-child(4n+3) b { background: #b45309; } .ab-card:nth-child(4n) b { background: #137333; }
+.ab-card h3 { font-size: 19px; margin-bottom: 6px; } .ab-card p { color: #475569; font-size: 15.5px; }
+/* photo plein cadre avec citation */
+.ab-band { position: relative; isolation: isolate; color: #fff; padding: 96px 0; background: #0f172a center / cover no-repeat; background-position: center calc(50% + var(--py, 0px)); }
+.ab-band::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(15,23,42,.88), rgba(15,23,42,.45)); }
+.ab-band blockquote { font-size: clamp(24px,4vw,44px); line-height: 1.15; letter-spacing: -.025em; font-weight: 900; max-width: 900px; border: 0; padding: 0; color: #fff; }
+.ab-band cite { display: block; margin-top: 22px; font-style: normal; font-weight: 700; color: #fdd663; }
+/* ambition */
+.ab-amb { display: grid; gap: 16px; position: relative; }
+.ab-amb div { background: #fff; border-radius: 22px; padding: 26px; border-top: 8px solid #4285f4; box-shadow: 0 10px 30px rgba(15,23,42,.08); }
+.ab-amb div:nth-child(2) { border-color: #fbbc04; } .ab-amb div:nth-child(3) { border-color: #34a853; }
+.ab-amb em { display: block; font-style: normal; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: 13px; color: #475569; margin-bottom: 8px; }
+.ab-amb p { font-size: 19px; font-weight: 700; line-height: 1.35; }
+.ab-bg { background: #f8fafc; }
+/* indépendance */
+.ab-indep { display: grid; gap: 24px; align-items: center; background: linear-gradient(120deg,#eef4ff,#fff); border-radius: 30px; padding: 40px 30px; border: 1px solid #e2e8f0; }
+.ab-indep strong { font-size: clamp(28px,4.4vw,46px); line-height: 1.08; letter-spacing: -.03em; font-weight: 900; }
+.ab-indep p { color: #475569; font-size: 18px; }
+/* histoire */
+.ab-story { display: grid; gap: 30px; align-items: center; }
+.ab-story p { color: #475569; font-size: 18px; margin-bottom: 14px; }
+.ab-story p:first-of-type { color: #0f172a; font-weight: 700; font-size: clamp(20px,2.6vw,26px); line-height: 1.35; letter-spacing: -.01em; }
+.ab-story figure { margin: 0; border-radius: 26px; overflow: hidden; box-shadow: 0 18px 40px rgba(15,23,42,.22); border: 6px solid #fff; rotate: 2deg; }
+.ab-story figure img { width: 100%; display: block; }
+@media (min-width: 900px) {
+  .ab-vm { grid-template-columns: 1fr 1fr; } .ab-values { grid-template-columns: repeat(4, 1fr); }
+  .ab-amb { grid-template-columns: repeat(3, 1fr); } .ab-indep { grid-template-columns: 1.1fr 1fr; padding: 54px 54px; }
+  .ab-story { grid-template-columns: 1.15fr 1fr; gap: 60px; } .ab-band { padding: 140px 0; }
+}
