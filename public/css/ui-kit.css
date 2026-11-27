@@ -113,3 +113,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .logo__text b { font-size: 20px; font-weight: 700; color: #1967d2; letter-spacing: -.01em; }
 .footer .logo img { height: 42px; }
 @media (max-width: 420px) { .logo__text > span { display: none; } .logo__text b { font-size: 19px; } }
+
+.dark-cta-box a.btn-pill-blue, .dark-cta-box a.btn-primary, .dark-cta-box a.btn-light { color: #fff; }
+.dark-cta-box a.btn-light { color: #0f172a; }

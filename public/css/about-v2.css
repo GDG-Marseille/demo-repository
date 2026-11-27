@@ -53,3 +53,21 @@
   .ab-amb { grid-template-columns: repeat(3, 1fr); } .ab-indep { grid-template-columns: 1.1fr 1fr; padding: 54px 54px; }
   .ab-story { grid-template-columns: 1.15fr 1fr; gap: 60px; } .ab-band { padding: 140px 0; }
 }
+
+.ab-band blockquote { background: none; box-shadow: none; margin: 0; }
+.ab-band blockquote::before, .ab-band blockquote::after { content: none; }
+@media (min-width: 900px) { .ab-values .ab-card:last-child { grid-column: span 2; } }
+.ab-wrap, .ab-indep, .ab-vm, .ab-values, .ab-amb { min-width: 0; }
+.ab-indep strong, .ab-vm p, .ab-amb p, .ab-story p { overflow-wrap: anywhere; }
+
+.ab-values { grid-template-columns: minmax(0, 1fr); }
+.ab-card { min-width: 0; }
+@media (min-width: 600px) { .ab-values { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .ab-values { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Équipe : cartes plus présentes */
+.apropos-team-section { background: #f8fafc; }
+.apropos-team-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+.apropos-team-card { background: #fff; border-radius: 26px; padding: 30px 22px; box-shadow: 0 12px 34px rgba(15,23,42,.08); text-align: center; border: 1px solid #e2e8f0; }
+.apropos-team-card .team-avatar-img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 10px 24px rgba(15,23,42,.18); margin: 0 auto 14px; display: block; }
+.apropos-team-card h3 { font-size: 20px; font-weight: 800; }
