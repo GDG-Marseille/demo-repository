@@ -1,0 +1,48 @@
+/* Refonte : même langage visuel sur toutes les pages (titres lourds, sections alternées, cartes douces).
+   Appliqué aux pages « historiques » ; l'accueil (.hv) et À propos (.ab) ont leur propre feuille. */
+:root { --v3-ink:#0f172a; --v3-mut:#475569; --v3-line:#e2e8f0; --v3-soft:#f8fafc; --v3-blue:#1967d2; }
+main:not(.hv):not(.ab) { background: #fff; }
+main:not(.hv):not(.ab) > section:not(.hero-photo) { padding-block: clamp(52px, 7vw, 92px); }
+main:not(.hv):not(.ab) > section:not(.hero-photo):not([class*="cta"]):nth-of-type(even) { background: var(--v3-soft); }
+main:not(.hv):not(.ab) > section:not(.hero-photo):not([class*="cta"]):nth-of-type(odd) { background: #fff; }
+/* titres */
+main:not(.hv):not(.ab) section:not([class*="cta"]) h2 { font-weight: 900; letter-spacing: -.03em; line-height: 1.08; color: var(--v3-ink); font-size: clamp(28px, 4.4vw, 46px); }
+main:not(.hv):not(.ab) section:not([class*="cta"]) h2 + p, main:not(.hv):not(.ab) section:not([class*="cta"]) .section-subtitle-gray, main:not(.hv):not(.ab) section:not([class*="cta"]) .section-main-subtitle { color: var(--v3-mut); font-size: 18px; line-height: 1.55; }
+main:not(.hv):not(.ab) h3 { letter-spacing: -.015em; }
+/* cartes */
+main:not(.hv):not(.ab) :is(.cta-card, .engagement-card, .ev-card-modern, .archive-card, .breakdown-card, .tier-card, .need-card, .pricing-card-clean, .partner-stat-card, .info-card, .contact-form-card, .support-progress-card, .event-card--side) {
+  border-radius: 24px; border: 1px solid var(--v3-line); box-shadow: 0 12px 34px rgba(15,23,42,.07); background: #fff; }
+main:not(.hv):not(.ab) .ev-card-modern { overflow: hidden; position: relative; }
+/* pastille de date sur les cartes d'événement */
+.ev-date-badge { position: absolute; top: 14px; left: 14px; z-index: 2; background: #fff; color: #0f172a; border-radius: 14px; padding: 6px 12px; text-align: center; line-height: 1.05; box-shadow: 0 8px 20px rgba(15,23,42,.22); }
+.ev-date-badge b { display: block; font-size: 24px; font-weight: 900; } .ev-date-badge span { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #1967d2; }
+/* photo des cartes : plus de présence */
+main:not(.hv):not(.ab) .ev-card-img { height: 220px; object-fit: cover; width: 100%; }
+/* hero événements : recherche plus nette */
+.hero-photo .events-search-wrapper { box-shadow: 0 18px 44px rgba(0,0,0,.28); }
+/* bande de chiffres */
+main:not(.hv):not(.ab) .events-stats-section .stat-number { font-weight: 900; }
+/* progression des dons : la barre se remplit à l'écran */
+.progress-bar-fill { transition: width 1.4s cubic-bezier(.2,.7,.2,1); }
+/* partenaires : cartes du mur */
+main:not(.hv):not(.ab) .pw-card { border-radius: 26px; }
+/* contact : intro humaine */
+.v3-lead { max-width: 640px; color: #475569; font-size: 18px; margin: 0 0 28px; }
+/* formulaires : champs plus généreux */
+main:not(.hv):not(.ab) :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]) { border-radius: 12px; border: 1.5px solid #cbd5e1; padding: 12px 14px; }
+main:not(.hv):not(.ab) :is(input, select, textarea):focus { border-color: #1967d2; box-shadow: 0 0 0 4px rgba(25,103,210,.15); outline: none; }
+/* bandeaux d'appel à l'action sombres : titres blancs conservés */
+main:not(.hv):not(.ab) section[class*="cta"] h2 { color: #fff; }
+
+/* Textes clairs sur photo : à ne pas assombrir */
+main:not(.hv):not(.ab) .featured-banner :is(h2, p, .featured-title, .featured-desc, .featured-date) { color: #fff; }
+main:not(.hv):not(.ab) .featured-banner .featured-desc { color: #eef2f7; }
+main:not(.hv):not(.ab) .hero-photo :is(h1, p) { color: #fff; }
+main:not(.hv):not(.ab) .hero-photo p { color: #eef2f7; }
+main:not(.hv):not(.ab) .event-card--featured :is(h3, p) { color: #fff; }
+
+/* intitulés de niveau (page Partenaires) : petits, en capitales */
+main:not(.hv):not(.ab) h2.pw-level-title { font-size: 14px; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; color: #64748b; margin-bottom: 18px; }
+main:not(.hv):not(.ab) .pw-level-title { font-size: 14px !important; letter-spacing: .1em !important; text-transform: uppercase !important; font-weight: 800 !important; color: #64748b !important; margin-bottom: 18px !important; }
+.hero-photo .hero-photo__actions, .hero-photo .join-hero-actions { justify-content: flex-start !important; }
+main:not(.hv):not(.ab) .section-subtitle-center { font-size: 14px !important; letter-spacing: .12em !important; text-transform: uppercase !important; font-weight: 800 !important; color: #64748b !important; margin-bottom: 22px !important; }
