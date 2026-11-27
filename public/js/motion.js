@@ -51,17 +51,6 @@
         }), { threshold: 0.6 });
         counters.forEach(c => co.observe(c));
 
-        // barres de progression (dons) : se remplissent à l'écran
-        document.querySelectorAll('.progress-bar-fill').forEach(bar => {
-            const target = bar.style.width || '0%';
-            bar.style.width = '0%';
-            const po = new IntersectionObserver(entries => entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                po.unobserve(bar); bar.style.width = target;
-            }), { threshold: 0.5 });
-            po.observe(bar);
-        });
-
         // parallaxe douce
         const layers = [...document.querySelectorAll('.hero-photo, .hv-photocard, .ab-band')];
         let ticking = false;

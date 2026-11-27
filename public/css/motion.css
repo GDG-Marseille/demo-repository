@@ -8,7 +8,7 @@ html { scroll-behavior: smooth; }
   .motion [data-reveal="zoom"] { translate: 0 0; scale: .94; transition: opacity .8s ease var(--d,0ms), scale .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms); }
   .motion [data-reveal="zoom"].in { scale: 1; }
   /* entrée des en-têtes */
-  .motion .hero-photo > .container > *, .motion .hv-hero .hv-wrap > div:first-child > * { animation: mv-up .9s cubic-bezier(.2,.7,.2,1) both; }
+  .motion .hero-photo > .container > *, .motion .hv-hero .hv-wrap > div:first-child > * { opacity: 0; translate: 0 26px; animation: mv-up .9s cubic-bezier(.2,.7,.2,1) forwards; }
   .motion .hero-photo > .container > *:nth-child(1), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(1) { animation-delay: .05s; }
   .motion .hero-photo > .container > *:nth-child(2), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(2) { animation-delay: .17s; }
   .motion .hero-photo > .container > *:nth-child(3), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(3) { animation-delay: .29s; }
@@ -16,7 +16,7 @@ html { scroll-behavior: smooth; }
   .motion .hero-photo > .container > *:nth-child(n+5), .motion .hv-hero .hv-wrap > div:first-child > *:nth-child(n+5) { animation-delay: .5s; }
   .motion .hv-photo { animation: mv-pop 1s cubic-bezier(.2,.8,.2,1) .15s both; }
   .motion .hv-brace { animation: mv-float 4s ease-in-out 1s infinite; }
-  @keyframes mv-up { from { opacity: 0; translate: 0 26px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes mv-up { to { opacity: 1; translate: 0 0; } }
   @keyframes mv-pop { from { opacity: 0; translate: 40px 20px; scale: .96; } to { opacity: 1; translate: 0 0; scale: 1; } }
   @keyframes mv-float { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: 0 -10px; rotate: 4deg; } }
   /* parallaxe douce des photos d'en-tête */

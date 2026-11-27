@@ -31,12 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (safeImage(event.image)) {
             const img = el('img', 'ev-card-img'); img.src = event.image; img.alt = 'Visuel : ' + event.title; img.loading = 'lazy'; card.append(img);
         }
-        if (safeImage(event.image)) {
-            const d = new Date(event.start), badge = el('div', 'ev-date-badge');
-            const day = el('b', '', new Intl.DateTimeFormat('fr-FR', { day: '2-digit', timeZone: 'Europe/Paris' }).format(d));
-            const mon = el('span', '', new Intl.DateTimeFormat('fr-FR', { month: 'short', timeZone: 'Europe/Paris' }).format(d).replace('.', ''));
-            badge.append(day, mon); card.append(badge);
-        }
         const body = el('div', 'ev-card-body full-height-body');
         const meta = el('div', 'ev-meta-row');
         meta.append(el('span', 'ev-date-blue', date(event.start)), el('span', 'ev-tag-gray', past ? 'Événement passé' : 'À venir'));
