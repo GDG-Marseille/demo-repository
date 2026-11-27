@@ -92,3 +92,18 @@ const formScript = document.createElement('script');
 formScript.src = BASE + 'js/forms.js';
 document.body.appendChild(formScript);
 
+
+
+// Bandeau « Rejoindre » collant sur téléphone : visible après un peu de défilement, masqué sur les pages de formulaire.
+(() => {
+    const page = location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
+    if (['contact', 'devenir-partenaire', 'mentions-legales', 'politique-confidentialite', '404', '404.html'].includes(page)) return;
+    const bar = document.createElement('a');
+    bar.className = 'join-sticky';
+    bar.href = 'https://gdg.community.dev/gdg-marseille/';
+    bar.target = '_blank'; bar.rel = 'noopener noreferrer';
+    bar.innerHTML = '<span>Rejoindre le GDG Marseille</span><small>Gratuit · sans engagement</small>';
+    document.addEventListener('DOMContentLoaded', () => document.body.appendChild(bar));
+    const update = () => bar.classList.toggle('is-on', scrollY > 420 && innerHeight + scrollY < document.documentElement.scrollHeight - 260);
+    document.addEventListener('scroll', update, { passive: true });
+})();

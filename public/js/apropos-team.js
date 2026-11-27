@@ -8,28 +8,28 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Méryl Stretti",
             role: "Fondatrice & organisatrice principale",
             roleClass: "blue-text",
-            img: "images/meryl-conference.jpeg",
+            img: "images/meryl-conference-sm.jpg",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/merylstretti/" }, { label: "Site web", url: "https://kwdcreative.fr/" }]
         },
         {
             name: "Eric Huang",
             role: "Conseil et support tech",
             roleClass: "green-text",
-            img: "images/eric-portrait.png",
+            img: "images/eric-portrait-sm.jpg",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/eric-huang-lin/" }, { label: "Site web", url: "https://ams-cg.com/" }]
         },
         {
             name: "Mathias Rodriguez",
             role: "Responsable Cybersécurité",
             roleClass: "yellow-text",
-            img: "images/mathias-portrait.png",
+            img: "images/mathias-portrait-sm.jpg",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/mathias-rodrigues-1084182b5/" }]
         },
         {
             name: "Charlotte Garcia",
             role: "Responsable Communication",
             roleClass: "blue-text",
-            img: "images/charlotte-portrait.jpg",
+            img: "images/charlotte-portrait-sm.jpg",
             links: [{ label: "LinkedIn", url: "https://www.linkedin.com/in/charlotte-garcia-7425341b2/" }, { label: "Site web", url: "https://www.instagram.com/cgcommunication__/" }]
         }
     ];
